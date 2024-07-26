@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Explore and Import Chicago Health Atlas Data and Spatial Layers • ChicagoHA</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
@@ -13,12 +19,13 @@
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore and Import Chicago Health Atlas Data and Spatial Layers">
 <meta name="description" content="Allows for painless use of the Chicago Health Atlas API to explore and import data.">
 <meta property="og:description" content="Allows for painless use of the Chicago Health Atlas API to explore and import data.">
+<meta property="og:image" content="https://ryanzomorrodi.github.io/ChicagoHA/logo.png">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">ChicagoHA</a>
 
@@ -51,16 +58,19 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="chicagoha">ChicagoHA<a class="anchor" aria-label="anchor" href="#chicagoha"></a>
-</h1></div>
+<div class="page-header">
+<img src="logo.png" class="logo" alt=""><h1 id="chicagoha">ChicagoHA<a class="anchor" aria-label="anchor" href="#chicagoha"></a>
+</h1>
+</div>
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Explore and Import Chicago Health Atlas Data and Spatial Layers.</p>
 <p>The Chicago Health Atlas is a collaboration between the Chicago Department of Public Health and PHAME Center at UIC, which aims to provide a place to “review, explore and compare health-related data over time and across communities.” With the same spirit in mind, this tool aims to make Chicago health data analysis within R more painless and reproducable. For more information about the Chicago Health Atlas check out the <a href="https://chicagohealthatlas.org/" class="external-link">Chicago Health Atlas website</a>.</p>
+<p><strong>Note:</strong> This is an unofficial R wrapper for the Chicago Health Atlas. This package is in no way affiliated with the Chicago Department of Public Health or PHAME Center at UIC.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of ChicagoHA from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of ChicagoHA from <a href="https://github.com/ryanzomorrodi/ChicagoHA" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"ryanzomorrodi/ChicagoHA"</span><span class="op">)</span></span></code></pre></div>
@@ -139,10 +149,10 @@
 <span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52419 ymax: 42.02305</span></span>
-<span><span class="co">#&gt; CRS:           NA</span></span>
+<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
 <span><span class="co">#&gt; # A tibble: 77 × 7</span></span>
 <span><span class="co">#&gt;    layer_key    geoid     name  population state notes                  geometry</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt;            &lt;MULTIPOLYGON&gt;</span></span>
+<span><span class="co">#&gt;  * &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;MULTIPOLYGON [°]&gt;</span></span>
 <span><span class="co">#&gt;  1 neighborhood 1714000-1 Roge…      55454 IL    Far … (((-87.65456 41.99818, -…</span></span>
 <span><span class="co">#&gt;  2 neighborhood 1714000-… Norw…      41069 IL    Far … (((-87.78002 41.99742, -…</span></span>
 <span><span class="co">#&gt;  3 neighborhood 1714000-… Jeff…      26201 IL    Far … (((-87.75264 41.96798, -…</span></span>
