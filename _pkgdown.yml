@@ -1,6 +1,7 @@
 url: https://ryanzomorrodi.github.io/ChicagoHA/
 template:
   bootstrap: 5
+  bootswatch: yeti
 
 reference:
 - title: Tabular Data

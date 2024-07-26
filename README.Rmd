@@ -22,9 +22,12 @@ Explore and Import Chicago Health Atlas Data and Spatial Layers.
 
 The Chicago Health Atlas is a collaboration between the Chicago Department of Public Health and PHAME Center at UIC, which aims to provide a place to "review, explore and compare health-related data over time and across communities." With the same spirit in mind, this tool aims to make Chicago health data analysis within R more painless and reproducable. For more information about the Chicago Health Atlas check out the [Chicago Health Atlas website](https://chicagohealthatlas.org/). 
 
+**Note:** This is an unofficial R wrapper for the Chicago Health Atlas. This package is in no way affiliated with the Chicago Department of Public Health or PHAME Center at UIC.
+
 ## Installation
 
-You can install the development version of ChicagoHA from [GitHub](https://github.com/) with:
+You can install the development version of ChicagoHA from
+[GitHub](https://github.com/ryanzomorrodi/ChicagoHA) with:
 
 ``` r
 # install.packages("pak")

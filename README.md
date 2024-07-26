@@ -16,10 +16,14 @@ aims to make Chicago health data analysis within R more painless and
 reproducable. For more information about the Chicago Health Atlas check
 out the [Chicago Health Atlas website](https://chicagohealthatlas.org/).
 
+**Note:** This is an unofficial R wrapper for the Chicago Health Atlas.
+This package is in no way affiliated with the Chicago Department of
+Public Health or PHAME Center at UIC.
+
 ## Installation
 
 You can install the development version of ChicagoHA from
-[GitHub](https://github.com/) with:
+[GitHub](https://github.com/ryanzomorrodi/ChicagoHA) with:
 
 ``` r
 # install.packages("pak")
@@ -119,10 +123,10 @@ layer
 #> Geometry type: MULTIPOLYGON
 #> Dimension:     XY
 #> Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52419 ymax: 42.02305
-#> CRS:           NA
+#> Geodetic CRS:  WGS 84
 #> # A tibble: 77 × 7
 #>    layer_key    geoid     name  population state notes                  geometry
-#>    <chr>        <chr>     <chr>      <int> <chr> <chr>            <MULTIPOLYGON>
+#>  * <chr>        <chr>     <chr>      <int> <chr> <chr>        <MULTIPOLYGON [°]>
 #>  1 neighborhood 1714000-1 Roge…      55454 IL    Far … (((-87.65456 41.99818, -…
 #>  2 neighborhood 1714000-… Norw…      41069 IL    Far … (((-87.78002 41.99742, -…
 #>  3 neighborhood 1714000-… Jeff…      26201 IL    Far … (((-87.75264 41.96798, -…

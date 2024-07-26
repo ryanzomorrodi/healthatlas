@@ -1,6 +1,10 @@
 cha_api_url <- "https://chicagohealthatlas.org/api/v1/"
 
 cha_req <- function(endpoint) {
+  if (!curl::has_internet()) {
+    stop("Your API call has errors. No Internet Connection.")
+  }
+
   httr2::request(cha_api_url) |>
     httr2::req_user_agent("ChicagoHA R package") |>
     httr2::req_url_path_append(endpoint) |>
