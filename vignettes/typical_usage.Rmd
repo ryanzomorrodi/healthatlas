@@ -1,0 +1,110 @@
+---
+title: "Typical Usage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Typical Usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Discover indicators
+
+```{r setup}
+library(ChicagoHA)
+```
+
+We can list all the topics (aka indicators) present within Chicago Health Atlas using `cha_topics()`. The most important column here is the `topic_key` which can be used to identify the topic within subsequent functions.
+```{r}
+topics <- cha_topics(progress = FALSE)
+topics
+```
+
+Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `cha_topc_subcategories()`.
+```{r}
+subcategories <- cha_topic_subcategories()
+subcategories
+```
+
+You can use a `subcategory_key` to subset the list of topics too.
+```{r}
+cha_topics("diet-exercise")
+```
+
+Once we have a topic or topics in mind, we can explore what populations, time periods, and geographic scales that data is available for using `cha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
+```{r}
+coverage <- cha_coverage("HCSFVAP", progress = FALSE)
+coverage
+```
+
+## Import tabular data
+
+Now, we can import our data using `cha_data()` specifying the keys we identified above.
+```{r}
+ease_of_access <- cha_data(
+  topic_key = "HCSFVAP",
+  population_key = "",
+  period_key = "2022-2023",
+  layer_key = "neighborhood"
+)
+ease_of_access
+```
+
+## Import spatial data
+
+We can check what layers we can import with `cha_layers()`.
+```{r}
+layers <- cha_layers()
+layers
+```
+
+Since we just downloaded our data at the Community Area level, let's import the Community Area geographic layer with `cha_layer()`.
+```{r}
+community_areas <- cha_layer("neighborhood")
+```
+
+Let's map our data!
+```{r}
+library(dplyr)
+library(ggplot2)
+
+map_data <- community_areas |>
+  left_join(ease_of_access, join_by(geoid == neighborhood)) 
+
+plot <- ggplot(map_data) +
+  geom_sf(aes(fill = value), alpha = 0.7) +
+  scale_fill_distiller(palette = "GnBu", direction = 1) +
+  labs(
+    title = "Easy Access to Fruits and Vegetables within Chicago",
+    fill = "Percent of adults who reported\nthat it is very easy for them to\nget fresh fruits and vegetables."
+  ) +
+  theme_minimal()
+plot
+```
+
+Our map looks pretty good, but perhaps there is a point layer that may provide more insight into the spatial variation of the ease of access to fruits and vegetables. We can use `cha_point_layers()` to list all the point layers available in the Chicago Health Atlas.
+```{r}
+point_layers <- cha_point_layers()
+point_layers
+```
+
+Grocery store locations may be an important aspect of the ease of access to fruits and vegetables, we can import this layer by providing the `point_layer_uuid` to `cha_point_layer()`.
+```{r}
+grocery_stores <- cha_point_layer("7d9caf3c-75e6-4382-8c97-069696a3efbf")
+```
+
+Now that we have imported our grocery stores, let's layer them on top of our map.
+```{r}
+plot +
+  geom_sf(data = grocery_stores, size = 0.5)
+```
+
+As expected, it seems that the areas with more grocery stores have a higher percent of adults who report that it is very easy to get fresh fruits and vegetables. 
+
+This is a typical use case for the `ChicagoHA`, in which we explored every function that `ChicagoHA` has to offer. Now it's time for you to explore.

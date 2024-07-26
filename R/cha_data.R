@@ -1,3 +1,32 @@
+#' Obtain Chicago Health Atlas Data
+#'
+#' @description
+#' Obtain data for a topic within a population at a
+#' specified time period and a geographic scale.
+#' @param topic_key Unique ID specifying a topic.
+#' @param population_key Unique ID for a population
+#' stratification.
+#' @param period_key Unique ID for a time period.
+#' @param layer_key Unique ID for a geographic layer.
+#'
+#' @return Data tibble containing value and standard
+#' error for topic measure.
+#' @export
+#'
+#' @examples
+#' cha_data("POP", "H", "2014-2018", "zip")
 cha_data <- function(topic_key, population_key, period_key, layer_key) {
-  cha_api_data(topic_key, population_key, period_key, layer_key)
+  body <- cha_api_data_req(topic_key, population_key, period_key, layer_key) |>
+    cha_req_perform() |>
+    cha_resp_body("results")
+
+  tibble::tibble(body) |>
+    tidyr::unnest_wider(body) |>
+    dplyr::select(g, a, v, se) |>
+    dplyr::rename(
+      !!layer_key := g,
+      measure = a,
+      value = v,
+      standardError = se
+    )
 }

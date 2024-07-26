@@ -1,0 +1,26 @@
+url: https://ryanzomorrodi.github.io/ChicagoHA/
+template:
+  bootstrap: 5
+
+reference:
+- title: Tabular Data
+  subtitle: Explore data
+  contents:
+  - cha_topics
+  - cha_topic_subcategories
+  - cha_coverage
+
+- subtitle: Import data
+  contents:
+  - cha_data
+
+- title: Spatial Data
+  subtitle: Geographic layers
+  contents:
+  - cha_layers
+  - cha_layer
+
+- subtitle: Point layers
+  contents:
+  - cha_point_layers
+  - cha_point_layer

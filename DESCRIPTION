@@ -1,17 +1,24 @@
 Package: ChicagoHA
-Title: What the Package Does (One Line, Title Case)
+Title: Explore and Import Chicago Health Atlas Data and Spatial Layers
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0003-6417-5985"))
+Description: Allows for painless use of the 'Chicago Health Atlas' API to explore and import data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
-    httr2
+    dplyr,
+    httr2,
+    sf,
+    tibble,
+    tidyr,
+    xml2
 Suggests: 
+    ggplot2,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://ryanzomorrodi.github.io/ChicagoHA/

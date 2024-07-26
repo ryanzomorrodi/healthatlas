@@ -1,0 +1,84 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ChicagoHA
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Explore and Import Chicago Health Atlas Data and Spatial Layers.
+
+The Chicago Health Atlas is a collaboration between the Chicago Department of Public Health and PHAME Center at UIC, which aims to provide a place to "review, explore and compare health-related data over time and across communities." With the same spirit in mind, this tool aims to make Chicago health data analysis within R more painless and reproducable. For more information about the Chicago Health Atlas check out the [Chicago Health Atlas website](https://chicagohealthatlas.org/). 
+
+## Installation
+
+You can install the development version of ChicagoHA from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::install("ryanzomorrodi/ChicagoHA")
+```
+
+## Usage
+```{r}
+library(ChicagoHA)
+```
+
+We can list all the topics (aka indicators) present within Chicago Health Atlas using `cha_topics()`. The most important column here is the `topic_key` which can be used to identify the topic within subsequent functions.
+```{r}
+cha_topics(progress = FALSE)
+```
+
+Then, we can explore what populations, time periods, and geographic scales that data is available for using `cha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
+```{r}
+cha_coverage("EDA", progress = FALSE)
+```
+
+Now, we can import our data using `cha_data()` specifying the keys we identified above.
+```{r}
+data <- cha_data(
+  topic_key = "EDA",
+  population_key = "",
+  period_key = "2018-2022",
+  layer_key = "neighborhood"
+)
+data
+```
+
+Let's create a map. But first, we will need to download the Community Areas geographic layer. We can do that with `cha_layer()`.
+```{r}
+layer <- cha_layer(
+  layer_key = "neighborhood"
+)
+layer
+```
+
+Now we can make our map!
+```{r message=FALSE}
+library(dplyr)
+library(ggplot2)
+
+map_data <- layer |>
+  left_join(data, join_by(geoid == neighborhood)) 
+
+ggplot(map_data) +
+  geom_sf(aes(fill = value), alpha = 0.7) +
+  scale_fill_distiller(palette = "GnBu", direction = 1) +
+  labs(
+    title = "9th Grade Education Rate",
+    fill = ""
+  ) +
+  theme_minimal()
+```
