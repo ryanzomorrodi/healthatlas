@@ -75,7 +75,7 @@ library(dplyr)
 library(ggplot2)
 
 map_data <- community_areas |>
-  left_join(ease_of_access, join_by(geoid == neighborhood)) 
+  left_join(ease_of_access, "geoid") 
 
 plot <- ggplot(map_data) +
   geom_sf(aes(fill = value), alpha = 0.7) +

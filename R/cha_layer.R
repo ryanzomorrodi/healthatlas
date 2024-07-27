@@ -16,10 +16,12 @@ cha_layers <- function() {
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
     dplyr::select(
-      layer_name = name,
-      layer_key = slug,
-      layer_description = description,
-      layer_url = shapes
+      c(
+        "layer_name" = "name",
+        "layer_key" = "slug",
+        "layer_description" = "description",
+        "layer_url" = "shapes"
+      )
     )
 }
 
@@ -34,24 +36,26 @@ cha_layers <- function() {
 #' @export
 #'
 #' @examples
-#' cha_layer("zip")
+#' cha_layer("zip", progress = FALSE)
 cha_layer <- function(layer_key, progress = TRUE) {
+  key <- layer_key
+
   body <- cha_api_geographies_req(layer_key) |>
     cha_req_perform_iterative(progress) |>
     cha_resp_body_iterative()
 
   layer_sf <- cha_layers() |>
-    dplyr::filter(layer_key == .env$layer_key) |>
+    dplyr::filter(layer_key == key) |>
     purrr::pluck("layer_url") |>
     sf::read_sf() |>
-    dplyr::select(geoid = id)
+    dplyr::select(c("geoid" = "id"))
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
-    dplyr::rename(layer_key = layer) |>
+    dplyr::rename(c("layer_key" = "layer")) |>
     dplyr::left_join(
       layer_sf,
-      by = dplyr::join_by(geoid)
+      by = "geoid"
     ) |>
     sf::st_as_sf(crs = 4326)
 }

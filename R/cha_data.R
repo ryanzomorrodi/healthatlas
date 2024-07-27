@@ -22,11 +22,13 @@ cha_data <- function(topic_key, population_key, period_key, layer_key) {
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
-    dplyr::select(g, a, v, se) |>
+    dplyr::select(c("g", "a", "v", "se")) |>
     dplyr::rename(
-      !!layer_key := g,
-      measure = a,
-      value = v,
-      standardError = se
+      c(
+        "geoid" = "g",
+        "measure" = "a",
+        "value" = "v",
+        "standardError" = "se"
+      )
     )
 }

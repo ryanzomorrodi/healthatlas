@@ -6,8 +6,10 @@ cha_stratifications <- function(progress = TRUE) {
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
     dplyr::select(
-      population_key = key,
-      population_name = name,
-      population_grouping = grouping
+      c(
+        "population_key" = "key",
+        "population_name" = "name",
+        "population_grouping" = "grouping"
+      )
     )
 }

@@ -12,11 +12,13 @@ cha_topic_subcategories <- function() {
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
-    tidyr::unnest_longer(subcategories) |>
-    tidyr::unnest_wider(subcategories, names_sep = "_") |>
+    tidyr::unnest_longer("subcategories") |>
+    tidyr::unnest_wider("subcategories", names_sep = "_") |>
     dplyr::select(
-      subcategories_name,
-      subcategories_key = subcategories_slug,
-      category_name = name
+      c(
+        "subcategories_name",
+        "subcategories_key" = "subcategories_slug",
+        "category_name" = "name"
+      )
     )
 }

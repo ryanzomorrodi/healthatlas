@@ -96,18 +96,18 @@ data <- cha_data(
 )
 data
 #> # A tibble: 77 × 4
-#>    neighborhood measure value standardError
-#>    <chr>        <chr>   <dbl>         <dbl>
-#>  1 1714000-35   EDA      96.1          4.64
-#>  2 1714000-36   EDA      98.5          4.64
-#>  3 1714000-37   EDA      96.0          6.93
-#>  4 1714000-38   EDA      97.0          4.69
-#>  5 1714000-39   EDA      98.4          7.34
-#>  6 1714000-4    EDA      96.1          3.18
-#>  7 1714000-40   EDA      97.5          6.86
-#>  8 1714000-41   EDA      99.0          5.27
-#>  9 1714000-42   EDA      96.3          3.63
-#> 10 1714000-1    EDA      93.9          2.72
+#>    geoid      measure value standardError
+#>    <chr>      <chr>   <dbl>         <dbl>
+#>  1 1714000-35 EDA      96.1          4.64
+#>  2 1714000-36 EDA      98.5          4.64
+#>  3 1714000-37 EDA      96.0          6.93
+#>  4 1714000-38 EDA      97.0          4.69
+#>  5 1714000-39 EDA      98.4          7.34
+#>  6 1714000-4  EDA      96.1          3.18
+#>  7 1714000-40 EDA      97.5          6.86
+#>  8 1714000-41 EDA      99.0          5.27
+#>  9 1714000-42 EDA      96.3          3.63
+#> 10 1714000-1  EDA      93.9          2.72
 #> # ℹ 67 more rows
 ```
 
@@ -147,7 +147,7 @@ library(dplyr)
 library(ggplot2)
 
 map_data <- layer |>
-  left_join(data, join_by(geoid == neighborhood)) 
+  left_join(data, "geoid") 
 
 ggplot(map_data) +
   geom_sf(aes(fill = value), alpha = 0.7) +

@@ -13,6 +13,7 @@ Imports:
     curl,
     dplyr,
     httr2,
+    purrr,
     sf,
     tibble,
     tidyr,

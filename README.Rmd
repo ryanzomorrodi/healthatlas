@@ -74,7 +74,7 @@ library(dplyr)
 library(ggplot2)
 
 map_data <- layer |>
-  left_join(data, join_by(geoid == neighborhood)) 
+  left_join(data, "geoid") 
 
 ggplot(map_data) +
   geom_sf(aes(fill = value), alpha = 0.7) +

@@ -6,12 +6,13 @@
 #' search for individual topics use `cha_topics`.
 #' @param topic_key 3-8 letter ID uniquely identifying
 #' a topic.
+#' @param progress Display a progress bar?
 #'
 #' @return Topic coverage tibble
 #' @export
 #'
 #' @examples
-#' cha_coverage("POP")
+#' cha_coverage("POP", progress = FALSE)
 cha_coverage <- function(topic_key, progress = TRUE) {
   body <- cha_api_coverage_req(topic_key) |>
     cha_req_perform() |>
@@ -26,18 +27,20 @@ cha_coverage <- function(topic_key, progress = TRUE) {
     tidyr::unnest_wider(body) |>
     dplyr::right_join(
       stratifications,
-      dplyr::join_by(population == population_key)
+      by = c("population" = "population_key")
     ) |>
     dplyr::right_join(
       layers,
-      dplyr::join_by(body_id == layer_key)
+      by = c("body_id" = "layer_key")
     ) |>
     dplyr::select(
-      population_key = population,
-      population_name,
-      population_grouping,
-      period_key = period,
-      layer_key = body_id,
-      layer_name
+      c(
+        "population_key" = "population",
+        "population_name",
+        "population_grouping",
+        "period_key" = "period",
+        "layer_key" = "body_id",
+        "layer_name"
+      )
     )
 }
