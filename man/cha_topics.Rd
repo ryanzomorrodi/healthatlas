@@ -19,5 +19,5 @@ Topics information tibble
 List Population Stratifications
 }
 \examples{
-cha_topics("education")
+cha_topics("education", progress = FALSE)
 }

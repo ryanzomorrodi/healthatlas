@@ -4,6 +4,10 @@
 # ChicagoHA
 
 <!-- badges: start -->
+
+[![ChicagoHA status
+badge](https://ryanzomorrodi.r-universe.dev/badges/ChicagoHA)](https://ryanzomorrodi.r-universe.dev/ChicagoHA)
+[![R-CMD-check](https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Explore and Import Chicago Health Atlas Data and Spatial Layers.

@@ -18,5 +18,5 @@ cha_layer(layer_key, progress = TRUE)
 Import geographic layer as a \code{sf} object.
 }
 \examples{
-cha_layer("zip")
+cha_layer("zip", progress = FALSE)
 }

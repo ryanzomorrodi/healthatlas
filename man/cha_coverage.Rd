@@ -21,5 +21,5 @@ geographic layers available for a given topic. To
 search for individual topics use \code{cha_topics}.
 }
 \examples{
-cha_coverage("POP")
+cha_coverage("POP", progress = FALSE)
 }
