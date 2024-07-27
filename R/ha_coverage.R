@@ -3,7 +3,7 @@
 #' @description
 #' List all combinations of population, periods, and
 #' geographic layers available for a given topic. To
-#' search for individual topics use `cha_topics`.
+#' search for individual topics use `ha_topics`.
 #' @param topic_key 3-8 letter ID uniquely identifying
 #' a topic.
 #' @param progress Display a progress bar?
@@ -12,14 +12,16 @@
 #' @export
 #'
 #' @examples
-#' cha_coverage("POP", progress = FALSE)
-cha_coverage <- function(topic_key, progress = TRUE) {
-  body <- cha_api_coverage_req(topic_key) |>
-    cha_req_perform() |>
-    cha_resp_body("coverages")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_coverage("POP", progress = FALSE)
+ha_coverage <- function(topic_key, progress = TRUE) {
+  body <- ha_api_coverage_req(topic_key) |>
+    ha_req_perform() |>
+    ha_resp_body("coverages")
 
-  stratifications <- cha_stratifications(progress)
-  layers <- cha_layers()
+  stratifications <- ha_stratifications(progress)
+  layers <- ha_layers()
 
   tibble::tibble(body) |>
     tidyr::unnest_longer(body) |>

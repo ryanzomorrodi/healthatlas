@@ -1,7 +1,7 @@
-cha_stratifications <- function(progress = TRUE) {
-  body <- cha_api_stratifications_req() |>
-    cha_req_perform_iterative(progress) |>
-    cha_resp_body_iterative()
+ha_stratifications <- function(progress = TRUE) {
+  body <- ha_api_stratifications_req() |>
+    ha_req_perform_iterative(progress) |>
+    ha_resp_body_iterative()
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>

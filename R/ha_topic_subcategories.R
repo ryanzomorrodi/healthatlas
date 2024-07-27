@@ -4,11 +4,13 @@
 #' @export
 #'
 #' @examples
-#' cha_topic_subcategories()
-cha_topic_subcategories <- function() {
-  body <- cha_api_categories_req() |>
-    cha_req_perform() |>
-    cha_resp_body("results")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_topic_subcategories()
+ha_topic_subcategories <- function() {
+  body <- ha_api_categories_req() |>
+    ha_req_perform() |>
+    ha_resp_body("results")
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>

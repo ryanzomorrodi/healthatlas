@@ -7,11 +7,13 @@
 #' @export
 #'
 #' @examples
-#' cha_point_layers()
-cha_point_layers <- function() {
-  body <- cha_api_points_req() |>
-    cha_req_perform() |>
-    cha_resp_body("results")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_point_layers()
+ha_point_layers <- function() {
+  body <- ha_api_points_req() |>
+    ha_req_perform() |>
+    ha_resp_body("results")
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
@@ -34,11 +36,13 @@ cha_point_layers <- function() {
 #' @export
 #'
 #' @examples
-#' cha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")
-cha_point_layer <- function(point_layer_uuid) {
-  body <- cha_api_points_req(point_layer_uuid) |>
-    cha_req_perform() |>
-    cha_resp_body("points")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")
+ha_point_layer <- function(point_layer_uuid) {
+  body <- ha_api_points_req(point_layer_uuid) |>
+    ha_req_perform() |>
+    ha_resp_body("points")
   
   output <- tibble::tibble(body) |>
     tidyr::unnest_wider(

@@ -17,37 +17,47 @@ knitr::opts_chunk$set(
 ## Discover indicators
 
 ```{r setup}
-library(ChicagoHA)
+library(healthatlas)
 ```
 
-We can list all the topics (aka indicators) present within Chicago Health Atlas using `cha_topics()`. The most important column here is the `topic_key` which can be used to identify the topic within subsequent functions.
+Let's set our health atlas. For this example, we are going to use the Chicago Health Atlas, and can do so, by providing the Chicago Health Atlas URL to `ha_set()`.
 ```{r}
-topics <- cha_topics(progress = FALSE)
+ha_set("chicagohealthatlas.org")
+```
+
+If at anytime, we need to check which health atlas we are using, we can using `ha_get()`.
+```{r}
+ha_get()
+```
+
+We can list all the topics (aka indicators) present within Chicago Health Atlas using `ha_topics()`. The most important column here is the `topic_key` which can be used to identify the topic within subsequent functions.
+```{r}
+topics <- ha_topics(progress = FALSE)
 topics
 ```
 
-Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `cha_topc_subcategories()`.
+Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_topc_subcategories()`.
 ```{r}
-subcategories <- cha_topic_subcategories()
+subcategories <- ha_topic_subcategories()
 subcategories
 ```
 
 You can use a `subcategory_key` to subset the list of topics too.
 ```{r}
-cha_topics("diet-exercise")
+ha_topics("diet-exercise")
 ```
 
-Once we have a topic or topics in mind, we can explore what populations, time periods, and geographic scales that data is available for using `cha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
+Once we have a topic or topics in mind, we can explore what populations, time periods, and geographic scales that data is available for using `ha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
 ```{r}
-coverage <- cha_coverage("HCSFVAP", progress = FALSE)
+coverage <- ha_coverage("HCSFVAP", progress = FALSE)
 coverage
 ```
 
 ## Import tabular data
 
-Now, we can import our data using `cha_data()` specifying the keys we identified above.
+Now, we can import our data using `ha_data()` specifying the keys we identified above.
 ```{r}
-ease_of_access <- cha_data(
+ease_of_access <- ha_data(
   topic_key = "HCSFVAP",
   population_key = "",
   period_key = "2022-2023",
@@ -58,15 +68,15 @@ ease_of_access
 
 ## Import spatial data
 
-We can check what layers we can import with `cha_layers()`.
+We can check what layers we can import with `ha_layers()`.
 ```{r}
-layers <- cha_layers()
+layers <- ha_layers()
 layers
 ```
 
-Since we just downloaded our data at the Community Area level, let's import the Community Area geographic layer with `cha_layer()`.
+Since we just downloaded our data at the Community Area level, let's import the Community Area geographic layer with `ha_layer()`.
 ```{r}
-community_areas <- cha_layer("neighborhood")
+community_areas <- ha_layer("neighborhood")
 ```
 
 Let's map our data!
@@ -88,15 +98,15 @@ plot <- ggplot(map_data) +
 plot
 ```
 
-Our map looks pretty good, but perhaps there is a point layer that may provide more insight into the spatial variation of the ease of access to fruits and vegetables. We can use `cha_point_layers()` to list all the point layers available in the Chicago Health Atlas.
+Our map looks pretty good, but perhaps there is a point layer that may provide more insight into the spatial variation of the ease of access to fruits and vegetables. We can use `ha_point_layers()` to list all the point layers available in the Chicago Health Atlas.
 ```{r}
-point_layers <- cha_point_layers()
+point_layers <- ha_point_layers()
 point_layers
 ```
 
-Grocery store locations may be an important aspect of the ease of access to fruits and vegetables, we can import this layer by providing the `point_layer_uuid` to `cha_point_layer()`.
+Grocery store locations may be an important aspect of the ease of access to fruits and vegetables, we can import this layer by providing the `point_layer_uuid` to `ha_point_layer()`.
 ```{r}
-grocery_stores <- cha_point_layer("7d9caf3c-75e6-4382-8c97-069696a3efbf")
+grocery_stores <- ha_point_layer("7d9caf3c-75e6-4382-8c97-069696a3efbf")
 ```
 
 Now that we have imported our grocery stores, let's layer them on top of our map.
@@ -107,4 +117,4 @@ plot +
 
 As expected, it seems that the areas with more grocery stores have a higher percent of adults who report that it is very easy to get fresh fruits and vegetables. 
 
-This is a typical use case for the `ChicagoHA`, in which we explored every function that `ChicagoHA` has to offer. Now it's time for you to explore.
+This is a typical use case for the `healthatlas`, in which we explored every function that `healthatlas` has to offer. Now it's time for you to explore.

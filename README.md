@@ -1,52 +1,69 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# ChicagoHA
+# healthatlas
 
 <!-- badges: start -->
 
-[![ChicagoHA status
-badge](https://ryanzomorrodi.r-universe.dev/badges/ChicagoHA)](https://ryanzomorrodi.r-universe.dev/ChicagoHA)
-[![R-CMD-check](https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml)
+[![healthatlas status
+badge](https://ryanzomorrodi.r-universe.dev/badges/healthatlas)](https://ryanzomorrodi.r-universe.dev/healthatlas)
+[![R-CMD-check](https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
-Explore and Import Chicago Health Atlas Data and Spatial Layers.
+Explore and Import *Metopio* Powered Health Atlases.
 
-The Chicago Health Atlas is a collaboration between the Chicago
-Department of Public Health and PHAME Center at UIC, which aims to
-provide a place to “review, explore and compare health-related data over
-time and across communities.” With the same spirit in mind, this tool
-aims to make Chicago health data analysis within R more painless and
-reproducable. For more information about the Chicago Health Atlas check
-out the [Chicago Health Atlas website](https://chicagohealthatlas.org/).
+[Metopio](https://metopio.com/) helps many public health departments
+build curated data platforms. These data platforms are a convenient way
+for community members and researchers to explore and download public
+health data. With the same spirit in mind, this package aim to make
+interfacing with these data portals within R more **painless** and
+**reproducable**.
 
-**Note:** This is an unofficial R wrapper for the Chicago Health Atlas.
-This package is in no way affiliated with the Chicago Department of
-Public Health or PHAME Center at UIC.
+**Note:** This is an unofficial R wrapper for Metopio Health Atlases.
+This package is in no way affiliated with the Metopio or any of the
+public health departments Metopio serves.
+
+Examples of Metopio health atlases include:
+
+- Chicago Health Atlas: <https://chicagohealthatlas.org/>  
+- Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
+- Idaho Oregon Community Health Atlas:
+  <https://idahooregoncommunityhealthatlas.org/>  
+- Northern Kentucky Health Atlas:
+  <https://atlas.northernkentuckyusa.com/>
 
 ## Installation
 
-You can install the development version of ChicagoHA from
-[GitHub](https://github.com/ryanzomorrodi/ChicagoHA) with:
+You can install the development version of healthatlas from
+[GitHub](https://github.com/ryanzomorrodi/healthatlas) with:
 
 ``` r
 # install.packages("pak")
-pak::install("ryanzomorrodi/ChicagoHA")
+pak::install("ryanzomorrodi/healthatlas")
 ```
 
 ## Usage
 
 ``` r
-library(ChicagoHA)
+library(healthatlas)
+```
+
+Set your health atlas. For this example, we are going to use the Chicago
+Health Atlas, and can do so, by providing the Chicago Health Atlas URL
+to `ha_set()`.
+
+``` r
+ha_set("chicagohealthatlas.org")
 ```
 
 We can list all the topics (aka indicators) present within Chicago
-Health Atlas using `cha_topics()`. The most important column here is the
+Health Atlas using `ha_topics()`. The most important column here is the
 `topic_key` which can be used to identify the topic within subsequent
 functions.
 
 ``` r
-cha_topics(progress = FALSE)
+ha_topics(progress = FALSE)
 #> # A tibble: 403 × 7
 #>    topic_name           topic_key topic_description topic_units subcategory_name
 #>    <chr>                <chr>     <chr>             <chr>       <chr>           
@@ -65,12 +82,12 @@ cha_topics(progress = FALSE)
 ```
 
 Then, we can explore what populations, time periods, and geographic
-scales that data is available for using `cha_coverage()`. Again, the
-most important columns here are the key columns which can be used to
-specify the data desired.
+scales that data is available for using `ha_coverage()`. Again, the most
+important columns here are the key columns which can be used to specify
+the data desired.
 
 ``` r
-cha_coverage("EDA", progress = FALSE)
+ha_coverage("EDA", progress = FALSE)
 #> # A tibble: 132 × 6
 #>    population_key population_name population_grouping period_key layer_key
 #>    <chr>          <chr>           <chr>               <chr>      <chr>    
@@ -88,11 +105,11 @@ cha_coverage("EDA", progress = FALSE)
 #> # ℹ 1 more variable: layer_name <chr>
 ```
 
-Now, we can import our data using `cha_data()` specifying the keys we
+Now, we can import our data using `ha_data()` specifying the keys we
 identified above.
 
 ``` r
-data <- cha_data(
+data <- ha_data(
   topic_key = "EDA",
   population_key = "",
   period_key = "2018-2022",
@@ -116,10 +133,10 @@ data
 ```
 
 Let’s create a map. But first, we will need to download the Community
-Areas geographic layer. We can do that with `cha_layer()`.
+Areas geographic layer. We can do that with `ha_layer()`.
 
 ``` r
-layer <- cha_layer(
+layer <- ha_layer(
   layer_key = "neighborhood"
 )
 layer
@@ -163,4 +180,4 @@ ggplot(map_data) +
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />

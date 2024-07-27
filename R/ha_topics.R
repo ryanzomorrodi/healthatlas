@@ -8,11 +8,13 @@
 #' @export
 #'
 #' @examples
-#' cha_topics("education", progress = FALSE)
-cha_topics <- function(subcategory_key = NULL, progress = TRUE) {
-  body <- cha_api_topics_req(subcategory_key) |>
-    cha_req_perform_iterative(progress) |>
-    cha_resp_body_iterative()
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_topics("education", progress = FALSE)
+ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
+  body <- ha_api_topics_req(subcategory_key) |>
+    ha_req_perform_iterative(progress) |>
+    ha_resp_body_iterative()
   
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>

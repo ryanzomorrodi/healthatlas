@@ -4,24 +4,29 @@ template:
   bootswatch: yeti
 
 reference:
+- title: Get and Set Portal
+  contents:
+  - ha_get
+  - ha_set
+
 - title: Tabular Data
   subtitle: Explore data
   contents:
-  - cha_topics
-  - cha_topic_subcategories
-  - cha_coverage
+  - ha_topics
+  - ha_topic_subcategories
+  - ha_coverage
 
 - subtitle: Import data
   contents:
-  - cha_data
+  - ha_data
 
 - title: Spatial Data
   subtitle: Geographic layers
   contents:
-  - cha_layers
-  - cha_layer
+  - ha_layers
+  - ha_layer
 
 - subtitle: Point layers
   contents:
-  - cha_point_layers
-  - cha_point_layer
+  - ha_point_layers
+  - ha_point_layer

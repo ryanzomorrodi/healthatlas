@@ -7,11 +7,13 @@
 #' @export
 #'
 #' @examples
-#' cha_layers()
-cha_layers <- function() {
-  body <- cha_api_layers_req() |>
-    cha_req_perform() |>
-    cha_resp_body("results")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_layers()
+ha_layers <- function() {
+  body <- ha_api_layers_req() |>
+    ha_req_perform() |>
+    ha_resp_body("results")
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
@@ -36,15 +38,17 @@ cha_layers <- function() {
 #' @export
 #'
 #' @examples
-#' cha_layer("zip", progress = FALSE)
-cha_layer <- function(layer_key, progress = TRUE) {
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_layer("zip", progress = FALSE)
+ha_layer <- function(layer_key, progress = TRUE) {
   key <- layer_key
 
-  body <- cha_api_geographies_req(layer_key) |>
-    cha_req_perform_iterative(progress) |>
-    cha_resp_body_iterative()
+  body <- ha_api_geographies_req(layer_key) |>
+    ha_req_perform_iterative(progress) |>
+    ha_resp_body_iterative()
 
-  layer_sf <- cha_layers() |>
+  layer_sf <- ha_layers() |>
     dplyr::filter(layer_key == key) |>
     purrr::pluck("layer_url") |>
     sf::read_sf() |>

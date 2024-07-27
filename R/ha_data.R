@@ -1,4 +1,4 @@
-#' Obtain Chicago Health Atlas Data
+#' Obtain Data
 #'
 #' @description
 #' Obtain data for a topic within a population at a
@@ -14,11 +14,13 @@
 #' @export
 #'
 #' @examples
-#' cha_data("POP", "H", "2014-2018", "zip")
-cha_data <- function(topic_key, population_key, period_key, layer_key) {
-  body <- cha_api_data_req(topic_key, population_key, period_key, layer_key) |>
-    cha_req_perform() |>
-    cha_resp_body("results")
+#' ha_set("chicagohealthatlas.org")
+#' 
+#' ha_data("POP", "H", "2014-2018", "zip")
+ha_data <- function(topic_key, population_key, period_key, layer_key) {
+  body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
+    ha_req_perform() |>
+    ha_resp_body("results")
 
   tibble::tibble(body) |>
     tidyr::unnest_wider(body) |>
