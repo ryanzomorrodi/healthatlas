@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Typical Usage • ChicagoHA</title>
+<title>Typical Usage • healthatlas</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -24,7 +24,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="../index.html">ChicagoHA</a>
+    <a class="navbar-brand me-2" href="../index.html">healthatlas</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
 
@@ -72,13 +72,23 @@
 <h2 id="discover-indicators">Discover indicators<a class="anchor" aria-label="anchor" href="#discover-indicators"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/ChicagoHA/">ChicagoHA</a></span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/healthatlas/" class="external-link">healthatlas</a></span><span class="op">)</span></span></code></pre></div>
+<p>Let’s set our health atlas. For this example, we are going to use the
+Chicago Health Atlas, and can do so, by providing the Chicago Health
+Atlas URL to <code><a href="../reference/ha_set.html">ha_set()</a></code>.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_set.html">ha_set</a></span><span class="op">(</span><span class="st">"chicagohealthatlas.org"</span><span class="op">)</span></span></code></pre></div>
+<p>If at anytime, we need to check which health atlas we are using, we
+can using <code><a href="../reference/ha_get.html">ha_get()</a></code>.</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_get.html">ha_get</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "https://chicagohealthatlas.org/api/v1/"</span></span></code></pre></div>
 <p>We can list all the topics (aka indicators) present within Chicago
-Health Atlas using <code><a href="../reference/cha_topics.html">cha_topics()</a></code>. The most important column
+Health Atlas using <code><a href="../reference/ha_topics.html">ha_topics()</a></code>. The most important column
 here is the <code>topic_key</code> which can be used to identify the
 topic within subsequent functions.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_topics.html">cha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">topics</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 403 × 7</span></span></span>
 <span><span class="co">#&gt;    topic_name           topic_key topic_description topic_units subcategory_name</span></span>
@@ -97,9 +107,9 @@ topic within subsequent functions.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: subcategory_key &lt;chr&gt;, category &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Often, you may have an topic area that you are interested in
 exploring. You can explore these topic areas using
-<code>cha_topc_subcategories()</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">subcategories</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_topic_subcategories.html">cha_topic_subcategories</a></span><span class="op">(</span><span class="op">)</span></span>
+<code>ha_topc_subcategories()</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">subcategories</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topic_subcategories.html">ha_topic_subcategories</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">subcategories</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 30 × 3</span></span></span>
 <span><span class="co">#&gt;    subcategories_name    subcategories_key     category_name       </span></span>
@@ -117,8 +127,8 @@ exploring. You can explore these topic areas using
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 20 more rows</span></span></span></code></pre></div>
 <p>You can use a <code>subcategory_key</code> to subset the list of
 topics too.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/cha_topics.html">cha_topics</a></span><span class="op">(</span><span class="st">"diet-exercise"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span><span class="st">"diet-exercise"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 20 × 7</span></span></span>
 <span><span class="co">#&gt;    topic_name           topic_key topic_description topic_units subcategory_name</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span></span>
@@ -145,11 +155,11 @@ topics too.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: subcategory_key &lt;chr&gt;, category &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Once we have a topic or topics in mind, we can explore what
 populations, time periods, and geographic scales that data is available
-for using <code><a href="../reference/cha_coverage.html">cha_coverage()</a></code>. Again, the most important columns
+for using <code><a href="../reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns
 here are the key columns which can be used to specify the data
 desired.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">coverage</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_coverage.html">cha_coverage</a></span><span class="op">(</span><span class="st">"HCSFVAP"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">coverage</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_coverage.html">ha_coverage</a></span><span class="op">(</span><span class="st">"HCSFVAP"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">coverage</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 168 × 6</span></span></span>
 <span><span class="co">#&gt;    population_key population_name population_grouping period_key layer_key</span></span>
@@ -170,10 +180,10 @@ desired.</p>
 <div class="section level2">
 <h2 id="import-tabular-data">Import tabular data<a class="anchor" aria-label="anchor" href="#import-tabular-data"></a>
 </h2>
-<p>Now, we can import our data using <code><a href="../reference/cha_data.html">cha_data()</a></code> specifying
+<p>Now, we can import our data using <code><a href="../reference/ha_data.html">ha_data()</a></code> specifying
 the keys we identified above.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">ease_of_access</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_data.html">cha_data</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ease_of_access</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
 <span>  topic_key <span class="op">=</span> <span class="st">"HCSFVAP"</span>,</span>
 <span>  population_key <span class="op">=</span> <span class="st">""</span>,</span>
 <span>  period_key <span class="op">=</span> <span class="st">"2022-2023"</span>,</span>
@@ -199,9 +209,9 @@ the keys we identified above.</p>
 <h2 id="import-spatial-data">Import spatial data<a class="anchor" aria-label="anchor" href="#import-spatial-data"></a>
 </h2>
 <p>We can check what layers we can import with
-<code><a href="../reference/cha_layers.html">cha_layers()</a></code>.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_layers.html">cha_layers</a></span><span class="op">(</span><span class="op">)</span></span>
+<code><a href="../reference/ha_layers.html">ha_layers()</a></code>.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layers.html">ha_layers</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">layers</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 4</span></span></span>
 <span><span class="co">#&gt;   layer_name      layer_key    layer_description                       layer_url</span></span>
@@ -212,11 +222,11 @@ the keys we identified above.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Chicago         place        Cities, towns, villages, and boroughs,… https://…</span></span></code></pre></div>
 <p>Since we just downloaded our data at the Community Area level, let’s
 import the Community Area geographic layer with
-<code><a href="../reference/cha_layer.html">cha_layer()</a></code>.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_layer.html">cha_layer</a></span><span class="op">(</span><span class="st">"neighborhood"</span><span class="op">)</span></span></code></pre></div>
+<code><a href="../reference/ha_layer.html">ha_layer()</a></code>.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layer.html">ha_layer</a></span><span class="op">(</span><span class="st">"neighborhood"</span><span class="op">)</span></span></code></pre></div>
 <p>Let’s map our data!</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
@@ -240,14 +250,14 @@ import the Community Area geographic layer with
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">plot</span></span></code></pre></div>
-<p><img src="typical_usage_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
+<p><img src="typical_usage_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 <p>Our map looks pretty good, but perhaps there is a point layer that
 may provide more insight into the spatial variation of the ease of
 access to fruits and vegetables. We can use
-<code><a href="../reference/cha_point_layers.html">cha_point_layers()</a></code> to list all the point layers available
-in the Chicago Health Atlas.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">point_layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_point_layers.html">cha_point_layers</a></span><span class="op">(</span><span class="op">)</span></span>
+<code><a href="../reference/ha_point_layers.html">ha_point_layers()</a></code> to list all the point layers available in
+the Chicago Health Atlas.</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">point_layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_point_layers.html">ha_point_layers</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">point_layers</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
 <span><span class="co">#&gt;    point_layer_name                      point_layer_uuid point_layer_descript…¹</span></span>
@@ -265,21 +275,21 @@ in the Chicago Health Atlas.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ abbreviated name: ¹​point_layer_description</span></span></span></code></pre></div>
 <p>Grocery store locations may be an important aspect of the ease of
 access to fruits and vegetables, we can import this layer by providing
-the <code>point_layer_uuid</code> to <code><a href="../reference/cha_point_layer.html">cha_point_layer()</a></code>.</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">grocery_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/cha_point_layer.html">cha_point_layer</a></span><span class="op">(</span><span class="st">"7d9caf3c-75e6-4382-8c97-069696a3efbf"</span><span class="op">)</span></span></code></pre></div>
+the <code>point_layer_uuid</code> to <code><a href="../reference/ha_point_layer.html">ha_point_layer()</a></code>.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">grocery_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_point_layer.html">ha_point_layer</a></span><span class="op">(</span><span class="st">"7d9caf3c-75e6-4382-8c97-069696a3efbf"</span><span class="op">)</span></span></code></pre></div>
 <p>Now that we have imported our grocery stores, let’s layer them on top
 of our map.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">plot</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">grocery_stores</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="typical_usage_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
+<p><img src="typical_usage_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
 <p>As expected, it seems that the areas with more grocery stores have a
 higher percent of adults who report that it is very easy to get fresh
 fruits and vegetables.</p>
-<p>This is a typical use case for the <code>ChicagoHA</code>, in which
-we explored every function that <code>ChicagoHA</code> has to offer. Now
-it’s time for you to explore.</p>
+<p>This is a typical use case for the <code>healthatlas</code>, in which
+we explored every function that <code>healthatlas</code> has to offer.
+Now it’s time for you to explore.</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

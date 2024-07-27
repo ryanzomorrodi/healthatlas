@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Explore and Import Chicago Health Atlas Data and Spatial Layers • ChicagoHA</title>
+<title>Explore and Import `Metopio` Health Atlas Data and Spatial Layers • healthatlas</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -16,9 +16,9 @@
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore and Import Chicago Health Atlas Data and Spatial Layers">
-<meta name="description" content="Allows for painless use of the Chicago Health Atlas API to explore and import data.">
-<meta property="og:description" content="Allows for painless use of the Chicago Health Atlas API to explore and import data.">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Explore and Import `Metopio` Health Atlas Data and Spatial Layers">
+<meta name="description" content="Allows for painless use of the Metopio health atlas APIs to explore and import data.">
+<meta property="og:description" content="Allows for painless use of the Metopio health atlas APIs to explore and import data.">
 <meta property="og:image" content="https://ryanzomorrodi.github.io/ChicagoHA/logo.png">
 </head>
 <body>
@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="index.html">ChicagoHA</a>
+    <a class="navbar-brand me-2" href="index.html">healthatlas</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
 
@@ -59,30 +59,45 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="chicagoha">ChicagoHA<a class="anchor" aria-label="anchor" href="#chicagoha"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="healthatlas">healthatlas<a class="anchor" aria-label="anchor" href="#healthatlas"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<p>Explore and Import Chicago Health Atlas Data and Spatial Layers.</p>
-<p>The Chicago Health Atlas is a collaboration between the Chicago Department of Public Health and PHAME Center at UIC, which aims to provide a place to “review, explore and compare health-related data over time and across communities.” With the same spirit in mind, this tool aims to make Chicago health data analysis within R more painless and reproducable. For more information about the Chicago Health Atlas check out the <a href="https://chicagohealthatlas.org/" class="external-link">Chicago Health Atlas website</a>.</p>
-<p><strong>Note:</strong> This is an unofficial R wrapper for the Chicago Health Atlas. This package is in no way affiliated with the Chicago Department of Public Health or PHAME Center at UIC.</p>
+<!-- badges: end -->
+<p>Explore and Import <em>Metopio</em> Powered Health Atlases.</p>
+<p><a href="https://metopio.com/" class="external-link">Metopio</a> helps many public health departments build curated data platforms. These data platforms are a convenient way for community members and researchers to explore and download public health data. With the same spirit in mind, this package aim to make interfacing with these data portals within R more <strong>painless</strong> and <strong>reproducable</strong>.</p>
+<p><strong>Note:</strong> This is an unofficial R wrapper for Metopio Health Atlases. This package is in no way affiliated with the Metopio or any of the public health departments Metopio serves.</p>
+<p>Examples of Metopio health atlases include:</p>
+<ul>
+<li>Chicago Health Atlas: <a href="https://chicagohealthatlas.org/" class="external-link uri">https://chicagohealthatlas.org/</a><br>
+</li>
+<li>Cook County Health Atlas: <a href="https://cookcountyhealthatlas.org/" class="external-link uri">https://cookcountyhealthatlas.org/</a><br>
+</li>
+<li>Idaho Oregon Community Health Atlas: <a href="https://idahooregoncommunityhealthatlas.org/" class="external-link uri">https://idahooregoncommunityhealthatlas.org/</a><br>
+</li>
+<li>Northern Kentucky Health Atlas: <a href="https://atlas.northernkentuckyusa.com/" class="external-link uri">https://atlas.northernkentuckyusa.com/</a>
+</li>
+</ul>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of ChicagoHA from <a href="https://github.com/ryanzomorrodi/ChicagoHA" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of healthatlas from <a href="https://github.com/ryanzomorrodi/healthatlas" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"ryanzomorrodi/ChicagoHA"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"ryanzomorrodi/healthatlas"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/ChicagoHA/">ChicagoHA</a></span><span class="op">)</span></span></code></pre></div>
-<p>We can list all the topics (aka indicators) present within Chicago Health Atlas using <code><a href="reference/cha_topics.html">cha_topics()</a></code>. The most important column here is the <code>topic_key</code> which can be used to identify the topic within subsequent functions.</p>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/healthatlas/" class="external-link">healthatlas</a></span><span class="op">)</span></span></code></pre></div>
+<p>Set your health atlas. For this example, we are going to use the Chicago Health Atlas, and can do so, by providing the Chicago Health Atlas URL to <code><a href="reference/ha_set.html">ha_set()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cha_topics.html">cha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ha_set.html">ha_set</a></span><span class="op">(</span><span class="st">"chicagohealthatlas.org"</span><span class="op">)</span></span></code></pre></div>
+<p>We can list all the topics (aka indicators) present within Chicago Health Atlas using <code><a href="reference/ha_topics.html">ha_topics()</a></code>. The most important column here is the <code>topic_key</code> which can be used to identify the topic within subsequent functions.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 403 × 7</span></span>
 <span><span class="co">#&gt;    topic_name           topic_key topic_description topic_units subcategory_name</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;           </span></span>
@@ -98,9 +113,9 @@
 <span><span class="co">#&gt; 10 Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease </span></span>
 <span><span class="co">#&gt; # ℹ 393 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 2 more variables: subcategory_key &lt;chr&gt;, category &lt;chr&gt;</span></span></code></pre></div>
-<p>Then, we can explore what populations, time periods, and geographic scales that data is available for using <code><a href="reference/cha_coverage.html">cha_coverage()</a></code>. Again, the most important columns here are the key columns which can be used to specify the data desired.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/cha_coverage.html">cha_coverage</a></span><span class="op">(</span><span class="st">"EDA"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<p>Then, we can explore what populations, time periods, and geographic scales that data is available for using <code><a href="reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns here are the key columns which can be used to specify the data desired.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="reference/ha_coverage.html">ha_coverage</a></span><span class="op">(</span><span class="st">"EDA"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 132 × 6</span></span>
 <span><span class="co">#&gt;    population_key population_name population_grouping period_key layer_key</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;               &lt;chr&gt;      &lt;chr&gt;    </span></span>
@@ -116,9 +131,9 @@
 <span><span class="co">#&gt; 10 ""             Full population ""                  2013-2017  place    </span></span>
 <span><span class="co">#&gt; # ℹ 122 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 1 more variable: layer_name &lt;chr&gt;</span></span></code></pre></div>
-<p>Now, we can import our data using <code><a href="reference/cha_data.html">cha_data()</a></code> specifying the keys we identified above.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cha_data.html">cha_data</a></span><span class="op">(</span></span>
+<p>Now, we can import our data using <code><a href="reference/ha_data.html">ha_data()</a></code> specifying the keys we identified above.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
 <span>  topic_key <span class="op">=</span> <span class="st">"EDA"</span>,</span>
 <span>  population_key <span class="op">=</span> <span class="st">""</span>,</span>
 <span>  period_key <span class="op">=</span> <span class="st">"2018-2022"</span>,</span>
@@ -139,9 +154,9 @@
 <span><span class="co">#&gt;  9 1714000-42 EDA      96.3          3.63</span></span>
 <span><span class="co">#&gt; 10 1714000-1  EDA      93.9          2.72</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span></code></pre></div>
-<p>Let’s create a map. But first, we will need to download the Community Areas geographic layer. We can do that with <code><a href="reference/cha_layer.html">cha_layer()</a></code>.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">layer</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/cha_layer.html">cha_layer</a></span><span class="op">(</span></span>
+<p>Let’s create a map. But first, we will need to download the Community Areas geographic layer. We can do that with <code><a href="reference/ha_layer.html">ha_layer()</a></code>.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">layer</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ha_layer.html">ha_layer</a></span><span class="op">(</span></span>
 <span>  layer_key <span class="op">=</span> <span class="st">"neighborhood"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">layer</span></span>
@@ -165,7 +180,7 @@
 <span><span class="co">#&gt; 10 neighborhood 1714000-… Mont…      14412 IL    Nort… (((-87.78942 41.91752, -…</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span></code></pre></div>
 <p>Now we can make our map!</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
@@ -180,7 +195,7 @@
 <span>    fill <span class="op">=</span> <span class="st">""</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-7-1.png" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="100%"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
@@ -195,7 +210,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing ChicagoHA</a></li>
+<li><a href="authors.html#citation">Citing healthatlas</a></li>
 </ul>
 </div>
 
@@ -209,8 +224,8 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://ryanzomorrodi.r-universe.dev/ChicagoHA" class="external-link"><img src="https://ryanzomorrodi.r-universe.dev/badges/ChicagoHA" alt="ChicagoHA status badge"></a></li>
-<li><a href="https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ryanzomorrodi/ChicagoHA/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
+<li><a href="https://ryanzomorrodi.r-universe.dev/healthatlas" class="external-link"><img src="https://ryanzomorrodi.r-universe.dev/badges/healthatlas" alt="healthatlas status badge"></a></li>
+<li><a href="https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
