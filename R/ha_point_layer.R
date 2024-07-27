@@ -1,7 +1,7 @@
 #' List Point Layers
 #'
 #' @description
-#' List point layers available.
+#' List all point layers available.
 #' 
 #' @return Point layer information tibble.
 #' @export

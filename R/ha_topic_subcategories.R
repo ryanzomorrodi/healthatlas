@@ -1,5 +1,9 @@
 #' List Topic Subcategories
 #'
+#' @description
+#' List the topic subcategories, which can be
+#' used to filter topics within `ha_topics()`.
+#' 
 #' @return Topic subcategory tibble
 #' @export
 #'

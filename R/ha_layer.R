@@ -1,7 +1,7 @@
 #' List Geographic Layers
 #' 
 #' @description
-#' List geographic layers available.
+#' List all geographic layers available.
 #' 
 #' @return Layer information tibble.
 #' @export

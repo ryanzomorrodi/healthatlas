@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 Explore and Import *Metopio* Powered Health Atlases.
 
-[Metopio](https://metopio.com/) helps many public health departments build curated data platforms. These data platforms are a convenient way for community members and researchers to explore and download public health data. With the same spirit in mind, this package aim to make interfacing with these data portals within R more **painless** and **reproducable**.
+[Metopio](https://metopio.com/) helps many public health departments build curated data platforms. These data platforms are a convenient way for community members and researchers to explore and download public health data. With the same spirit in mind, this package aim to make interfacing with these data portals within R more **painless** and **reproducible**.
 
 **Note:** This is an unofficial R wrapper for Metopio Health Atlases. This package is in no way affiliated with the Metopio or any of the public health departments Metopio serves.
 
@@ -32,7 +32,7 @@ Examples of Metopio health atlases include:
 -   Chicago Health Atlas: <https://chicagohealthatlas.org/>  
 -   Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
 -   Idaho Oregon Community Health Atlas: <https://idahooregoncommunityhealthatlas.org/>  
--   Northern Kentucky Health Atlas: <https://atlas.northernkentuckyusa.com/>
+-   Northern Kentucky Atlas: <https://atlas.northernkentuckyusa.com/>
 
 ## Installation
 

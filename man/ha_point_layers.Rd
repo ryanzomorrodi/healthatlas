@@ -10,7 +10,7 @@ ha_point_layers()
 Point layer information tibble.
 }
 \description{
-List point layers available.
+List all point layers available.
 }
 \examples{
 ha_set("chicagohealthatlas.org")

@@ -3,7 +3,7 @@
 #' @description
 #' List all combinations of population, periods, and
 #' geographic layers available for a given topic. To
-#' search for individual topics use `ha_topics`.
+#' search for individual topics use `ha_topics()`.
 #' @param topic_key 3-8 letter ID uniquely identifying
 #' a topic.
 #' @param progress Display a progress bar?

@@ -2,7 +2,7 @@
 % Please edit documentation in R/ha_topics.R
 \name{ha_topics}
 \alias{ha_topics}
-\title{List Population Stratifications}
+\title{List Topics}
 \usage{
 ha_topics(subcategory_key = NULL, progress = TRUE)
 }
@@ -16,7 +16,8 @@ topic subcategory}
 Topics information tibble
 }
 \description{
-List Population Stratifications
+List all topics available with descriptions
+and units.
 }
 \examples{
 ha_set("chicagohealthatlas.org")

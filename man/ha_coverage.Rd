@@ -18,7 +18,7 @@ Topic coverage tibble
 \description{
 List all combinations of population, periods, and
 geographic layers available for a given topic. To
-search for individual topics use \code{ha_topics}.
+search for individual topics use \code{ha_topics()}.
 }
 \examples{
 ha_set("chicagohealthatlas.org")

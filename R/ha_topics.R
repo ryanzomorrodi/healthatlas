@@ -1,5 +1,8 @@
-#' List Population Stratifications
+#' List Topics
 #'
+#' @description
+#' List all topics available with descriptions
+#' and units.
 #' @param subcategory_key Unique id for a
 #' topic subcategory
 #' @param progress Display a progress bar?

@@ -10,7 +10,7 @@ ha_layers()
 Layer information tibble.
 }
 \description{
-List geographic layers available.
+List all geographic layers available.
 }
 \examples{
 ha_set("chicagohealthatlas.org")

@@ -1,8 +1,7 @@
 ha_req <- function(endpoint) {
   if (!curl::has_internet()) {
     stop("Your API call has errors. No Internet Connection.")
-  }
-  if (is.null(ha_get())) {
+  } else if (is.null(ha_get())) {
     stop("Set your portal using ha_set()")
   }
 

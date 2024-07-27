@@ -1,5 +1,5 @@
 Package: healthatlas
-Title: Explore and Import `Metopio` Health Atlas Data and Spatial Layers
+Title: Explore and Import 'Metopio' Health Atlas Data and Spatial Layers
 Version: 0.0.0.9000
 Authors@R: 
     person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"),
