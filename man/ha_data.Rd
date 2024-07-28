@@ -7,14 +7,17 @@
 ha_data(topic_key, population_key, period_key, layer_key, wide = FALSE)
 }
 \arguments{
-\item{topic_key}{Unique ID specifying a topic.}
+\item{topic_key}{Character string or vector of
+Unique IDs specifying topics.}
 
-\item{population_key}{Unique ID for a population
-stratification.}
+\item{population_key}{Character string or vector of
+Unique IDs for population stratifications.}
 
-\item{period_key}{Unique ID for a time period.}
+\item{period_key}{Character string or vector of
+Unique IDs for time periods.}
 
-\item{layer_key}{Unique ID for a geographic layer.}
+\item{layer_key}{Character string or vector of
+Unique IDs for geographic layers.}
 
 \item{wide}{Pivot wider so that each row contains
 the values of all topics within a population at a
