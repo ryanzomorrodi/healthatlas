@@ -4,8 +4,9 @@
 #' List all combinations of population, periods, and
 #' geographic layers available for a given topic. To
 #' search for individual topics use `ha_topics()`.
-#' @param topic_key 3-8 letter ID uniquely identifying
-#' a topic.
+#' @param topic_key Unique ID specifying a topic.
+#' @param layer_key Character string or vector of 
+#' Unique IDs for geographic layers.
 #' @param progress Display a progress bar?
 #'
 #' @return Topic coverage tibble
@@ -15,8 +16,8 @@
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_coverage("POP", progress = FALSE)
-ha_coverage <- function(topic_key, progress = TRUE) {
-  body <- ha_api_coverage_req(topic_key) |>
+ha_coverage <- function(topic_key, layer_key = NULL, progress = TRUE) {
+  body <- ha_api_coverage_req(topic_key, layer_key) |>
     ha_req_perform() |>
     ha_resp_body("coverages")
 

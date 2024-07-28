@@ -44,7 +44,7 @@ ha_api_regions_req <- function(label = NULL) {
 ha_api_coverage_req <- function(topic, layers = NULL) {
   ha_req("coverage") |>
     httr2::req_url_path_append(topic) |>
-    httr2::req_url_query(layers = layers)
+    httr2::req_url_query(layers = layers, .multi = "comma")
 }
 
 ha_api_data_req <- function(topic, population, period, layer) {
@@ -53,6 +53,7 @@ ha_api_data_req <- function(topic, population, period, layer) {
       topic =  topic,
       population = population,
       period = period,
-      layer = layer
+      layer = layer,
+      .multi = "comma"
     )
 }

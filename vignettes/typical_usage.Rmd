@@ -36,7 +36,7 @@ topics <- ha_topics(progress = FALSE)
 topics
 ```
 
-Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_topc_subcategories()`.
+Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_topic_subcategories()`.
 ```{r}
 subcategories <- ha_topic_subcategories()
 subcategories
@@ -104,7 +104,7 @@ point_layers <- ha_point_layers()
 point_layers
 ```
 
-Grocery store locations may be an important aspect of the ease of access to fruits and vegetables, we can import this layer by providing the `point_layer_uuid` to `ha_point_layer()`.
+Grocery store locations may be an important aspect of the ease of access to fruits and vegetables. We can import this layer by providing the `point_layer_uuid` to `ha_point_layer()`.
 ```{r}
 grocery_stores <- ha_point_layer("7d9caf3c-75e6-4382-8c97-069696a3efbf")
 ```

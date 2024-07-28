@@ -4,7 +4,7 @@
 \alias{ha_data}
 \title{Obtain Data}
 \usage{
-ha_data(topic_key, population_key, period_key, layer_key)
+ha_data(topic_key, population_key, period_key, layer_key, wide = FALSE)
 }
 \arguments{
 \item{topic_key}{Unique ID specifying a topic.}
@@ -15,14 +15,23 @@ stratification.}
 \item{period_key}{Unique ID for a time period.}
 
 \item{layer_key}{Unique ID for a geographic layer.}
+
+\item{wide}{Pivot wider so that each row contains
+the values of all topics within a population at a
+specified time period and a geographic area?}
 }
 \value{
 Data tibble containing value and standard
-error for topic measure.
+error for each topic measure.
 }
 \description{
-Obtain data for a topic within a population at a
-specified time period and a geographic scale.
+Obtain data for one or more topics within specificied
+populations for specified time periods and geographic
+scale.
+
+All combinations of topic, population, period, and layer
+will be returned. Warnings will be generated for any
+invalid combinations.
 }
 \examples{
 ha_set("chicagohealthatlas.org")
