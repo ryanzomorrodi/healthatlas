@@ -17,9 +17,11 @@
 #' Unique IDs for time periods.
 #' @param layer_key Character string or vector of 
 #' Unique IDs for geographic layers.
+#' @param geometry Attach geometry to output?
 #' @param wide Pivot wider so that each row contains 
 #' the values of all topics within a population at a 
 #' specified time period and a geographic area?
+#' @param progress Display a progress bar?
 #'
 #' @return Data tibble containing value and standard
 #' error for each topic measure.
@@ -29,7 +31,7 @@
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_data("POP", "H", "2014-2018", "zip")
-ha_data <- function(topic_key, population_key, period_key, layer_key, wide = FALSE) {
+ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, wide = FALSE, progress = TRUE) {
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
     ha_req_perform() |>
     ha_resp_body("results")
@@ -77,5 +79,17 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, wide = FAL
       names_vary = "slowest"
     )
   }
+  if (geometry) {
+    layer <- ha_layer(layer_key, progress)
+
+    output <- output |>
+      dplyr::left_join(
+        dplyr::select(layer, "geoid"), 
+        "geoid"
+      ) |>
+      sf::st_as_sf()
+  }
+
+
   output
 }

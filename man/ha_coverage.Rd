@@ -4,13 +4,15 @@
 \alias{ha_coverage}
 \title{List Topic Coverage}
 \usage{
-ha_coverage(topic_key, layer_key = NULL, progress = TRUE)
+ha_coverage(topic_key, layer_key = NULL, keys_only = FALSE, progress = TRUE)
 }
 \arguments{
 \item{topic_key}{Unique ID specifying a topic.}
 
 \item{layer_key}{Character string or vector of
 Unique IDs for geographic layers.}
+
+\item{keys_only}{Return only keys?}
 
 \item{progress}{Display a progress bar?}
 }

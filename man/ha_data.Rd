@@ -4,7 +4,15 @@
 \alias{ha_data}
 \title{Obtain Data}
 \usage{
-ha_data(topic_key, population_key, period_key, layer_key, wide = FALSE)
+ha_data(
+  topic_key,
+  population_key,
+  period_key,
+  layer_key,
+  geometry = FALSE,
+  wide = FALSE,
+  progress = TRUE
+)
 }
 \arguments{
 \item{topic_key}{Character string or vector of
@@ -19,9 +27,13 @@ Unique IDs for time periods.}
 \item{layer_key}{Character string or vector of
 Unique IDs for geographic layers.}
 
+\item{geometry}{Attach geometry to output?}
+
 \item{wide}{Pivot wider so that each row contains
 the values of all topics within a population at a
 specified time period and a geographic area?}
+
+\item{progress}{Display a progress bar?}
 }
 \value{
 Data tibble containing value and standard

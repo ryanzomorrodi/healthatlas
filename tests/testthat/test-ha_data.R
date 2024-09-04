@@ -96,3 +96,24 @@ test_that("check data with two topics and two periods wide", {
   "check 77 * 2 rows"
   expect_equal(nrow(data), 77 * 2)
 })
+
+test_that("check data with two topics and two periods and geometry", {
+  skip_if_offline(cha_url)
+  skip_on_cran()
+
+  ha_set(cha_url)
+  topics <- c("EDB", "EDE")
+  data <- ha_data(topics, "", c("2017-2021", "2018-2022"), "neighborhood", geometry = TRUE)
+
+  "expect a tibble"
+  expect_s3_class(data, "sf")
+  expect_s3_class(data, "tbl_df")
+  expect_s3_class(data, "tbl")
+  expect_s3_class(data, "data.frame")
+
+  "check table names"
+  expect_equal(names(data), c(data_header_long, "geometry"))
+  
+  "check 77 * 2 rows"
+  expect_equal(nrow(data), 77 * 4)
+})
