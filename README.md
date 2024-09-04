@@ -30,8 +30,7 @@ Examples of Metopio health atlases include:
 - Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
 - Idaho Oregon Community Health Atlas:
   <https://idahooregoncommunityhealthatlas.org/>  
-- Northern Kentucky Atlas:
-  <https://atlas.northernkentuckyusa.com/>
+- Northern Kentucky Atlas: <https://atlas.northernkentuckyusa.com/>
 
 ## Installation
 
@@ -78,7 +77,7 @@ ha_topics(progress = FALSE)
 #>  9 Adult binge drinkin… HCSBDP    Percent of adult… % of adults Alcohol & Drug …
 #> 10 Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease 
 #> # ℹ 393 more rows
-#> # ℹ 2 more variables: subcategory_key <chr>, category <chr>
+#> # ℹ 2 more variables: subcategory_key <chr>, category_name <chr>
 ```
 
 Then, we can explore what populations, time periods, and geographic
@@ -116,19 +115,19 @@ data <- ha_data(
   layer_key = "neighborhood"
 )
 data
-#> # A tibble: 77 × 4
-#>    geoid      measure value standardError
-#>    <chr>      <chr>   <dbl>         <dbl>
-#>  1 1714000-35 EDA      96.1          4.64
-#>  2 1714000-36 EDA      98.5          4.64
-#>  3 1714000-37 EDA      96.0          6.93
-#>  4 1714000-38 EDA      97.0          4.69
-#>  5 1714000-39 EDA      98.4          7.34
-#>  6 1714000-4  EDA      96.1          3.18
-#>  7 1714000-40 EDA      97.5          6.86
-#>  8 1714000-41 EDA      99.0          5.27
-#>  9 1714000-42 EDA      96.3          3.63
-#> 10 1714000-1  EDA      93.9          2.72
+#> # A tibble: 77 × 7
+#>    geoid      topic_key population_key period_key layer_key  value standardError
+#>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl>         <dbl>
+#>  1 1714000-35 EDA       ""             2018-2022  neighborh…  96.1          4.64
+#>  2 1714000-36 EDA       ""             2018-2022  neighborh…  98.5          4.64
+#>  3 1714000-37 EDA       ""             2018-2022  neighborh…  96.0          6.93
+#>  4 1714000-38 EDA       ""             2018-2022  neighborh…  97.0          4.69
+#>  5 1714000-39 EDA       ""             2018-2022  neighborh…  98.4          7.34
+#>  6 1714000-4  EDA       ""             2018-2022  neighborh…  96.1          3.18
+#>  7 1714000-40 EDA       ""             2018-2022  neighborh…  97.5          6.86
+#>  8 1714000-41 EDA       ""             2018-2022  neighborh…  99.0          5.27
+#>  9 1714000-42 EDA       ""             2018-2022  neighborh…  96.3          3.63
+#> 10 1714000-1  EDA       ""             2018-2022  neighborh…  93.9          2.72
 #> # ℹ 67 more rows
 ```
 
@@ -139,6 +138,12 @@ Areas geographic layer. We can do that with `ha_layer()`.
 layer <- ha_layer(
   layer_key = "neighborhood"
 )
+#> Iterating ■■■■■■■■■■■■■■■■                  50% | ETA:  2s
+#> Iterating ■■■■■■■■■■■■■■■■■■■■■■■           75% | ETA:  2s
+#> Iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
+```
+
+``` r
 layer
 #> Simple feature collection with 77 features and 6 fields
 #> Geometry type: MULTIPOLYGON
@@ -148,16 +153,16 @@ layer
 #> # A tibble: 77 × 7
 #>    layer_key    geoid     name  population state notes                  geometry
 #>  * <chr>        <chr>     <chr>      <int> <chr> <chr>        <MULTIPOLYGON [°]>
-#>  1 neighborhood 1714000-1 Roge…      55454 IL    Far … (((-87.65456 41.99818, -…
-#>  2 neighborhood 1714000-… Norw…      41069 IL    Far … (((-87.78002 41.99742, -…
-#>  3 neighborhood 1714000-… Jeff…      26201 IL    Far … (((-87.75264 41.96798, -…
-#>  4 neighborhood 1714000-… Fore…      19579 IL    Far … (((-87.72642 41.99726, -…
-#>  5 neighborhood 1714000-… Nort…      17522 IL    Far … (((-87.7069 41.98309, -8…
-#>  6 neighborhood 1714000-… Alba…      48549 IL    Far … (((-87.70404 41.97356, -…
-#>  7 neighborhood 1714000-… Port…      63038 IL    Nort… (((-87.75264 41.96798, -…
-#>  8 neighborhood 1714000-… Irvi…      51911 IL    Nort… (((-87.69475 41.96128, -…
-#>  9 neighborhood 1714000-… Dunn…      43120 IL    Nort… (((-87.77621 41.93846, -…
-#> 10 neighborhood 1714000-… Mont…      14412 IL    Nort… (((-87.78942 41.91752, -…
+#>  1 neighborhood 1714000-6 Lake…     103048 IL    Nort… (((-87.64102 41.95481, -…
+#>  2 neighborhood 1714000-8 Near…      97789 IL    Cent… (((-87.62446 41.91158, -…
+#>  3 neighborhood 1714000-… Aust…      96753 IL    West… (((-87.78942 41.91752, -…
+#>  4 neighborhood 1714000-… West…      87942 IL    West… (((-87.65686 41.91079, -…
+#>  5 neighborhood 1714000-… Belm…      78151 IL    Nort… (((-87.74134 41.91391, -…
+#>  6 neighborhood 1714000-2 West…      77139 IL    Far … (((-87.68465 42.01949, -…
+#>  7 neighborhood 1714000-… Loga…      71742 IL    Nort… (((-87.68284 41.93224, -…
+#>  8 neighborhood 1714000-… Sout…      71402 IL    West… (((-87.6874 41.83481, -8…
+#>  9 neighborhood 1714000-7 Linc…      70425 IL    Nort… (((-87.63182 41.93259, -…
+#> 10 neighborhood 1714000-… Near…      67817 IL    West… (((-87.63759 41.88624, -…
 #> # ℹ 67 more rows
 ```
 

@@ -1,7 +1,7 @@
 #' Obtain Data
 #'
 #' @description
-#' Obtain data for one or more topics within specificied
+#' Obtain data for one or more topics within specified
 #' populations for specified time periods and geographic
 #' scale.
 #' 

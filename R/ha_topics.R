@@ -34,7 +34,7 @@ ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
         "topic_units" = "units",
         "subcategory_name",
         "subcategory_key",
-        "category"
+        "category_name" = "category"
       )
     )
 }

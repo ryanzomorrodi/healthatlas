@@ -36,9 +36,9 @@ topics <- ha_topics(progress = FALSE)
 topics
 ```
 
-Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_topic_subcategories()`.
+Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_subcategories()`.
 ```{r}
-subcategories <- ha_topic_subcategories()
+subcategories <- ha_subcategories()
 subcategories
 ```
 

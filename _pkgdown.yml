@@ -13,7 +13,7 @@ reference:
   subtitle: Explore data
   contents:
   - ha_topics
-  - ha_topic_subcategories
+  - ha_subcategories
   - ha_coverage
 
 - subtitle: Import data

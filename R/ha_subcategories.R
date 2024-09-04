@@ -10,8 +10,8 @@
 #' @examples
 #' ha_set("chicagohealthatlas.org")
 #' 
-#' ha_topic_subcategories()
-ha_topic_subcategories <- function() {
+#' ha_subcategories()
+ha_subcategories <- function() {
   body <- ha_api_categories_req() |>
     ha_req_perform() |>
     ha_resp_body("results")
@@ -22,8 +22,8 @@ ha_topic_subcategories <- function() {
     tidyr::unnest_wider("subcategories", names_sep = "_") |>
     dplyr::select(
       c(
-        "subcategories_name",
-        "subcategories_key" = "subcategories_slug",
+        "subcategory_name" = "subcategories_name",
+        "subcategory_key" = "subcategories_slug",
         "category_name" = "name"
       )
     )

@@ -28,7 +28,7 @@ Data tibble containing value and standard
 error for each topic measure.
 }
 \description{
-Obtain data for one or more topics within specificied
+Obtain data for one or more topics within specified
 populations for specified time periods and geographic
 scale.
 
