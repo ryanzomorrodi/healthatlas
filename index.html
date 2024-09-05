@@ -85,7 +85,7 @@
 <p>You can install the development version of healthatlas from <a href="https://github.com/ryanzomorrodi/healthatlas" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pkg_install.html" class="external-link">pkg_install</a></span><span class="op">(</span><span class="st">"ryanzomorrodi/healthatlas"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">pak</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="st">"ryanzomorrodi/healthatlas"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
@@ -112,25 +112,25 @@
 <span><span class="co">#&gt;  9 Adult binge drinkin… HCSBDP    Percent of adult… % of adults Alcohol &amp; Drug …</span></span>
 <span><span class="co">#&gt; 10 Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease </span></span>
 <span><span class="co">#&gt; # ℹ 393 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 2 more variables: subcategory_key &lt;chr&gt;, category &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # ℹ 2 more variables: subcategory_key &lt;chr&gt;, category_name &lt;chr&gt;</span></span></code></pre></div>
 <p>Then, we can explore what populations, time periods, and geographic scales that data is available for using <code><a href="reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns here are the key columns which can be used to specify the data desired.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ha_coverage.html">ha_coverage</a></span><span class="op">(</span><span class="st">"EDA"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 132 × 6</span></span>
-<span><span class="co">#&gt;    population_key population_name population_grouping period_key layer_key</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;               &lt;chr&gt;      &lt;chr&gt;    </span></span>
-<span><span class="co">#&gt;  1 ""             Full population ""                  2018-2022  place    </span></span>
-<span><span class="co">#&gt;  2 ""             Full population ""                  2022       place    </span></span>
-<span><span class="co">#&gt;  3 ""             Full population ""                  2017-2021  place    </span></span>
-<span><span class="co">#&gt;  4 ""             Full population ""                  2021       place    </span></span>
-<span><span class="co">#&gt;  5 ""             Full population ""                  2016-2020  place    </span></span>
-<span><span class="co">#&gt;  6 ""             Full population ""                  2015-2019  place    </span></span>
-<span><span class="co">#&gt;  7 ""             Full population ""                  2019       place    </span></span>
-<span><span class="co">#&gt;  8 ""             Full population ""                  2014-2018  place    </span></span>
-<span><span class="co">#&gt;  9 ""             Full population ""                  2018       place    </span></span>
-<span><span class="co">#&gt; 10 ""             Full population ""                  2013-2017  place    </span></span>
+<span><span class="co">#&gt; # A tibble: 132 × 7</span></span>
+<span><span class="co">#&gt;    topic_key population_key population_name population_grouping period_key</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;               &lt;chr&gt;     </span></span>
+<span><span class="co">#&gt;  1 EDA       ""             Full population ""                  2018-2022 </span></span>
+<span><span class="co">#&gt;  2 EDA       ""             Full population ""                  2022      </span></span>
+<span><span class="co">#&gt;  3 EDA       ""             Full population ""                  2017-2021 </span></span>
+<span><span class="co">#&gt;  4 EDA       ""             Full population ""                  2021      </span></span>
+<span><span class="co">#&gt;  5 EDA       ""             Full population ""                  2016-2020 </span></span>
+<span><span class="co">#&gt;  6 EDA       ""             Full population ""                  2015-2019 </span></span>
+<span><span class="co">#&gt;  7 EDA       ""             Full population ""                  2019      </span></span>
+<span><span class="co">#&gt;  8 EDA       ""             Full population ""                  2014-2018 </span></span>
+<span><span class="co">#&gt;  9 EDA       ""             Full population ""                  2018      </span></span>
+<span><span class="co">#&gt; 10 EDA       ""             Full population ""                  2013-2017 </span></span>
 <span><span class="co">#&gt; # ℹ 122 more rows</span></span>
-<span><span class="co">#&gt; # ℹ 1 more variable: layer_name &lt;chr&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # ℹ 2 more variables: layer_key &lt;chr&gt;, layer_name &lt;chr&gt;</span></span></code></pre></div>
 <p>Now, we can import our data using <code><a href="reference/ha_data.html">ha_data()</a></code> specifying the keys we identified above.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
@@ -140,19 +140,19 @@
 <span>  layer_key <span class="op">=</span> <span class="st">"neighborhood"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="va">data</span></span>
-<span><span class="co">#&gt; # A tibble: 77 × 4</span></span>
-<span><span class="co">#&gt;    geoid      measure value standardError</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;         &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 1714000-35 EDA      96.1          4.64</span></span>
-<span><span class="co">#&gt;  2 1714000-36 EDA      98.5          4.64</span></span>
-<span><span class="co">#&gt;  3 1714000-37 EDA      96.0          6.93</span></span>
-<span><span class="co">#&gt;  4 1714000-38 EDA      97.0          4.69</span></span>
-<span><span class="co">#&gt;  5 1714000-39 EDA      98.4          7.34</span></span>
-<span><span class="co">#&gt;  6 1714000-4  EDA      96.1          3.18</span></span>
-<span><span class="co">#&gt;  7 1714000-40 EDA      97.5          6.86</span></span>
-<span><span class="co">#&gt;  8 1714000-41 EDA      99.0          5.27</span></span>
-<span><span class="co">#&gt;  9 1714000-42 EDA      96.3          3.63</span></span>
-<span><span class="co">#&gt; 10 1714000-1  EDA      93.9          2.72</span></span>
+<span><span class="co">#&gt; # A tibble: 77 × 7</span></span>
+<span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;      &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;      &lt;chr&gt;      &lt;dbl&gt;         &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 1714000-35 EDA       ""             2018-2022  neighborh…  96.1          4.64</span></span>
+<span><span class="co">#&gt;  2 1714000-36 EDA       ""             2018-2022  neighborh…  98.5          4.64</span></span>
+<span><span class="co">#&gt;  3 1714000-37 EDA       ""             2018-2022  neighborh…  96.0          6.93</span></span>
+<span><span class="co">#&gt;  4 1714000-38 EDA       ""             2018-2022  neighborh…  97.0          4.69</span></span>
+<span><span class="co">#&gt;  5 1714000-39 EDA       ""             2018-2022  neighborh…  98.4          7.34</span></span>
+<span><span class="co">#&gt;  6 1714000-4  EDA       ""             2018-2022  neighborh…  96.1          3.18</span></span>
+<span><span class="co">#&gt;  7 1714000-40 EDA       ""             2018-2022  neighborh…  97.5          6.86</span></span>
+<span><span class="co">#&gt;  8 1714000-41 EDA       ""             2018-2022  neighborh…  99.0          5.27</span></span>
+<span><span class="co">#&gt;  9 1714000-42 EDA       ""             2018-2022  neighborh…  96.3          3.63</span></span>
+<span><span class="co">#&gt; 10 1714000-1  EDA       ""             2018-2022  neighborh…  93.9          2.72</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span></code></pre></div>
 <p>Let’s create a map. But first, we will need to download the Community Areas geographic layer. We can do that with <code><a href="reference/ha_layer.html">ha_layer()</a></code>.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -168,16 +168,16 @@
 <span><span class="co">#&gt; # A tibble: 77 × 7</span></span>
 <span><span class="co">#&gt;    layer_key    geoid     name  population state notes                  geometry</span></span>
 <span><span class="co">#&gt;  * &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;MULTIPOLYGON [°]&gt;</span></span>
-<span><span class="co">#&gt;  1 neighborhood 1714000-1 Roge…      55454 IL    Far … (((-87.65456 41.99818, -…</span></span>
-<span><span class="co">#&gt;  2 neighborhood 1714000-… Norw…      41069 IL    Far … (((-87.78002 41.99742, -…</span></span>
-<span><span class="co">#&gt;  3 neighborhood 1714000-… Jeff…      26201 IL    Far … (((-87.75264 41.96798, -…</span></span>
-<span><span class="co">#&gt;  4 neighborhood 1714000-… Fore…      19579 IL    Far … (((-87.72642 41.99726, -…</span></span>
-<span><span class="co">#&gt;  5 neighborhood 1714000-… Nort…      17522 IL    Far … (((-87.7069 41.98309, -8…</span></span>
-<span><span class="co">#&gt;  6 neighborhood 1714000-… Alba…      48549 IL    Far … (((-87.70404 41.97356, -…</span></span>
-<span><span class="co">#&gt;  7 neighborhood 1714000-… Port…      63038 IL    Nort… (((-87.75264 41.96798, -…</span></span>
-<span><span class="co">#&gt;  8 neighborhood 1714000-… Irvi…      51911 IL    Nort… (((-87.69475 41.96128, -…</span></span>
-<span><span class="co">#&gt;  9 neighborhood 1714000-… Dunn…      43120 IL    Nort… (((-87.77621 41.93846, -…</span></span>
-<span><span class="co">#&gt; 10 neighborhood 1714000-… Mont…      14412 IL    Nort… (((-87.78942 41.91752, -…</span></span>
+<span><span class="co">#&gt;  1 neighborhood 1714000-6 Lake…     103048 IL    Nort… (((-87.64102 41.95481, -…</span></span>
+<span><span class="co">#&gt;  2 neighborhood 1714000-8 Near…      97789 IL    Cent… (((-87.62446 41.91158, -…</span></span>
+<span><span class="co">#&gt;  3 neighborhood 1714000-… Aust…      96753 IL    West… (((-87.78942 41.91752, -…</span></span>
+<span><span class="co">#&gt;  4 neighborhood 1714000-… West…      87942 IL    West… (((-87.65686 41.91079, -…</span></span>
+<span><span class="co">#&gt;  5 neighborhood 1714000-… Belm…      78151 IL    Nort… (((-87.74134 41.91391, -…</span></span>
+<span><span class="co">#&gt;  6 neighborhood 1714000-2 West…      77139 IL    Far … (((-87.68465 42.01949, -…</span></span>
+<span><span class="co">#&gt;  7 neighborhood 1714000-… Loga…      71742 IL    Nort… (((-87.68284 41.93224, -…</span></span>
+<span><span class="co">#&gt;  8 neighborhood 1714000-… Sout…      71402 IL    West… (((-87.6874 41.83481, -8…</span></span>
+<span><span class="co">#&gt;  9 neighborhood 1714000-7 Linc…      70425 IL    Nort… (((-87.63182 41.93259, -…</span></span>
+<span><span class="co">#&gt; 10 neighborhood 1714000-… Near…      67817 IL    West… (((-87.63759 41.88624, -…</span></span>
 <span><span class="co">#&gt; # ℹ 67 more rows</span></span></code></pre></div>
 <p>Now we can make our map!</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
