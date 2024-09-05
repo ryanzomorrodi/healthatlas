@@ -1,5 +1,3 @@
-# healthatlas (development version)
+# bcdata 0.1.0
 
-* Initial CRAN submission.
-
-
+* Initial Release
