@@ -23,5 +23,6 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-URL: https://ryanzomorrodi.github.io/healthatlas/
+URL: https://ryanzomorrodi.github.io/healthatlas/, https://github.com/ryanzomorrodi/healthatlas
 Config/testthat/edition: 3
+BugReports: https://github.com/ryanzomorrodi/healthatlas/issues
