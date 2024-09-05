@@ -10,7 +10,9 @@ ha_get()
 Get health atlas currently connected to.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_get()
+}
 }

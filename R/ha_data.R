@@ -28,9 +28,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_data("POP", "H", "2014-2018", "zip")
+#' }
 ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, wide = FALSE, progress = TRUE) {
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
     ha_req_perform() |>

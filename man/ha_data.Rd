@@ -49,7 +49,9 @@ will be returned. Warnings will be generated for any
 invalid combinations.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_data("POP", "H", "2014-2018", "zip")
+}
 }

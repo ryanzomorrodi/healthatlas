@@ -14,7 +14,9 @@ List the topic subcategories, which can be
 used to filter topics within \code{ha_topics()}.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_subcategories()
+}
 }

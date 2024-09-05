@@ -8,9 +8,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_subcategories()
+#' }
 ha_subcategories <- function() {
   body <- ha_api_categories_req() |>
     ha_req_perform() |>

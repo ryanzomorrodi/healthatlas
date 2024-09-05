@@ -13,7 +13,9 @@ Point layer information tibble.
 List all point layers available.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_point_layers()
+}
 }

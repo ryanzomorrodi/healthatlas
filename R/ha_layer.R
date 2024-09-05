@@ -7,9 +7,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_layers()
+#' }
 ha_layers <- function() {
   body <- ha_api_layers_req() |>
     ha_req_perform() |>
@@ -38,9 +40,11 @@ ha_layers <- function() {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_layer("zip", progress = FALSE)
+#' }
 ha_layer <- function(layer_key, progress = TRUE) {
   key <- layer_key
 

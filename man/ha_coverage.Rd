@@ -25,7 +25,9 @@ geographic layers available for a given topic. To
 search for individual topics use \code{ha_topics()}.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_coverage("POP", progress = FALSE)
+}
 }

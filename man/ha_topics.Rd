@@ -20,7 +20,9 @@ List all topics available with descriptions
 and units.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_topics("education", progress = FALSE)
+}
 }

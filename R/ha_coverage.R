@@ -14,9 +14,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_coverage("POP", progress = FALSE)
+#' }
 ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress = TRUE) {
   body <- ha_api_coverage_req(topic_key, layer_key) |>
     ha_req_perform() |>

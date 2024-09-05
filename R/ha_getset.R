@@ -7,7 +7,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
+#' }
 ha_set <- function(ha_URL) {
   if (!grepl("^https://", ha_URL)) {
     ha_URL <- paste0("https://", ha_URL)
@@ -30,9 +32,11 @@ ha_set <- function(ha_URL) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_get()
+#' }
 ha_get <- function() {
   getOption("ha_URL")
 }

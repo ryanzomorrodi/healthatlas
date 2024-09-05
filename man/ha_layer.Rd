@@ -18,7 +18,9 @@ ha_layer(layer_key, progress = TRUE)
 Import geographic layer as a \code{sf} object.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_layer("zip", progress = FALSE)
+}
 }

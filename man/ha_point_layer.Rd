@@ -16,7 +16,9 @@ ha_point_layer(point_layer_uuid)
 Import point layer as a \code{sf} object.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
 
 ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")
+}
 }

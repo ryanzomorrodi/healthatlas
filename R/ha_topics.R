@@ -11,9 +11,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_topics("education", progress = FALSE)
+#' }
 ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
   body <- ha_api_topics_req(subcategory_key) |>
     ha_req_perform_iterative(progress) |>

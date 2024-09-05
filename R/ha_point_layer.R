@@ -7,9 +7,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_point_layers()
+#' }
 ha_point_layers <- function() {
   body <- ha_api_points_req() |>
     ha_req_perform() |>
@@ -35,10 +37,12 @@ ha_point_layers <- function() {
 #' @return `sf` point layer
 #' @export
 #'
-#' @examples
+#' @examples 
+#' \dontrun{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")
+#' }
 ha_point_layer <- function(point_layer_uuid) {
   body <- ha_api_points_req(point_layer_uuid) |>
     ha_req_perform() |>

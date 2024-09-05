@@ -39,7 +39,7 @@ You can install the development version of healthatlas from
 
 ``` r
 # install.packages("pak")
-pak::install("ryanzomorrodi/healthatlas")
+pak::pkg_install("ryanzomorrodi/healthatlas")
 ```
 
 ## Usage

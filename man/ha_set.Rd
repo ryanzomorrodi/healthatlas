@@ -13,5 +13,7 @@ ha_set(ha_URL)
 Set health atlas to connect to.
 }
 \examples{
+\dontrun{
 ha_set("chicagohealthatlas.org")
+}
 }
