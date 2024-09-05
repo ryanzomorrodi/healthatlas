@@ -52,9 +52,21 @@ ha_point_layer <- function(point_layer_uuid) {
     purrr::set_names(c("name", "lat", "lon")) |>
     sf::st_as_sf(coords = c("lon", "lat"), crs = 4326)
     
-  output$name <- purrr::map_chr(output$name, function(pt_name) {
-    xml2::xml_text(xml2::read_html(paste0("<x>", pt_name, "</x>")))
-  })
-
-  output
+  output |> 
+    dplyr::mutate("name" = strsplit(name, "<br>")) |>
+    dplyr::mutate("name" = 
+      purrr::map(name, function(x) {
+        if (length(x) == 1) {
+          names(x) <- "name"
+        } else if (length(x) == 2) {
+          names(x) <- c("name", "notes")
+        } else if (length(x) == 3) {
+          names(x) <- c("name", "addressLine_1", "addressLine_2")
+        }
+        x
+      })
+    ) |>
+    tidyr::unnest_wider("name") |>
+    dplyr::mutate(across(-c("geometry"), ~ gsub("<[^>]*>", "", .x))) |>
+    dplyr::mutate(across(-c("geometry"), ~ gsub("^\\s+|\\s+$", "", .x)))
 }

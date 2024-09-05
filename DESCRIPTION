@@ -16,8 +16,7 @@ Imports:
     purrr,
     sf,
     tibble,
-    tidyr,
-    xml2
+    tidyr
 Suggests: 
     ggplot2,
     knitr,
