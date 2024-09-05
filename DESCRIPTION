@@ -2,7 +2,7 @@ Package: healthatlas
 Title: Explore and Import 'Metopio' Health Atlas Data and Spatial Layers
 Version: 0.0.0.9000
 Authors@R: 
-    person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre"),
+    person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-6417-5985"))
 Description: Allows for painless use of the 'Metopio' health atlas APIs to explore and import data.
 License: MIT + file LICENSE

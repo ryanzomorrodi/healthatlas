@@ -35,7 +35,13 @@ Examples of Metopio health atlases include:
 
 ## Installation
 
-You can install the development version of healthatlas from
+You can install healthatlas from CRAN.
+
+``` r
+install.packages("healthatlas")
+```
+
+Or, you can install the development version of healthatlas from
 [GitHub](https://github.com/ryanzomorrodi/healthatlas) with:
 
 ``` r
