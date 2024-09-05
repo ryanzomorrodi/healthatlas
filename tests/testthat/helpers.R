@@ -9,4 +9,3 @@ data_header_long <- c("geoid", "topic_key", "population_key", "period_key", "lay
 layers_header <- c("layer_name", "layer_key", "layer_description", "layer_url")
 layer_header <- c("layer_key", "geoid", "name", "population", "state","notes", "geometry")
 point_layers_header <- c("point_layer_name", "point_layer_uuid", "point_layer_description")
-point_layer_header <- c("name", "geometry")

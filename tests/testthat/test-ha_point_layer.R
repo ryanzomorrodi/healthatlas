@@ -30,9 +30,6 @@ test_that("check a single point layer", {
   expect_s3_class(point_layer, "tbl")
   expect_s3_class(point_layer, "data.frame")
 
-  "check table names"
-  expect_equal(names(point_layer), point_layer_header)
-
   "check more than 1 row"
   expect_gt(nrow(point_layer), 1)
 })

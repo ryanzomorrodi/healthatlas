@@ -49,13 +49,13 @@ ha_point_layer <- function(point_layer_uuid) {
       body,
       names_sep = "_"
     ) |>
-    purrr::set_names(c("name", "lat", "lon")) |>
-    sf::st_as_sf(coords = c("lon", "lat"), crs = 4326)
+    purrr::set_names(c("name", "lat", "lon"))
     
   output |> 
-    dplyr::mutate("name" = strsplit(name, "<br>")) |>
+    dplyr::mutate("name" = gsub("&amp;", "&", !!as.symbol("name"))) |>
+    dplyr::mutate("name" = strsplit(!!as.symbol("name"), "<br>")) |>
     dplyr::mutate("name" = 
-      purrr::map(name, function(x) {
+      purrr::map(!!as.symbol("name"), function(x) {
         if (length(x) == 1) {
           names(x) <- "name"
         } else if (length(x) == 2) {
@@ -67,6 +67,7 @@ ha_point_layer <- function(point_layer_uuid) {
       })
     ) |>
     tidyr::unnest_wider("name") |>
-    dplyr::mutate(across(-c("geometry"), ~ gsub("<[^>]*>", "", .x))) |>
-    dplyr::mutate(across(-c("geometry"), ~ gsub("^\\s+|\\s+$", "", .x)))
+    dplyr::mutate(dplyr::across(-c("lat", "lon"), ~ gsub("<[^>]*>", "", .x))) |>
+    dplyr::mutate(dplyr::across(-c("lat", "lon"), ~ gsub("^\\s+|\\s+$", "", .x))) |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = 4326)
 }

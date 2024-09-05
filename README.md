@@ -87,21 +87,21 @@ the data desired.
 
 ``` r
 ha_coverage("EDA", progress = FALSE)
-#> # A tibble: 132 × 6
-#>    population_key population_name population_grouping period_key layer_key
-#>    <chr>          <chr>           <chr>               <chr>      <chr>    
-#>  1 ""             Full population ""                  2018-2022  place    
-#>  2 ""             Full population ""                  2022       place    
-#>  3 ""             Full population ""                  2017-2021  place    
-#>  4 ""             Full population ""                  2021       place    
-#>  5 ""             Full population ""                  2016-2020  place    
-#>  6 ""             Full population ""                  2015-2019  place    
-#>  7 ""             Full population ""                  2019       place    
-#>  8 ""             Full population ""                  2014-2018  place    
-#>  9 ""             Full population ""                  2018       place    
-#> 10 ""             Full population ""                  2013-2017  place    
+#> # A tibble: 132 × 7
+#>    topic_key population_key population_name population_grouping period_key
+#>    <chr>     <chr>          <chr>           <chr>               <chr>     
+#>  1 EDA       ""             Full population ""                  2018-2022 
+#>  2 EDA       ""             Full population ""                  2022      
+#>  3 EDA       ""             Full population ""                  2017-2021 
+#>  4 EDA       ""             Full population ""                  2021      
+#>  5 EDA       ""             Full population ""                  2016-2020 
+#>  6 EDA       ""             Full population ""                  2015-2019 
+#>  7 EDA       ""             Full population ""                  2019      
+#>  8 EDA       ""             Full population ""                  2014-2018 
+#>  9 EDA       ""             Full population ""                  2018      
+#> 10 EDA       ""             Full population ""                  2013-2017 
 #> # ℹ 122 more rows
-#> # ℹ 1 more variable: layer_name <chr>
+#> # ℹ 2 more variables: layer_key <chr>, layer_name <chr>
 ```
 
 Now, we can import our data using `ha_data()` specifying the keys we
@@ -138,12 +138,6 @@ Areas geographic layer. We can do that with `ha_layer()`.
 layer <- ha_layer(
   layer_key = "neighborhood"
 )
-#> Iterating ■■■■■■■■■■■■■■■■                  50% | ETA:  2s
-#> Iterating ■■■■■■■■■■■■■■■■■■■■■■■           75% | ETA:  2s
-#> Iterating ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100% | ETA:  0s
-```
-
-``` r
 layer
 #> Simple feature collection with 77 features and 6 fields
 #> Geometry type: MULTIPOLYGON
