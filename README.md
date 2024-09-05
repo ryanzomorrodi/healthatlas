@@ -8,7 +8,8 @@
 [![healthatlas status
 badge](https://ryanzomorrodi.r-universe.dev/badges/healthatlas)](https://ryanzomorrodi.r-universe.dev/healthatlas)
 [![R-CMD-check](https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ryanzomorrodi/healthatlas/actions/workflows/R-CMD-check.yaml)
-
+[![Codecov test
+coverage](https://codecov.io/gh/ryanzomorrodi/ChicagoHA/branch/main/graph/badge.svg)](https://app.codecov.io/gh/ryanzomorrodi/ChicagoHA?branch=main)
 <!-- badges: end -->
 
 Explore and Import *Metopio* Powered Health Atlases.
