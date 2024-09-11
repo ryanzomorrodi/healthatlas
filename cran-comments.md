@@ -1,5 +1,9 @@
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-* This is a new release.
+* This is a new release resubmit.
+* Expanded on description including by adding 
+  a web reference for the 
+* Added \value to ha_get.Rd and ha_set.Rd files 
+* Changed \dontrun to \donttest for all examples

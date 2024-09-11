@@ -7,14 +7,14 @@
 ha_subcategories()
 }
 \value{
-Topic subcategory tibble
+Topic subcategory tibble.
 }
 \description{
 List the topic subcategories, which can be
 used to filter topics within \code{ha_topics()}.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_subcategories()

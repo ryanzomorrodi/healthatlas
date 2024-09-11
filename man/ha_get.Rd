@@ -6,11 +6,14 @@
 \usage{
 ha_get()
 }
+\value{
+Current value of ha_URL environment variable.
+}
 \description{
 Get health atlas currently connected to.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_get()

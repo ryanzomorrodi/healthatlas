@@ -4,7 +4,13 @@ Version: 0.1.0
 Authors@R: 
     person("Ryan", "Zomorrodi", , "rzomor2@uic.edu", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-6417-5985"))
-Description: Allows for painless use of the 'Metopio' health atlas APIs to explore and import data.
+Description: Allows for painless use of the 'Metopio' health atlas APIs
+    <https://metopio.com/how-it-works/atlas/> to explore and import data.
+    'Metopio' health atlases store open public health data. See what topics
+    (or indicators) are available among specific populations, periods, and
+    geographic layers. Download relevant data along with geographic 
+    boundaries or point datasets. Spatial datasets are returned as 'sf' 
+    objects.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

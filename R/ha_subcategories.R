@@ -4,11 +4,11 @@
 #' List the topic subcategories, which can be
 #' used to filter topics within `ha_topics()`.
 #' 
-#' @return Topic subcategory tibble
+#' @return Topic subcategory tibble.
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_subcategories()

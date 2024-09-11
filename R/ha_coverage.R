@@ -10,11 +10,11 @@
 #' @param keys_only Return only keys?
 #' @param progress Display a progress bar?
 #'
-#' @return Topic coverage tibble
+#' @return Topic coverage tibble.
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_coverage("POP", progress = FALSE)

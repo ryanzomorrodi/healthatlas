@@ -13,14 +13,14 @@ topic subcategory}
 \item{progress}{Display a progress bar?}
 }
 \value{
-Topics information tibble
+Topics information tibble.
 }
 \description{
 List all topics available with descriptions
 and units.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_topics("education", progress = FALSE)

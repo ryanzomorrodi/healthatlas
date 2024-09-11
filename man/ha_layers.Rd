@@ -13,7 +13,7 @@ Layer information tibble.
 List all geographic layers available.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_layers()

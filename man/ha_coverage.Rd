@@ -17,7 +17,7 @@ Unique IDs for geographic layers.}
 \item{progress}{Display a progress bar?}
 }
 \value{
-Topic coverage tibble
+Topic coverage tibble.
 }
 \description{
 List all combinations of population, periods, and
@@ -25,7 +25,7 @@ geographic layers available for a given topic. To
 search for individual topics use \code{ha_topics()}.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_coverage("POP", progress = FALSE)

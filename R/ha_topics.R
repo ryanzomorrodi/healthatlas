@@ -7,11 +7,11 @@
 #' topic subcategory
 #' @param progress Display a progress bar?
 #'
-#' @return Topics information tibble
+#' @return Topics information tibble.
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_topics("education", progress = FALSE)

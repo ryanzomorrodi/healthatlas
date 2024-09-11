@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_point_layers()
@@ -34,11 +34,11 @@ ha_point_layers <- function() {
 #' Import point layer as a `sf` object.
 #' @param point_layer_uuid Unique ID for a point layer.
 #' 
-#' @return `sf` point layer
+#' @return `sf` point layer.
 #' @export
 #'
 #' @examples 
-#' \dontrun{
+#' \donttest{
 #' ha_set("chicagohealthatlas.org")
 #' 
 #' ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")

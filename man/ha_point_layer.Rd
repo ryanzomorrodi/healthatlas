@@ -10,13 +10,13 @@ ha_point_layer(point_layer_uuid)
 \item{point_layer_uuid}{Unique ID for a point layer.}
 }
 \value{
-\code{sf} point layer
+\code{sf} point layer.
 }
 \description{
 Import point layer as a \code{sf} object.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 
 ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")

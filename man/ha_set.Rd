@@ -9,11 +9,14 @@ ha_set(ha_URL)
 \arguments{
 \item{ha_URL}{URL of the health atlas home page.}
 }
+\value{
+No return value. Sets ha_URL environment variable.
+}
 \description{
 Set health atlas to connect to.
 }
 \examples{
-\dontrun{
+\donttest{
 ha_set("chicagohealthatlas.org")
 }
 }
