@@ -26,5 +26,5 @@ ha_subcategories <- function() {
   colnames(output) <- c("subcategory_name", "subcategory_key", "category_name")
   rownames(output) <- NULL
 
-  as_tibble(output)
+  tibble::as_tibble(output)
 }

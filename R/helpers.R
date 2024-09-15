@@ -64,8 +64,3 @@ ha_resp_body <- function(resp, accessor) {
 
   body
 }
-
-as_tibble <- function(x) {
-  class(x) <- c("tbl_df", "tbl", "data.frame")
-  x
-}

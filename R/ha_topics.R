@@ -27,5 +27,5 @@ ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
   colnames(subcategories) <- c("subcategory_name", "subcategory_key", "category_name")
   
   cbind(output, subcategories) |>
-    as_tibble()
+    tibble::as_tibble()
 }

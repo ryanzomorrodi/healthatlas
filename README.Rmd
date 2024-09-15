@@ -31,8 +31,12 @@ Examples of Metopio health atlases include:
 
 -   Chicago Health Atlas: <https://chicagohealthatlas.org/>  
 -   Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
+-   University of Illinois Cancer Center Data Hub: <https://uicc.metop.io/>  
 -   Idaho Oregon Community Health Atlas: <https://idahooregoncommunityhealthatlas.org/>  
 -   Northern Kentucky Atlas: <https://atlas.northernkentuckyusa.com/>
+-   Allen County Health Atlas: <https://allencountyhealthatlas.org/>
+-   Kane County Health Atlas: <https://kanehealthatlas.org/>
+-   Contra Costa Health Atlas: <https://atlas.cchealth.org/>
 
 ## Installation
 

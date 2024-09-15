@@ -21,7 +21,7 @@ ha_point_layers <- function() {
   output <- output[c("name", "uuid", "description")]
   colnames(output) <- c("point_layer_name", "point_layer_uuid", "point_layer_description")
 
-  as_tibble(output)
+  tibble::as_tibble(output)
 }
 
 #' Obtain Point Layer
@@ -44,7 +44,7 @@ ha_point_layer <- function(point_layer_uuid) {
     ha_req_perform() |>
     ha_resp_body("points")
   
-  output <- as_tibble(body)
+  output <- tibble::as_tibble(body)
   colnames(output) <- c("name", "lat", "lon")
   output$name <- gsub("&amp;", "&", output$name)
   output$name <- gsub("<[^>]*>", " ", output$name)
