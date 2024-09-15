@@ -19,12 +19,10 @@
 ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
   body <- ha_api_topics_req(subcategory_key) |>
     ha_req_perform_iterative(progress) |>
-      lapply(\(x) httr2::resp_body_json(x, simplifyVector = TRUE)) |>
-      lapply(\(x) x[["results"]])
+    ha_resp_body_iterative()
   
-  output <- do.call(rbind, body)
-  subcategories <- do.call(rbind, output$subcategories)
-  output <- output[c("name", "key", "description", "units")]
+  subcategories <- do.call(rbind, body$subcategories)
+  output <- body[c("name", "key", "description", "units")]
   colnames(output) <- c("topic_name", "topic_key", "topic_description", "topic_units")
   colnames(subcategories) <- c("subcategory_name", "subcategory_key", "category_name")
   

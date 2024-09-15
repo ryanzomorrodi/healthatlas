@@ -43,16 +43,14 @@ ha_layers <- function() {
 ha_layer <- function(layer_key, progress = TRUE) {
   body <- ha_api_geographies_req(layer_key) |>
     ha_req_perform_iterative(progress) |>
-    lapply(\(x) httr2::resp_body_json(x, simplifyVector = TRUE)) |>
-    lapply(\(x) x[["results"]])
+    ha_resp_body_iterative()
 
   layers <- ha_layers()
   layer_url <- layers[layers$layer_key == layer_key, "layer_url"]
   layer_sf <- sf::read_sf(layer_url) |>
-    subset(select = "id") |>
-    setNames(c("geoid", "geometry"))
+    subset(select = "id")
+  colnames(layer_sf) <- c("geoid", "geometry")
 
-  do.call(rbind, body) |>
-    merge(layer_sf, by = "geoid", all.x = TRUE) |>
+  merge(body, layer_sf, by = "geoid", all.x = TRUE) |>
     sf::st_as_sf(crs = 4326)
 }
