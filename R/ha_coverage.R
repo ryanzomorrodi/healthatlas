@@ -39,5 +39,5 @@ ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress
       "population_grouping", "period_key", "layer_key", "layer_name")]
   }
 
-  output
+  as_tibble(output)
 }

@@ -6,5 +6,5 @@ ha_stratifications <- function(progress = TRUE) {
   output <- body[c("key", "name", "grouping")]
   colnames(output) <- c("population_key", "population_name", "population_grouping")
 
-  output
+  as_tibble(output)
 }

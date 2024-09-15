@@ -20,7 +20,7 @@ ha_layers <- function() {
   output <- body[c("name", "slug", "description", "shapes")]
   colnames(output) <- c("layer_name", "layer_key", "layer_description", "layer_url")
 
-  output
+  as_tibble(output)
 }
 
 #' Obtain Geographic Layer
@@ -53,6 +53,7 @@ ha_layer <- function(layer_key, progress = TRUE) {
     subset(select = "id")
   colnames(layer_sf) <- c("geoid", "geometry")
 
-  merge(output, layer_sf, by = "geoid", all.x = TRUE) |>
+  as_tibble(output) |>
+    merge(layer_sf, by = "geoid", all.x = TRUE) |>
     sf::st_as_sf(crs = 4326)
 }

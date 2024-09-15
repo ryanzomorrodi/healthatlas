@@ -35,7 +35,7 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
     ha_req_perform() |>
     ha_resp_body("results")
   
-  output <- body[c("g", "a", "p", "d", "l", "v", "se")]
+  output <- as_tibble(body[c("g", "a", "p", "d", "l", "v", "se")])
   keys <- c("topic_key", "population_key", "period_key", "layer_key")
   colnames(output) <- c("geoid", keys, "value", "standardError")
   
@@ -60,7 +60,7 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
   if (geometry) {
     layer <- ha_layer(layer_key, progress)
 
-    output <- merge(output, layer[c("geoid")], by = "geoid") |>
+    output <- merge(output, layer[c("geoid")], by = "geoid", all.x = TRUE) |>
       sf::st_as_sf()
   }
 
