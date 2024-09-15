@@ -44,6 +44,7 @@ ha_point_layer <- function(point_layer_uuid) {
     ha_req_perform() |>
     ha_resp_body("points")
   
+  output <- body
   colnames(output) <- c("name", "lat", "lon")
   output$name <- gsub("&amp;", "&", output$name)
   output$name <- gsub("<[^>]*>", " ", output$name)

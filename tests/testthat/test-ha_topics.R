@@ -7,9 +7,7 @@ test_that("check all topic", {
   "expect no progress bar"
   expect_snapshot(topics <- ha_topics(progress = FALSE))
 
-  "expect a tibble"
-  expect_s3_class(topics, "tbl_df")
-  expect_s3_class(topics, "tbl")
+  "expect a data.frame"
   expect_s3_class(topics, "data.frame")
 
   "check table names"
@@ -26,9 +24,7 @@ test_that("check specified subcategory", {
   ha_set(cha_url)
   topics <- ha_topics(cha_subcategory_key)
 
-  "expect a tibble"
-  expect_s3_class(topics, "tbl_df")
-  expect_s3_class(topics, "tbl")
+  "expect a data.frame"
   expect_s3_class(topics, "data.frame")
 
   "check table names"

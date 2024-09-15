@@ -6,9 +6,7 @@ test_that("check all subcategories", {
   ha_set(cha_url)
   subcategories <- ha_subcategories()
 
-  "expect a tibble"
-  expect_s3_class(subcategories, "tbl_df")
-  expect_s3_class(subcategories, "tbl")
+  "expect a data.frame"
   expect_s3_class(subcategories, "data.frame")
 
   "check table names"

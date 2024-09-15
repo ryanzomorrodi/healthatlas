@@ -44,6 +44,8 @@ ha_layer <- function(layer_key, progress = TRUE) {
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()
 
+  names(body)[names(body) == "layer"] <- "layer_key"
+
   layers <- ha_layers()
   layer_url <- layers[layers$layer_key == layer_key, "layer_url"]
   layer_sf <- sf::read_sf(layer_url) |>
