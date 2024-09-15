@@ -22,40 +22,25 @@
 ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress = TRUE) {
   body <- ha_api_coverage_req(topic_key, layer_key) |>
     ha_req_perform() |>
-    ha_resp_body("coverages")
+    httr2::resp_body_json(simplifyVector = TRUE)
 
-  output <- tibble::tibble(body) |>
-    tidyr::unnest_longer(body) |>
-    tidyr::unnest_longer(body) |>
-    tidyr::unnest_wider(body) |>
-    dplyr::mutate("topic_key" = topic_key) |>
-    dplyr::select(
-      c(
-        "topic_key",
-        "population_key" = "population",
-        "period_key" = "period",
-        "layer_key" = "body_id"
-      )
-    )
+  output <- body[["coverages"]] |>
+    lapply(as.data.frame)
+  output <- lapply(names(output), \(x) cbind(output[[x]], layer_key = x)) |>
+    do.call(what = rbind)
+  output <- cbind(topic_key, output)
+  colnames(output) <- c("topic_key", "population_key", "period_key", "layer_key")
 
   if (!keys_only) {
     stratifications <- ha_stratifications(progress)
     layers <- ha_layers()
 
     output <- output |>
-      dplyr::right_join(stratifications, by = "population_key") |>
-      dplyr::right_join(layers, by = "layer_key") |>
-      dplyr::select(
-        c(
-          "topic_key",
-          "population_key",
-          "population_name",
-          "population_grouping",
-          "period_key",
-          "layer_key",
-          "layer_name"
-        )
-      )
+      merge(stratifications, by = "population_key", all.x = TRUE) |>
+      merge(layers, by = "layer_key", all.x = TRUE)
+      
+    output <- output[c("topic_key", "population_key", "population_name", 
+      "population_grouping", "period_key", "layer_key", "layer_name")]
   }
 
   output
