@@ -22,13 +22,9 @@
 ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress = TRUE) {
   body <- ha_api_coverage_req(topic_key, layer_key) |>
     ha_req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+    ha_resp_body("coverages")
 
-  output <- body[["coverages"]] |>
-    lapply(as.data.frame)
-  output <- lapply(names(output), \(x) cbind(output[[x]], layer_key = x)) |>
-    do.call(what = rbind)
-  output <- cbind(topic_key, output)
+  output <- cbind(topic_key, body)
   colnames(output) <- c("topic_key", "population_key", "period_key", "layer_key")
 
   if (!keys_only) {

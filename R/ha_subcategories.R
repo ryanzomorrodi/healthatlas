@@ -16,10 +16,9 @@
 ha_subcategories <- function() {
   body <- ha_api_categories_req() |>
     ha_req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+    ha_resp_body("results")
 
-  output <- body$results 
-  output <- asplit(output, 1) |>
+  output <- asplit(body, 1) |>
     lapply(do.call, what = cbind) |>
     do.call(what = rbind)
   

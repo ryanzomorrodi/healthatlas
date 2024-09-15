@@ -42,9 +42,8 @@ ha_point_layers <- function() {
 ha_point_layer <- function(point_layer_uuid) {
   body <- ha_api_points_req(point_layer_uuid) |>
     ha_req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
-
-  output <- as.data.frame(body[["points"]])
+    ha_resp_body("points")
+  
   colnames(output) <- c("name", "lat", "lon")
   output$name <- gsub("&amp;", "&", output$name)
   output$name <- gsub("<[^>]*>", " ", output$name)

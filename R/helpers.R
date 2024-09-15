@@ -44,18 +44,23 @@ ha_resp_body_iterative <- function(resp) {
     do.call(what = rbind)
 }
 
-ha_resp_body <- function(resp, accessor = NULL) {
-  body <- httr2::resp_body_json(resp)
+ha_resp_body <- function(resp, accessor) {
+  body <- httr2::resp_body_json(resp, simplifyVector = TRUE)
 
   count <- body[["count"]]
   if (!is.null(count) && count == 0) {
     stop("Your API call has errors. No Results.")
   }
-  if (!is.null(accessor)) {
-    body <- body[[accessor]]
+  body <- body[[accessor]]
+  if (is.matrix(body)) {
+    body <- as.data.frame(body)
   }
-  if (!is.null(names(body))) {
-    body <- list(body)
+  if (!is.data.frame(body)) {
+    body <- body[!is.na(body)]
+    body <- lapply(body, as.data.frame)
+    body <- lapply(names(body), \(x) cbind(body[[x]], x))
+    body <- do.call(rbind, body)
   }
+
   body
 }

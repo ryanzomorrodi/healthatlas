@@ -14,11 +14,10 @@
 #' }
 ha_layers <- function() {
   body <- ha_api_layers_req() |>
-    ha_req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+    ha_req_perform()  |>
+    ha_resp_body("results")
 
-  output <- body[["results"]]
-  output <- output[c("name", "slug", "description", "shapes")]
+  output <- body[c("name", "slug", "description", "shapes")]
   colnames(output) <- c("layer_name", "layer_key", "layer_description", "layer_url")
 
   output

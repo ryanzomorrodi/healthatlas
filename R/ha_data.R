@@ -35,11 +35,10 @@
 #' }
 ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, wide = FALSE, progress = TRUE) {
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
-    ha_req_perform()  |>
-    httr2::resp_body_json(simplifyVector = TRUE)
-
-  output <- body[["results"]] 
-  output <- output[c("g", "a", "p", "d", "l", "v", "se")]
+    ha_req_perform() |>
+    ha_resp_body("results")
+  
+  output <- body[c("g", "a", "p", "d", "l", "v", "se")]
   keys <- c("topic_key", "population_key", "period_key", "layer_key")
   colnames(output) <- c("geoid", keys, "value", "standardError")
   
@@ -50,15 +49,16 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
     layer_key = layer_key
   )
   missing <- combinations[!interaction(combinations[keys]) %in% interaction(output[keys]),]
-  paste0(
-    "Your API call has errors. No results for ",
-    "topic_key = \"", missing$topic_key,
-    "\" population_key = \"", missing$population_key,
-    "\" period_key = \"", missing$period_key,
-    "\" layer_key = \"", missing$layer_key,
-    "\"."
-  ) |> 
-    lapply(warning)
+  for (i in seq_len(nrow(missing))) {
+    warning(paste0(
+      "Your API call has errors. No results for ",
+      "topic_key = \"", missing$topic_key[i],
+      "\" population_key = \"", missing$population_key[i],
+      "\" period_key = \"", missing$period_key[i],
+      "\" layer_key = \"", missing$layer_key[i],
+      "\"."
+    ))
+  }
   
   if (wide) {
     output <- tidyr::pivot_wider(
