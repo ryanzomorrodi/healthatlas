@@ -17,12 +17,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: 
     curl,
-    dplyr,
     httr2,
-    purrr,
-    sf,
-    tibble,
-    tidyr
+    sf
 Suggests: 
     ggplot2,
     knitr,
