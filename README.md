@@ -47,11 +47,10 @@ install.packages("healthatlas")
 ```
 
 Or, you can install the development version of healthatlas from
-[GitHub](https://github.com/ryanzomorrodi/healthatlas) with:
+[R-universe](https://ryanzomorrodi.r-universe.dev/healthatlas) with:
 
 ``` r
-# install.packages("pak")
-pak::pkg_install("ryanzomorrodi/healthatlas")
+install.packages("healthatlas", repos = c("https://ryanzomorrodi.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 ## Usage
@@ -200,4 +199,4 @@ ggplot(map_data) +
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />

@@ -45,11 +45,10 @@ You can install healthatlas from CRAN.
 install.packages("healthatlas")
 ```
 
-Or, you can install the development version of healthatlas from [GitHub](https://github.com/ryanzomorrodi/healthatlas) with:
+Or, you can install the development version of healthatlas from [R-universe](https://ryanzomorrodi.r-universe.dev/healthatlas) with:
 
-``` r
-# install.packages("pak")
-pak::pkg_install("ryanzomorrodi/healthatlas")
+```{r eval = FALSE}
+install.packages("healthatlas", repos = c("https://ryanzomorrodi.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 ## Usage
