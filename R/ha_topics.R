@@ -19,24 +19,14 @@
 ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
   body <- ha_api_topics_req(subcategory_key) |>
     ha_req_perform_iterative(progress) |>
-    ha_resp_body_iterative()
+      lapply(\(x) httr2::resp_body_json(x, simplifyVector = TRUE)) |>
+      lapply(\(x) x[["results"]])
   
-  tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    tidyr::hoist("subcategories",
-      subcategory_name = list(1, "name"),
-      subcategory_key = list(1, "slug"),
-      category = list(1, "category")
-    ) |>
-    dplyr::select(
-      c(
-        "topic_name" = "name",
-        "topic_key" = "key",
-        "topic_description" = "description",
-        "topic_units" = "units",
-        "subcategory_name",
-        "subcategory_key",
-        "category_name" = "category"
-      )
-    )
+  output <- do.call(rbind, body)
+  subcategories <- do.call(rbind, output$subcategories)
+  output <- output[c("name", "key", "description", "units")]
+  colnames(output) <- c("topic_name", "topic_key", "topic_description", "topic_units")
+  colnames(subcategories) <- c("subcategory_name", "subcategory_key", "category_name")
+  
+  cbind(output, subcategories)
 }
