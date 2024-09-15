@@ -32,7 +32,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Obtain Geographic Layer</h1>
-      <small class="dont-index">Source: <a href="https://github.com/ryanzomorrodi/healthatlas/blob/main/R/ha_layer.R" class="external-link"><code>R/ha_layer.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ryanzomorrodi/healthatlas/blob/v0.1.0/R/ha_layer.R" class="external-link"><code>R/ha_layer.R</code></a></small>
       <div class="d-none name"><code>ha_layer.Rd</code></div>
     </div>
 
@@ -64,30 +64,11 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="ha_set.html">ha_set</a></span><span class="op">(</span><span class="st">"chicagohealthatlas.org"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">ha_layer</span><span class="op">(</span><span class="st">"zip"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 58 features and 6 fields</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -87.86959 ymin: 41.6298 xmax: -87.524 ymax: 42.0231</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 58 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    layer_key geoid name         population state notes                  geometry</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  <span style="color: #BCBCBC;">*</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;MULTIPOLYGON [°]&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> zip       60629 60629 (Chic…     <span style="text-decoration: underline;">114</span>453 IL    <span style="color: #949494;">""</span>    (((-87.7403 41.79299, -8…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> zip       60632 60632 (Chic…      <span style="text-decoration: underline;">92</span>237 IL    <span style="color: #949494;">""</span>    (((-87.74352 41.8165, -8…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> zip       60618 60618 (Chic…      <span style="text-decoration: underline;">90</span>316 IL    <span style="color: #949494;">""</span>    (((-87.72781 41.96091, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> zip       60639 60639 (Chic…      <span style="text-decoration: underline;">89</span>543 IL    <span style="color: #949494;">""</span>    (((-87.78557 41.93101, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> zip       60623 60623 (Chic…      <span style="text-decoration: underline;">87</span>649 IL    <span style="color: #949494;">""</span>    (((-87.73989 41.86599, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> zip       60647 60647 (Chic…      <span style="text-decoration: underline;">85</span>631 IL    <span style="color: #949494;">""</span>    (((-87.72692 41.9318, -8…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> zip       60617 60617 (Chic…      <span style="text-decoration: underline;">77</span>270 IL    <span style="color: #949494;">""</span>    (((-87.58571 41.75149, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> zip       60625 60625 (Chic…      <span style="text-decoration: underline;">76</span>525 IL    <span style="color: #949494;">""</span>    (((-87.7208 41.98289, -8…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> zip       60608 60608 (Chic…      <span style="text-decoration: underline;">75</span>770 IL    <span style="color: #949494;">""</span>    (((-87.69583 41.86648, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> zip       60634 60634 (Chic…      <span style="text-decoration: underline;">75</span>694 IL    <span style="color: #949494;">""</span>    (((-87.85743 41.95962, -…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 48 more rows</span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
