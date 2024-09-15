@@ -56,7 +56,7 @@ ha_resp_body <- function(resp, accessor) {
     body <- as.data.frame(body)
   }
   if (!is.data.frame(body)) {
-    body <- body[!is.na(body)]
+    body <- body[lengths(body) != 0]
     body <- lapply(body, as.data.frame)
     body <- lapply(names(body), \(x) cbind(body[[x]], x))
     body <- do.call(rbind, body)
