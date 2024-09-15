@@ -44,7 +44,8 @@ ha_layer <- function(layer_key, progress = TRUE) {
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()
 
-  names(body)[names(body) == "layer"] <- "layer_key"
+  output <- body
+  names(output)[names(output) == "layer"] <- "layer_key"
 
   layers <- ha_layers()
   layer_url <- layers[layers$layer_key == layer_key, "layer_url"]
@@ -52,6 +53,6 @@ ha_layer <- function(layer_key, progress = TRUE) {
     subset(select = "id")
   colnames(layer_sf) <- c("geoid", "geometry")
 
-  merge(body, layer_sf, by = "geoid", all.x = TRUE) |>
+  merge(output, layer_sf, by = "geoid", all.x = TRUE) |>
     sf::st_as_sf(crs = 4326)
 }

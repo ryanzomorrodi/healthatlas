@@ -61,13 +61,19 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
   }
   
   if (wide) {
-    output <- tidyr::pivot_wider(
-      output,
-      names_from = "topic_key",
-      values_from = c("value", "standardError"),
-      names_glue = "{topic_key}_{.value}",
-      names_vary = "slowest"
+    idvars = c("geoid", "population_key", "period_key", "layer_key")
+    output <- reshape(
+      output, 
+      direction = "wide", 
+      idvar = idvars, 
+      timevar = c("topic_key"),
+      sep = "_"
     )
+
+    # flipping new names to "{topic_key}_{.value}"
+    col_index <- !(colnames(output) %in% idvars)
+    colnames(output)[col_index] <- strsplit(colnames(output)[col_index], "_") |> 
+      sapply(\(x) paste(rev(x), collapse = "_"))
   }
   if (geometry) {
     layer <- ha_layer(layer_key, progress)
@@ -75,7 +81,6 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
     output <- merge(output, layer[c("geoid")], by = "geoid") |>
       sf::st_as_sf()
   }
-
 
   output
 }
