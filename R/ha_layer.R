@@ -14,19 +14,13 @@
 #' }
 ha_layers <- function() {
   body <- ha_api_layers_req() |>
-    ha_req_perform() |>
+    ha_req_perform()  |>
     ha_resp_body("results")
 
-  tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    dplyr::select(
-      c(
-        "layer_name" = "name",
-        "layer_key" = "slug",
-        "layer_description" = "description",
-        "layer_url" = "shapes"
-      )
-    )
+  output <- body[c("name", "slug", "description", "shapes")]
+  colnames(output) <- c("layer_name", "layer_key", "layer_description", "layer_url")
+
+  tibble::as_tibble(output)
 }
 
 #' Obtain Geographic Layer
@@ -46,24 +40,20 @@ ha_layers <- function() {
 #' ha_layer("zip", progress = FALSE)
 #' }
 ha_layer <- function(layer_key, progress = TRUE) {
-  key <- layer_key
-
   body <- ha_api_geographies_req(layer_key) |>
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()
 
-  layer_sf <- ha_layers() |>
-    dplyr::filter(layer_key == key) |>
-    purrr::pluck("layer_url") |>
-    sf::read_sf() |>
-    dplyr::select(c("geoid" = "id"))
+  output <- body
+  names(output)[names(output) == "layer"] <- "layer_key"
 
-  tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    dplyr::rename(c("layer_key" = "layer")) |>
-    dplyr::left_join(
-      layer_sf,
-      by = "geoid"
-    ) |>
+  layers <- ha_layers()
+  layer_url <- layers[layers$layer_key == layer_key, "layer_url"]
+  layer_sf <- sf::read_sf(layer_url) |>
+    subset(select = "id")
+  colnames(layer_sf) <- c("geoid", "geometry")
+
+  tibble::as_tibble(output) |>
+    merge(layer_sf, by = "geoid", all.x = TRUE) |>
     sf::st_as_sf(crs = 4326)
 }

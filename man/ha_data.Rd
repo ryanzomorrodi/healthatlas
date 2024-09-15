@@ -10,7 +10,6 @@ ha_data(
   period_key,
   layer_key,
   geometry = FALSE,
-  wide = FALSE,
   progress = TRUE
 )
 }
@@ -28,10 +27,6 @@ Unique IDs for time periods.}
 Unique IDs for geographic layers.}
 
 \item{geometry}{Attach geometry to output?}
-
-\item{wide}{Pivot wider so that each row contains
-the values of all topics within a population at a
-specified time period and a geographic area?}
 
 \item{progress}{Display a progress bar?}
 }

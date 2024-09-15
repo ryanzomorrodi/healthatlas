@@ -5,9 +5,7 @@ test_that("check layers list", {
   ha_set(cha_url)
   layers <- ha_layers()
 
-  "expect a tibble"
-  expect_s3_class(layers, "tbl_df")
-  expect_s3_class(layers, "tbl")
+  "expect a data.frame"
   expect_s3_class(layers, "data.frame")
 
   "check table names"
@@ -24,10 +22,8 @@ test_that("check a single layer", {
   ha_set(cha_url)
   expect_snapshot(layer <- ha_layer("neighborhood", progress = FALSE))
 
-  "expect a tibble"
+  "expect a data.frame"
   expect_s3_class(layer, "sf")
-  expect_s3_class(layer, "tbl_df")
-  expect_s3_class(layer, "tbl")
   expect_s3_class(layer, "data.frame")
 
   "check table names"

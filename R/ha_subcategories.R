@@ -18,15 +18,13 @@ ha_subcategories <- function() {
     ha_req_perform() |>
     ha_resp_body("results")
 
-  tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    tidyr::unnest_longer("subcategories") |>
-    tidyr::unnest_wider("subcategories", names_sep = "_") |>
-    dplyr::select(
-      c(
-        "subcategory_name" = "subcategories_name",
-        "subcategory_key" = "subcategories_slug",
-        "category_name" = "name"
-      )
-    )
+  output <- asplit(body, 1) |>
+    lapply(do.call, what = cbind) |>
+    do.call(what = rbind)
+  
+  output <- output[c("subcategories.name", "subcategories.slug", "name")]
+  colnames(output) <- c("subcategory_name", "subcategory_key", "category_name")
+  rownames(output) <- NULL
+
+  tibble::as_tibble(output)
 }

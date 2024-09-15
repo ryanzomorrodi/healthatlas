@@ -24,39 +24,20 @@ ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress
     ha_req_perform() |>
     ha_resp_body("coverages")
 
-  output <- tibble::tibble(body) |>
-    tidyr::unnest_longer(body) |>
-    tidyr::unnest_longer(body) |>
-    tidyr::unnest_wider(body) |>
-    dplyr::mutate("topic_key" = topic_key) |>
-    dplyr::select(
-      c(
-        "topic_key",
-        "population_key" = "population",
-        "period_key" = "period",
-        "layer_key" = "body_id"
-      )
-    )
+  output <- cbind(topic_key, body)
+  colnames(output) <- c("topic_key", "population_key", "period_key", "layer_key")
 
   if (!keys_only) {
     stratifications <- ha_stratifications(progress)
     layers <- ha_layers()
 
     output <- output |>
-      dplyr::right_join(stratifications, by = "population_key") |>
-      dplyr::right_join(layers, by = "layer_key") |>
-      dplyr::select(
-        c(
-          "topic_key",
-          "population_key",
-          "population_name",
-          "population_grouping",
-          "period_key",
-          "layer_key",
-          "layer_name"
-        )
-      )
+      merge(stratifications, by = "population_key", all.x = TRUE) |>
+      merge(layers, by = "layer_key", all.x = TRUE)
+      
+    output <- output[c("topic_key", "population_key", "population_name", 
+      "population_grouping", "period_key", "layer_key", "layer_name")]
   }
 
-  output
+  tibble::as_tibble(output)
 }

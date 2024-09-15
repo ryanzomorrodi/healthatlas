@@ -7,9 +7,7 @@ test_that("check specific topic coverage", {
   "expect no progress bar"
   expect_snapshot(coverage <- ha_coverage("EDB", progress = FALSE))
 
-  "expect a tibble"
-  expect_s3_class(coverage, "tbl_df")
-  expect_s3_class(coverage, "tbl")
+  "expect a data.frame"
   expect_s3_class(coverage, "data.frame")
 
   "check table names"
@@ -28,9 +26,7 @@ test_that("check specific topic and layer coverage", {
   "expect no progress bar"
   expect_snapshot(coverage <- ha_coverage("EDB", "neighborhood", progress = FALSE))
 
-  "expect a tibble"
-  expect_s3_class(coverage, "tbl_df")
-  expect_s3_class(coverage, "tbl")
+  "expect a data.frame"
   expect_s3_class(coverage, "data.frame")
 
   "check table names"
@@ -49,9 +45,7 @@ test_that("check keys only", {
   "expect no progress bar"
   expect_snapshot(coverage <- ha_coverage("EDB", "neighborhood", keys_only = TRUE))
 
-  "expect a tibble"
-  expect_s3_class(coverage, "tbl_df")
-  expect_s3_class(coverage, "tbl")
+  "expect a data.frame"
   expect_s3_class(coverage, "data.frame")
 
   "check table names"

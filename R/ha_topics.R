@@ -21,22 +21,11 @@ ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()
   
-  tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    tidyr::hoist("subcategories",
-      subcategory_name = list(1, "name"),
-      subcategory_key = list(1, "slug"),
-      category = list(1, "category")
-    ) |>
-    dplyr::select(
-      c(
-        "topic_name" = "name",
-        "topic_key" = "key",
-        "topic_description" = "description",
-        "topic_units" = "units",
-        "subcategory_name",
-        "subcategory_key",
-        "category_name" = "category"
-      )
-    )
+  subcategories <- do.call(rbind, body$subcategories)
+  output <- body[c("name", "key", "description", "units")]
+  colnames(output) <- c("topic_name", "topic_key", "topic_description", "topic_units")
+  colnames(subcategories) <- c("subcategory_name", "subcategory_key", "category_name")
+  
+  cbind(output, subcategories) |>
+    tibble::as_tibble()
 }
