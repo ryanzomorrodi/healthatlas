@@ -35,42 +35,30 @@
 #' }
 ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, wide = FALSE, progress = TRUE) {
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
-    ha_req_perform() |>
-    ha_resp_body("results")
+    ha_req_perform()  |>
+    httr2::resp_body_json(simplifyVector = TRUE)
 
-  output <- tibble::tibble(body) |>
-    tidyr::unnest_wider(body) |>
-    dplyr::select(c("g", "a", "p", "d", "l", "v", "se")) |>
-    dplyr::rename(
-      c(
-        "geoid" = "g",
-        "topic_key" = "a",
-        "population_key" = "p",
-        "period_key" = "d",
-        "layer_key" = "l",
-        "value" = "v",
-        "standardError" = "se"
-      )
-    )
+  output <- body[["results"]] 
+  output <- output[c("g", "a", "p", "d", "l", "v", "se")]
+  keys <- c("topic_key", "population_key", "period_key", "layer_key")
+  colnames(output) <- c("geoid", keys, "value", "standardError")
   
-  dplyr::select(
-      output, 
-      c("topic_key", "population_key", "period_key", "layer_key")
-    ) |>
-    dplyr::distinct() |>
-    dplyr::anti_join(
-      x = tidyr::crossing(topic_key, population_key, period_key, layer_key),
-      c("topic_key", "population_key", "period_key", "layer_key")
-    ) |> purrr::pwalk(function(topic_key, population_key, period_key, layer_key) {
-      warning(paste0(
-        "Your API call has errors. No results for ",
-        "topic_key = \"", topic_key,
-        "\" population_key = \"", population_key,
-        "\" period_key = \"", period_key,
-        "\" layer_key = \"", layer_key,
-        "\"."
-      ))
-    })
+  combinations <- expand.grid(
+    topic_key = topic_key, 
+    population_key = population_key, 
+    period_key = period_key, 
+    layer_key = layer_key
+  )
+  missing <- combinations[!interaction(combinations[keys]) %in% interaction(output[keys]),]
+  paste0(
+    "Your API call has errors. No results for ",
+    "topic_key = \"", missing$topic_key,
+    "\" population_key = \"", missing$population_key,
+    "\" period_key = \"", missing$period_key,
+    "\" layer_key = \"", missing$layer_key,
+    "\"."
+  ) |> 
+    lapply(warning)
   
   if (wide) {
     output <- tidyr::pivot_wider(
@@ -84,11 +72,7 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
   if (geometry) {
     layer <- ha_layer(layer_key, progress)
 
-    output <- output |>
-      dplyr::left_join(
-        dplyr::select(layer, "geoid"), 
-        "geoid"
-      ) |>
+    output <- merge(output, layer[c("geoid")], by = "geoid") |>
       sf::st_as_sf()
   }
 
