@@ -17,7 +17,7 @@ Explore and Import *Metopio* Powered Health Atlases.
 [Metopio](https://metopio.com/) helps many public health departments
 build curated data platforms. These data platforms are a convenient way
 for community members and researchers to explore and download public
-health data. With the same spirit in mind, this package aim to make
+health data. With the same spirit in mind, this package aims to make
 interfacing with these data portals within R more **painless** and
 **reproducible**.
 
@@ -27,11 +27,11 @@ public health departments Metopio serves.
 
 Examples of Metopio health atlases include:
 
-- Chicago Health Atlas: <https://chicagohealthatlas.org/>  
-- Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
-- Idaho Oregon Community Health Atlas:
-  <https://idahooregoncommunityhealthatlas.org/>  
-- Northern Kentucky Atlas: <https://atlas.northernkentuckyusa.com/>
+-   Chicago Health Atlas: <https://chicagohealthatlas.org/>  
+-   Cook County Health Atlas: <https://cookcountyhealthatlas.org/>  
+-   Idaho Oregon Community Health Atlas:
+    <https://idahooregoncommunityhealthatlas.org/>  
+-   Northern Kentucky Atlas: <https://atlas.northernkentuckyusa.com/>
 
 ## Installation
 
