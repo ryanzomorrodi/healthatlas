@@ -75,9 +75,17 @@
 </li>
 <li>Cook County Health Atlas: <a href="https://cookcountyhealthatlas.org/" class="external-link uri">https://cookcountyhealthatlas.org/</a><br>
 </li>
+<li>University of Illinois Cancer Center Data Hub: <a href="https://uicc.metop.io/" class="external-link uri">https://uicc.metop.io/</a><br>
+</li>
 <li>Idaho Oregon Community Health Atlas: <a href="https://idahooregoncommunityhealthatlas.org/" class="external-link uri">https://idahooregoncommunityhealthatlas.org/</a><br>
 </li>
 <li>Northern Kentucky Atlas: <a href="https://atlas.northernkentuckyusa.com/" class="external-link uri">https://atlas.northernkentuckyusa.com/</a>
+</li>
+<li>Allen County Health Atlas: <a href="https://allencountyhealthatlas.org/" class="external-link uri">https://allencountyhealthatlas.org/</a>
+</li>
+<li>Kane County Health Atlas: <a href="https://kanehealthatlas.org/" class="external-link uri">https://kanehealthatlas.org/</a>
+</li>
+<li>Contra Costa Health Atlas: <a href="https://atlas.cchealth.org/" class="external-link uri">https://atlas.cchealth.org/</a>
 </li>
 </ul>
 <div class="section level2">
@@ -86,10 +94,9 @@
 <p>You can install healthatlas from CRAN.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"healthatlas"</span><span class="op">)</span></span></code></pre></div>
-<p>Or, you can install the development version of healthatlas from <a href="https://github.com/ryanzomorrodi/healthatlas" class="external-link">GitHub</a> with:</p>
+<p>Or, you can install the development version of healthatlas from <a href="https://ryanzomorrodi.r-universe.dev/healthatlas" class="external-link">R-universe</a> with:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pkg_install.html" class="external-link">pkg_install</a></span><span class="op">(</span><span class="st">"ryanzomorrodi/healthatlas"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"healthatlas"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ryanzomorrodi.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
@@ -123,16 +130,16 @@
 <span><span class="co">#&gt; # A tibble: 132 × 7</span></span>
 <span><span class="co">#&gt;    topic_key population_key population_name population_grouping period_key</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;               &lt;chr&gt;     </span></span>
-<span><span class="co">#&gt;  1 EDA       ""             Full population ""                  2018-2022 </span></span>
-<span><span class="co">#&gt;  2 EDA       ""             Full population ""                  2022      </span></span>
+<span><span class="co">#&gt;  1 EDA       ""             Full population ""                  2009-2013 </span></span>
+<span><span class="co">#&gt;  2 EDA       ""             Full population ""                  2010-2014 </span></span>
 <span><span class="co">#&gt;  3 EDA       ""             Full population ""                  2017-2021 </span></span>
-<span><span class="co">#&gt;  4 EDA       ""             Full population ""                  2021      </span></span>
-<span><span class="co">#&gt;  5 EDA       ""             Full population ""                  2016-2020 </span></span>
-<span><span class="co">#&gt;  6 EDA       ""             Full population ""                  2015-2019 </span></span>
-<span><span class="co">#&gt;  7 EDA       ""             Full population ""                  2019      </span></span>
-<span><span class="co">#&gt;  8 EDA       ""             Full population ""                  2014-2018 </span></span>
-<span><span class="co">#&gt;  9 EDA       ""             Full population ""                  2018      </span></span>
-<span><span class="co">#&gt; 10 EDA       ""             Full population ""                  2013-2017 </span></span>
+<span><span class="co">#&gt;  4 EDA       ""             Full population ""                  2008-2012 </span></span>
+<span><span class="co">#&gt;  5 EDA       ""             Full population ""                  2015-2019 </span></span>
+<span><span class="co">#&gt;  6 EDA       ""             Full population ""                  2007-2011 </span></span>
+<span><span class="co">#&gt;  7 EDA       ""             Full population ""                  2014-2018 </span></span>
+<span><span class="co">#&gt;  8 EDA       ""             Full population ""                  2016-2020 </span></span>
+<span><span class="co">#&gt;  9 EDA       "F"            Female          "Sex"               2018-2022 </span></span>
+<span><span class="co">#&gt; 10 EDA       "M"            Male            "Sex"               2015-2019 </span></span>
 <span><span class="co">#&gt; # ℹ 122 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 2 more variables: layer_key &lt;chr&gt;, layer_name &lt;chr&gt;</span></span></code></pre></div>
 <p>Now, we can import our data using <code><a href="reference/ha_data.html">ha_data()</a></code> specifying the keys we identified above.</p>
@@ -169,20 +176,29 @@
 <span><span class="co">#&gt; Dimension:     XY</span></span>
 <span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52419 ymax: 42.02305</span></span>
 <span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
-<span><span class="co">#&gt; # A tibble: 77 × 7</span></span>
-<span><span class="co">#&gt;    layer_key    geoid     name  population state notes                  geometry</span></span>
-<span><span class="co">#&gt;  * &lt;chr&gt;        &lt;chr&gt;     &lt;chr&gt;      &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;MULTIPOLYGON [°]&gt;</span></span>
-<span><span class="co">#&gt;  1 neighborhood 1714000-6 Lake…     103048 IL    Nort… (((-87.64102 41.95481, -…</span></span>
-<span><span class="co">#&gt;  2 neighborhood 1714000-8 Near…      97789 IL    Cent… (((-87.62446 41.91158, -…</span></span>
-<span><span class="co">#&gt;  3 neighborhood 1714000-… Aust…      96753 IL    West… (((-87.78942 41.91752, -…</span></span>
-<span><span class="co">#&gt;  4 neighborhood 1714000-… West…      87942 IL    West… (((-87.65686 41.91079, -…</span></span>
-<span><span class="co">#&gt;  5 neighborhood 1714000-… Belm…      78151 IL    Nort… (((-87.74134 41.91391, -…</span></span>
-<span><span class="co">#&gt;  6 neighborhood 1714000-2 West…      77139 IL    Far … (((-87.68465 42.01949, -…</span></span>
-<span><span class="co">#&gt;  7 neighborhood 1714000-… Loga…      71742 IL    Nort… (((-87.68284 41.93224, -…</span></span>
-<span><span class="co">#&gt;  8 neighborhood 1714000-… Sout…      71402 IL    West… (((-87.6874 41.83481, -8…</span></span>
-<span><span class="co">#&gt;  9 neighborhood 1714000-7 Linc…      70425 IL    Nort… (((-87.63182 41.93259, -…</span></span>
-<span><span class="co">#&gt; 10 neighborhood 1714000-… Near…      67817 IL    West… (((-87.63759 41.88624, -…</span></span>
-<span><span class="co">#&gt; # ℹ 67 more rows</span></span></code></pre></div>
+<span><span class="co">#&gt; First 10 features:</span></span>
+<span><span class="co">#&gt;         geoid    layer_key                         name population state</span></span>
+<span><span class="co">#&gt; 1   1714000-1 neighborhood    Rogers Park (Chicago, IL)      55454    IL</span></span>
+<span><span class="co">#&gt; 2  1714000-10 neighborhood   Norwood Park (Chicago, IL)      41069    IL</span></span>
+<span><span class="co">#&gt; 3  1714000-11 neighborhood Jefferson Park (Chicago, IL)      26201    IL</span></span>
+<span><span class="co">#&gt; 4  1714000-12 neighborhood    Forest Glen (Chicago, IL)      19579    IL</span></span>
+<span><span class="co">#&gt; 5  1714000-13 neighborhood     North Park (Chicago, IL)      17522    IL</span></span>
+<span><span class="co">#&gt; 6  1714000-14 neighborhood    Albany Park (Chicago, IL)      48549    IL</span></span>
+<span><span class="co">#&gt; 7  1714000-15 neighborhood   Portage Park (Chicago, IL)      63038    IL</span></span>
+<span><span class="co">#&gt; 8  1714000-16 neighborhood    Irving Park (Chicago, IL)      51911    IL</span></span>
+<span><span class="co">#&gt; 9  1714000-17 neighborhood        Dunning (Chicago, IL)      43120    IL</span></span>
+<span><span class="co">#&gt; 10 1714000-18 neighborhood      Montclare (Chicago, IL)      14412    IL</span></span>
+<span><span class="co">#&gt;             notes                       geometry</span></span>
+<span><span class="co">#&gt; 1  Far North Side MULTIPOLYGON (((-87.65456 4...</span></span>
+<span><span class="co">#&gt; 2  Far North Side MULTIPOLYGON (((-87.78002 4...</span></span>
+<span><span class="co">#&gt; 3  Far North Side MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 4  Far North Side MULTIPOLYGON (((-87.72642 4...</span></span>
+<span><span class="co">#&gt; 5  Far North Side MULTIPOLYGON (((-87.7069 41...</span></span>
+<span><span class="co">#&gt; 6  Far North Side MULTIPOLYGON (((-87.70404 4...</span></span>
+<span><span class="co">#&gt; 7  Northwest Side MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 8  Northwest Side MULTIPOLYGON (((-87.69475 4...</span></span>
+<span><span class="co">#&gt; 9  Northwest Side MULTIPOLYGON (((-87.77621 4...</span></span>
+<span><span class="co">#&gt; 10 Northwest Side MULTIPOLYGON (((-87.78942 4...</span></span></code></pre></div>
 <p>Now we can make our map!</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
@@ -199,7 +215,7 @@
 <span>    fill <span class="op">=</span> <span class="st">""</span></span>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="100%"></p>
+<p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="100%"></p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
