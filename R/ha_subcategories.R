@@ -19,12 +19,13 @@ ha_subcategories <- function() {
     httr2::resp_body_json(simplifyVector = TRUE)
 
   output <- body$results 
-  output <- asplit(output, 1) |> 
-    lapply(\(x) do.call(cbind, x)) |>
+  output <- asplit(output, 1) |>
+    lapply(do.call, what = cbind) |>
     do.call(what = rbind)
-  rownames(output) <- NULL
+  
   output <- output[c("subcategories.name", "subcategories.slug", "name")]
   colnames(output) <- c("subcategory_name", "subcategory_key", "category_name")
+  rownames(output) <- NULL
 
   output
 }
