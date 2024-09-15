@@ -1,5 +1,5 @@
-# healthatlas 0.1.0
+# healthatlas (development version)
 
-# bcdata 0.1.0
+# healthatlas 0.1.0
 
 * Initial Release
