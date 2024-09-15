@@ -18,9 +18,6 @@
 #' @param layer_key Character string or vector of 
 #' Unique IDs for geographic layers.
 #' @param geometry Attach geometry to output?
-#' @param wide Pivot wider so that each row contains 
-#' the values of all topics within a population at a 
-#' specified time period and a geographic area?
 #' @param progress Display a progress bar?
 #'
 #' @return Data tibble containing value and standard
@@ -33,7 +30,7 @@
 #' 
 #' ha_data("POP", "H", "2014-2018", "zip")
 #' }
-ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, wide = FALSE, progress = TRUE) {
+ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, progress = TRUE) {
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
     ha_req_perform() |>
     ha_resp_body("results")
@@ -59,22 +56,7 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
       "\"."
     ))
   }
-  
-  if (wide) {
-    idvars = c("geoid", "population_key", "period_key", "layer_key")
-    output <- reshape(
-      output, 
-      direction = "wide", 
-      idvar = idvars, 
-      timevar = c("topic_key"),
-      sep = "_"
-    )
 
-    # flipping new names to "{topic_key}_{.value}"
-    col_index <- !(colnames(output) %in% idvars)
-    colnames(output)[col_index] <- strsplit(colnames(output)[col_index], "_") |> 
-      sapply(\(x) paste(rev(x), collapse = "_"))
-  }
   if (geometry) {
     layer <- ha_layer(layer_key, progress)
 
