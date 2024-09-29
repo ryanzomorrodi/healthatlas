@@ -10,13 +10,13 @@
 #' invalid combinations.
 #' 
 #' @param topic_key  Character string or vector of 
-#' Unique IDs specifying topics.
+#' Unique IDs(s) specifying topic(s).
 #' @param population_key Character string or vector of 
-#' Unique IDs for population stratifications.
+#' Unique ID(s) for population stratification(s).
 #' @param period_key Character string or vector of 
-#' Unique IDs for time periods.
-#' @param layer_key Character string or vector of 
-#' Unique IDs for geographic layers.
+#' Unique ID(s) for time period(s).
+#' @param layer_key Character string specifying an 
+#' Unique ID for a geographic layer.
 #' @param geometry Attach geometry to output?
 #' @param progress Display a progress bar?
 #'

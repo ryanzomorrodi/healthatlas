@@ -15,16 +15,16 @@ ha_data(
 }
 \arguments{
 \item{topic_key}{Character string or vector of
-Unique IDs specifying topics.}
+Unique IDs(s) specifying topic(s).}
 
 \item{population_key}{Character string or vector of
-Unique IDs for population stratifications.}
+Unique ID(s) for population stratification(s).}
 
 \item{period_key}{Character string or vector of
-Unique IDs for time periods.}
+Unique ID(s) for time period(s).}
 
-\item{layer_key}{Character string or vector of
-Unique IDs for geographic layers.}
+\item{layer_key}{Character string specifying an
+Unique ID for a geographic layer.}
 
 \item{geometry}{Attach geometry to output?}
 
