@@ -20,34 +20,34 @@ knitr::opts_chunk$set(
 library(healthatlas)
 ```
 
-Let's set our health atlas. For this example, we are going to use the Chicago Health Atlas, and can do so, by providing the Chicago Health Atlas URL to `ha_set()`.
+Let's set our health atlas. For this example we will use the Chicago Health Atlas. We can do so by calling `ha_set()` with the Chicago Health Atlas URL.
 ```{r}
 ha_set("chicagohealthatlas.org")
 ```
 
-If at anytime, we need to check which health atlas we are using, we can using `ha_get()`.
+If we need to check which health atlas we are using, we can use `ha_get()`.
 ```{r}
 ha_get()
 ```
 
-We can list all the topics (aka indicators) present within Chicago Health Atlas using `ha_topics()`. The most important column here is the `topic_key` which can be used to identify the topic within subsequent functions.
+We can list all the topics (aka indicators) present within Chicago Health Atlas by using `ha_topics()`. The most important column here is the `topic_key`. An individual `topic_key` can be used to identify a topic within subsequent functions.
 ```{r}
 topics <- ha_topics(progress = FALSE)
 topics
 ```
 
-Often, you may have an topic area that you are interested in exploring. You can explore these topic areas using `ha_subcategories()`.
+There may be a specific topic area you are interested in exploring. You can explore these topic areas using `ha_subcategories()`.
 ```{r}
 subcategories <- ha_subcategories()
 subcategories
 ```
 
-You can use a `subcategory_key` to subset the list of topics too.
+You can use a `subcategory_key` to subset the list of topics.
 ```{r}
 ha_topics("diet-exercise")
 ```
 
-Once we have a topic or topics in mind, we can explore what populations, time periods, and geographic scales that data is available for using `ha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
+Once we have a topic or topics in mind, we can explore what populations, time periods, and geographic scales that data is available at by using `ha_coverage()`. Again, the most important columns here are the key columns which can be used to specify the data desired.
 ```{r}
 coverage <- ha_coverage("HCSFVAP", progress = FALSE)
 coverage
@@ -55,7 +55,7 @@ coverage
 
 ## Import tabular data
 
-Now, we can import our data using `ha_data()` specifying the keys we identified above.
+Now, we can import our data using `ha_data()` and specifying the keys we identified above.
 ```{r}
 ease_of_access <- ha_data(
   topic_key = "HCSFVAP",
@@ -66,28 +66,67 @@ ease_of_access <- ha_data(
 ease_of_access
 ```
 
+We can even specify multiple topics, populations, and periods to get data for. `ha_data()` will return a combined table with data for every combination of topic, population, and period requested. A warning will be given for every invalid combindation of topic, population, and period requested.
+```{r}
+combinations_of_data <- ha_data(
+  topic_key = c("POP", "UMP"),
+  population_key = c("", "H"),
+  period_key = c("2017-2021", "2018-2022", "invalid"),
+  layer_key = "neighborhood"
+)
+combinations_of_data
+```
+
+If you want to mix and match topics, populations, years, or layers of data, I recommend creating a table of all the datasets you want, and `purrr::pmap()`-ing over the table.
+
+```{r}
+library(tibble)
+library(purrr)
+
+# creating a table of data I want
+metadata <- tribble(
+  ~ topic_key, ~ population_key, ~ period_key, ~ layer_key,
+  "POP",       "",               "2017-2021",  "neighborhood",
+  "HCSFVAP",   "",               "2020-2021",  "neighborhood",
+  "UMP",       "H",              "2017-2021",  "neighborhood",
+)
+
+metadata %>%
+  pmap(ha_data)
+```
+
 ## Import spatial data
 
-We can check what layers we can import with `ha_layers()`.
+We can see all the geographic layers available by using `ha_layers()`.
 ```{r}
 layers <- ha_layers()
 layers
 ```
 
-Since we just downloaded our data at the Community Area level, let's import the Community Area geographic layer with `ha_layer()`.
+Since we just downloaded our data at the Community Area level, let's import the Community Area geographic layer with `ha_layer()`. 
 ```{r}
 community_areas <- ha_layer("neighborhood")
+community_areas
+```
+
+You can also set `geometry = TRUE` within your data call to get the geographic layer's geometry along with your data.
+
+```{r}
+ease_of_access <- ha_data(
+  topic_key = "HCSFVAP",
+  population_key = "",
+  period_key = "2022-2023",
+  layer_key = "neighborhood",
+  geometry = TRUE
+)
+ease_of_access
 ```
 
 Let's map our data!
 ```{r}
-library(dplyr)
 library(ggplot2)
 
-map_data <- community_areas |>
-  left_join(ease_of_access, "geoid") 
-
-plot <- ggplot(map_data) +
+plot <- ggplot(ease_of_access) +
   geom_sf(aes(fill = value), alpha = 0.7) +
   scale_fill_distiller(palette = "GnBu", direction = 1) +
   labs(
@@ -115,6 +154,6 @@ plot +
   geom_sf(data = grocery_stores, size = 0.5)
 ```
 
-As expected, it seems that the areas with more grocery stores have a higher percent of adults who report that it is very easy to get fresh fruits and vegetables. 
+As expected, it seems that the areas with more grocery stores tend to have a higher percent of adults who report that it is very easy to get fresh fruits and vegetables. 
 
-This is a typical use case for the `healthatlas`, in which we explored every function that `healthatlas` has to offer. Now it's time for you to explore.
+This is a typical use case for the `healthatlas` in which we explored every function that `healthatlas` has to offer. Now it's time for you to explore!
