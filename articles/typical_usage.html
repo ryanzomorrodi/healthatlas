@@ -26,7 +26,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">healthatlas</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,20 +75,21 @@
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ryanzomorrodi.github.io/healthatlas/">healthatlas</a></span><span class="op">)</span></span></code></pre></div>
-<p>Let’s set our health atlas. For this example, we are going to use the
-Chicago Health Atlas, and can do so, by providing the Chicago Health
-Atlas URL to <code><a href="../reference/ha_set.html">ha_set()</a></code>.</p>
+<p>Let’s set our health atlas. For this example we will use the Chicago
+Health Atlas. We can do so by calling <code><a href="../reference/ha_set.html">ha_set()</a></code> with the
+Chicago Health Atlas URL.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_set.html">ha_set</a></span><span class="op">(</span><span class="st">"chicagohealthatlas.org"</span><span class="op">)</span></span></code></pre></div>
-<p>If at anytime, we need to check which health atlas we are using, we
-can using <code><a href="../reference/ha_get.html">ha_get()</a></code>.</p>
+<p>If we need to check which health atlas we are using, we can use
+<code><a href="../reference/ha_get.html">ha_get()</a></code>.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_get.html">ha_get</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "https://chicagohealthatlas.org/api/v1/"</span></span></code></pre></div>
 <p>We can list all the topics (aka indicators) present within Chicago
-Health Atlas using <code><a href="../reference/ha_topics.html">ha_topics()</a></code>. The most important column
-here is the <code>topic_key</code> which can be used to identify the
-topic within subsequent functions.</p>
+Health Atlas by using <code><a href="../reference/ha_topics.html">ha_topics()</a></code>. The most important
+column here is the <code>topic_key</code>. An individual
+<code>topic_key</code> can be used to identify a topic within subsequent
+functions.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">topics</span></span>
@@ -107,8 +108,8 @@ topic within subsequent functions.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 393 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: subcategory_key &lt;chr&gt;, category_name &lt;chr&gt;</span></span></span></code></pre></div>
-<p>Often, you may have an topic area that you are interested in
-exploring. You can explore these topic areas using
+<p>There may be a specific topic area you are interested in exploring.
+You can explore these topic areas using
 <code><a href="../reference/ha_subcategories.html">ha_subcategories()</a></code>.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">subcategories</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_subcategories.html">ha_subcategories</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -128,7 +129,7 @@ exploring. You can explore these topic areas using
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Injury &amp; Violence     injury-violence-1     Morbidity           </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 20 more rows</span></span></span></code></pre></div>
 <p>You can use a <code>subcategory_key</code> to subset the list of
-topics too.</p>
+topics.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span><span class="st">"diet-exercise"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 20 × 7</span></span></span>
@@ -157,8 +158,8 @@ topics too.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: subcategory_key &lt;chr&gt;, category_name &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Once we have a topic or topics in mind, we can explore what
 populations, time periods, and geographic scales that data is available
-for using <code><a href="../reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns
-here are the key columns which can be used to specify the data
+at by using <code><a href="../reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important
+columns here are the key columns which can be used to specify the data
 desired.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">coverage</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_coverage.html">ha_coverage</a></span><span class="op">(</span><span class="st">"HCSFVAP"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
@@ -182,8 +183,8 @@ desired.</p>
 <div class="section level2">
 <h2 id="import-tabular-data">Import tabular data<a class="anchor" aria-label="anchor" href="#import-tabular-data"></a>
 </h2>
-<p>Now, we can import our data using <code><a href="../reference/ha_data.html">ha_data()</a></code> specifying
-the keys we identified above.</p>
+<p>Now, we can import our data using <code><a href="../reference/ha_data.html">ha_data()</a></code> and
+specifying the keys we identified above.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ease_of_access</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
 <span>  topic_key <span class="op">=</span> <span class="st">"HCSFVAP"</span>,</span>
@@ -206,13 +207,116 @@ the keys we identified above.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 HCSFVAP   <span style="color: #949494;">""</span>             2022-2023  neighborh…  48.4          8.27</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  HCSFVAP   <span style="color: #949494;">""</span>             2022-2023  neighborh…  56.7          4.96</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span></code></pre></div>
+<p>We can even specify multiple topics, populations, and periods to get
+data for. <code><a href="../reference/ha_data.html">ha_data()</a></code> will return a combined table with data
+for every combination of topic, population, and period requested. A
+warning will be given for every invalid combindation of topic,
+population, and period requested.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">combinations_of_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
+<span>  topic_key <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"POP"</span>, <span class="st">"UMP"</span><span class="op">)</span>,</span>
+<span>  population_key <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">""</span>, <span class="st">"H"</span><span class="op">)</span>,</span>
+<span>  period_key <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2017-2021"</span>, <span class="st">"2018-2022"</span>, <span class="st">"invalid"</span><span class="op">)</span>,</span>
+<span>  layer_key <span class="op">=</span> <span class="st">"neighborhood"</span></span>
+<span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
+<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "POP" population_key = ""</span></span>
+<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
+<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "UMP" population_key = ""</span></span>
+<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
+<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "POP" population_key = "H"</span></span>
+<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
+<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "UMP" population_key = "H"</span></span>
+<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="va">combinations_of_data</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 616 × 7</span></span></span>
+<span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-35 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">21</span>276.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-36 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">7</span>417.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-37 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">2</span>280.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-38 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>397.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-39 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">18</span>503.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">42</span>252.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-40 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">11</span>608.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-41 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">28</span>802.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>362.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">55</span>627.            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 606 more rows</span></span></span></code></pre></div>
+<p>If you want to mix and match topics, populations, years, or layers of
+data, I recommend creating a table of all the datasets you want, and
+<code><a href="https://purrr.tidyverse.org/reference/pmap.html" class="external-link">purrr::pmap()</a></code>-ing over the table.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://purrr.tidyverse.org/" class="external-link">purrr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># creating a table of data I want</span></span>
+<span><span class="va">metadata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
+<span>  <span class="op">~</span> <span class="va">topic_key</span>, <span class="op">~</span> <span class="va">population_key</span>, <span class="op">~</span> <span class="va">period_key</span>, <span class="op">~</span> <span class="va">layer_key</span>,</span>
+<span>  <span class="st">"POP"</span>,       <span class="st">""</span>,               <span class="st">"2017-2021"</span>,  <span class="st">"neighborhood"</span>,</span>
+<span>  <span class="st">"HCSFVAP"</span>,   <span class="st">""</span>,               <span class="st">"2020-2021"</span>,  <span class="st">"neighborhood"</span>,</span>
+<span>  <span class="st">"UMP"</span>,       <span class="st">"H"</span>,              <span class="st">"2017-2021"</span>,  <span class="st">"neighborhood"</span>,</span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">metadata</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://purrr.tidyverse.org/reference/pmap.html" class="external-link">pmap</a></span><span class="op">(</span><span class="va">ha_data</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [[1]]</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
+<span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-35 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">21</span>276. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-36 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">7</span>417. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-37 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">2</span>280. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-38 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>397. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-39 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">18</span>503. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">42</span>252. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-40 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">11</span>608. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-41 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">28</span>802. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>362. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">55</span>627. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; [[2]]</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
+<span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-35 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  52.0          9.18</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-36 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  63.8          9.34</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-37 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  33.2          9.78</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-38 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  47.4          7.36</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-39 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  61.3          7.22</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4  HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  77.4          5.22</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-40 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  46.2          8.67</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-41 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  76.3          5.30</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  56.4          7.77</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  HCSFVAP   <span style="color: #949494;">""</span>             2020-2021  neighborh…  58.0          4.98</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; [[3]]</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
+<span><span class="co">#&gt;    geoid     topic_key population_key period_key layer_key   value standardError</span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-… UMP       H              2017-2021  neighbor… 20.2            22.8 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-… UMP       H              2017-2021  neighbor…  0.023<span style="text-decoration: underline;">9</span>         48.0 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-… UMP       H              2017-2021  neighbor…  6.60           21.8 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-… UMP       H              2017-2021  neighbor…  9.47           30.5 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-… UMP       H              2017-2021  neighbor… 12.2            28.4 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4 UMP       H              2017-2021  neighbor…  8.13            3.35</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-… UMP       H              2017-2021  neighbor… 29.8            52.9 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-… UMP       H              2017-2021  neighbor…  6.42           10.5 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-… UMP       H              2017-2021  neighbor…  3.37           37.6 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1 UMP       H              2017-2021  neighbor…  5.19            4.38</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="import-spatial-data">Import spatial data<a class="anchor" aria-label="anchor" href="#import-spatial-data"></a>
 </h2>
-<p>We can check what layers we can import with
+<p>We can see all the geographic layers available by using
 <code><a href="../reference/ha_layers.html">ha_layers()</a></code>.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layers.html">ha_layers</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">layers</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 4</span></span></span>
@@ -225,25 +329,81 @@ the keys we identified above.</p>
 <p>Since we just downloaded our data at the Community Area level, let’s
 import the Community Area geographic layer with
 <code><a href="../reference/ha_layer.html">ha_layer()</a></code>.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layer.html">ha_layer</a></span><span class="op">(</span><span class="st">"neighborhood"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">community_areas</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layer.html">ha_layer</a></span><span class="op">(</span><span class="st">"neighborhood"</span><span class="op">)</span></span>
+<span><span class="va">community_areas</span></span>
+<span><span class="co">#&gt; Simple feature collection with 77 features and 6 fields</span></span>
+<span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52419 ymax: 42.02305</span></span>
+<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
+<span><span class="co">#&gt; First 10 features:</span></span>
+<span><span class="co">#&gt;         geoid    layer_key                         name population state</span></span>
+<span><span class="co">#&gt; 1   1714000-1 neighborhood    Rogers Park (Chicago, IL)      55454    IL</span></span>
+<span><span class="co">#&gt; 2  1714000-10 neighborhood   Norwood Park (Chicago, IL)      41069    IL</span></span>
+<span><span class="co">#&gt; 3  1714000-11 neighborhood Jefferson Park (Chicago, IL)      26201    IL</span></span>
+<span><span class="co">#&gt; 4  1714000-12 neighborhood    Forest Glen (Chicago, IL)      19579    IL</span></span>
+<span><span class="co">#&gt; 5  1714000-13 neighborhood     North Park (Chicago, IL)      17522    IL</span></span>
+<span><span class="co">#&gt; 6  1714000-14 neighborhood    Albany Park (Chicago, IL)      48549    IL</span></span>
+<span><span class="co">#&gt; 7  1714000-15 neighborhood   Portage Park (Chicago, IL)      63038    IL</span></span>
+<span><span class="co">#&gt; 8  1714000-16 neighborhood    Irving Park (Chicago, IL)      51911    IL</span></span>
+<span><span class="co">#&gt; 9  1714000-17 neighborhood        Dunning (Chicago, IL)      43120    IL</span></span>
+<span><span class="co">#&gt; 10 1714000-18 neighborhood      Montclare (Chicago, IL)      14412    IL</span></span>
+<span><span class="co">#&gt;             notes                       geometry</span></span>
+<span><span class="co">#&gt; 1  Far North Side MULTIPOLYGON (((-87.65456 4...</span></span>
+<span><span class="co">#&gt; 2  Far North Side MULTIPOLYGON (((-87.78002 4...</span></span>
+<span><span class="co">#&gt; 3  Far North Side MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 4  Far North Side MULTIPOLYGON (((-87.72642 4...</span></span>
+<span><span class="co">#&gt; 5  Far North Side MULTIPOLYGON (((-87.7069 41...</span></span>
+<span><span class="co">#&gt; 6  Far North Side MULTIPOLYGON (((-87.70404 4...</span></span>
+<span><span class="co">#&gt; 7  Northwest Side MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 8  Northwest Side MULTIPOLYGON (((-87.69475 4...</span></span>
+<span><span class="co">#&gt; 9  Northwest Side MULTIPOLYGON (((-87.77621 4...</span></span>
+<span><span class="co">#&gt; 10 Northwest Side MULTIPOLYGON (((-87.78942 4...</span></span></code></pre></div>
+<p>You can also set <code>geometry = TRUE</code> within your data call
+to get the geographic layer’s geometry along with your data.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ease_of_access</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_data.html">ha_data</a></span><span class="op">(</span></span>
+<span>  topic_key <span class="op">=</span> <span class="st">"HCSFVAP"</span>,</span>
+<span>  population_key <span class="op">=</span> <span class="st">""</span>,</span>
+<span>  period_key <span class="op">=</span> <span class="st">"2022-2023"</span>,</span>
+<span>  layer_key <span class="op">=</span> <span class="st">"neighborhood"</span>,</span>
+<span>  geometry <span class="op">=</span> <span class="cn">TRUE</span></span>
+<span><span class="op">)</span></span>
+<span><span class="va">ease_of_access</span></span>
+<span><span class="co">#&gt; Simple feature collection with 77 features and 7 fields</span></span>
+<span><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span><span class="co">#&gt; Dimension:     XY</span></span>
+<span><span class="co">#&gt; Bounding box:  xmin: -87.94011 ymin: 41.64454 xmax: -87.52419 ymax: 42.02305</span></span>
+<span><span class="co">#&gt; Geodetic CRS:  WGS 84</span></span>
+<span><span class="co">#&gt; First 10 features:</span></span>
+<span><span class="co">#&gt;         geoid topic_key population_key period_key    layer_key    value</span></span>
+<span><span class="co">#&gt; 1   1714000-1   HCSFVAP                 2022-2023 neighborhood 56.70447</span></span>
+<span><span class="co">#&gt; 2  1714000-10   HCSFVAP                 2022-2023 neighborhood 61.06724</span></span>
+<span><span class="co">#&gt; 3  1714000-11   HCSFVAP                 2022-2023 neighborhood 61.46267</span></span>
+<span><span class="co">#&gt; 4  1714000-12   HCSFVAP                 2022-2023 neighborhood 81.03884</span></span>
+<span><span class="co">#&gt; 5  1714000-13   HCSFVAP                 2022-2023 neighborhood 54.84689</span></span>
+<span><span class="co">#&gt; 6  1714000-14   HCSFVAP                 2022-2023 neighborhood 52.98553</span></span>
+<span><span class="co">#&gt; 7  1714000-15   HCSFVAP                 2022-2023 neighborhood 61.05424</span></span>
+<span><span class="co">#&gt; 8  1714000-16   HCSFVAP                 2022-2023 neighborhood 61.62744</span></span>
+<span><span class="co">#&gt; 9  1714000-17   HCSFVAP                 2022-2023 neighborhood 72.73395</span></span>
+<span><span class="co">#&gt; 10 1714000-18   HCSFVAP                 2022-2023 neighborhood 51.01435</span></span>
+<span><span class="co">#&gt;    standardError                       geometry</span></span>
+<span><span class="co">#&gt; 1       4.958576 MULTIPOLYGON (((-87.65456 4...</span></span>
+<span><span class="co">#&gt; 2       5.929492 MULTIPOLYGON (((-87.78002 4...</span></span>
+<span><span class="co">#&gt; 3       5.845823 MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 4       4.560229 MULTIPOLYGON (((-87.72642 4...</span></span>
+<span><span class="co">#&gt; 5      10.003305 MULTIPOLYGON (((-87.7069 41...</span></span>
+<span><span class="co">#&gt; 6       6.182114 MULTIPOLYGON (((-87.70404 4...</span></span>
+<span><span class="co">#&gt; 7       5.687155 MULTIPOLYGON (((-87.75264 4...</span></span>
+<span><span class="co">#&gt; 8       6.953888 MULTIPOLYGON (((-87.69475 4...</span></span>
+<span><span class="co">#&gt; 9       5.353022 MULTIPOLYGON (((-87.77621 4...</span></span>
+<span><span class="co">#&gt; 10      9.557330 MULTIPOLYGON (((-87.78942 4...</span></span></code></pre></div>
 <p>Let’s map our data!</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
-<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     filter, lag</span></span>
-<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">map_data</span> <span class="op">&lt;-</span> <span class="va">community_areas</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">left_join</a></span><span class="op">(</span><span class="va">ease_of_access</span>, <span class="st">"geoid"</span><span class="op">)</span> </span>
-<span></span>
-<span><span class="va">plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">map_data</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="va">plot</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">ease_of_access</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">value</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html" class="external-link">scale_fill_distiller</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"GnBu"</span>, direction <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
@@ -252,13 +412,13 @@ import the Community Area geographic layer with
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">plot</span></span></code></pre></div>
-<p><img src="typical_usage_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
+<p><img src="typical_usage_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
 <p>Our map looks pretty good, but perhaps there is a point layer that
 may provide more insight into the spatial variation of the ease of
 access to fruits and vegetables. We can use
 <code><a href="../reference/ha_point_layers.html">ha_point_layers()</a></code> to list all the point layers available in
 the Chicago Health Atlas.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">point_layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_point_layers.html">ha_point_layers</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">point_layers</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
@@ -278,20 +438,20 @@ the Chicago Health Atlas.</p>
 <p>Grocery store locations may be an important aspect of the ease of
 access to fruits and vegetables. We can import this layer by providing
 the <code>point_layer_uuid</code> to <code><a href="../reference/ha_point_layer.html">ha_point_layer()</a></code>.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">grocery_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_point_layer.html">ha_point_layer</a></span><span class="op">(</span><span class="st">"7d9caf3c-75e6-4382-8c97-069696a3efbf"</span><span class="op">)</span></span></code></pre></div>
 <p>Now that we have imported our grocery stores, let’s layer them on top
 of our map.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">plot</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">grocery_stores</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="typical_usage_files/figure-html/unnamed-chunk-14-1.png" width="700"></p>
-<p>As expected, it seems that the areas with more grocery stores have a
-higher percent of adults who report that it is very easy to get fresh
-fruits and vegetables.</p>
-<p>This is a typical use case for the <code>healthatlas</code>, in which
+<p><img src="typical_usage_files/figure-html/unnamed-chunk-17-1.png" width="700"></p>
+<p>As expected, it seems that the areas with more grocery stores tend to
+have a higher percent of adults who report that it is very easy to get
+fresh fruits and vegetables.</p>
+<p>This is a typical use case for the <code>healthatlas</code> in which
 we explored every function that <code>healthatlas</code> has to offer.
-Now it’s time for you to explore.</p>
+Now it’s time for you to explore!</p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -304,7 +464,7 @@ Now it’s time for you to explore.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   typical_usage: typical_usage.html
-last_built: 2024-09-15T22:58Z
+last_built: 2024-09-29T02:01Z
 urls:
   reference: https://ryanzomorrodi.github.io/healthatlas/reference
   article: https://ryanzomorrodi.github.io/healthatlas/articles
