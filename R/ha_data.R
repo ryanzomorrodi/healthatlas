@@ -31,6 +31,17 @@
 #' ha_data("POP", "H", "2014-2018", "zip")
 #' }
 ha_data <- function(topic_key, population_key, period_key, layer_key, geometry = FALSE, progress = TRUE) {
+  chk::chk_not_missing(topic_key, x_name = "`topic_key`")
+  chk::chk_character(topic_key)
+  chk::chk_not_missing(population_key, x_name = "`population_key`")
+  chk::chk_character(population_key)
+  chk::chk_not_missing(period_key, x_name = "`period_key`")
+  chk::chk_character(period_key)
+  chk::chk_not_missing(layer_key, x_name = "`layer_key`")
+  chk::chk_string(layer_key)
+  chk::chk_logical(geometry)
+  chk::chk_logical(progress)
+
   body <- ha_api_data_req(topic_key, population_key, period_key, layer_key) |>
     ha_req_perform() |>
     ha_resp_body("results")

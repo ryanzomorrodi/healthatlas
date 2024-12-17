@@ -40,6 +40,10 @@ ha_layers <- function() {
 #' ha_layer("zip", progress = FALSE)
 #' }
 ha_layer <- function(layer_key, progress = TRUE) {
+  chk::chk_not_missing(layer_key, x_name = "`layer_key`")
+  chk::chk_string(layer_key)
+  chk::chk_logical(progress)
+
   body <- ha_api_geographies_req(layer_key) |>
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()

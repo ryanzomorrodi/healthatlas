@@ -20,6 +20,14 @@
 #' ha_coverage("POP", progress = FALSE)
 #' }
 ha_coverage <- function(topic_key, layer_key = NULL, keys_only = FALSE, progress = TRUE) {
+  chk::chk_not_missing(topic_key, x_name = "`topic_key`")
+  chk::chk_string(topic_key)
+  if (!is.null(layer_key)) {
+    chk::chk_character(layer_key)
+  }
+  chk::chk_logical(keys_only)
+  chk::chk_logical(progress)
+
   body <- ha_api_coverage_req(topic_key, layer_key) |>
     ha_req_perform() |>
     ha_resp_body("coverages")

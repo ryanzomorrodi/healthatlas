@@ -12,6 +12,7 @@
 #' ha_set("chicagohealthatlas.org")
 #' }
 ha_set <- function(ha_URL) {
+  chk::chk_not_missing(ha_URL, x_name = "`ha_URL`")
   if (!grepl("^https://", ha_URL)) {
     ha_URL <- paste0("https://", ha_URL)
   }
@@ -40,5 +41,5 @@ ha_set <- function(ha_URL) {
 #' ha_get()
 #' }
 ha_get <- function() {
-  Sys.getenv("ha_URL")
+  Sys.getenv("ha_URL", unset = NA)
 }

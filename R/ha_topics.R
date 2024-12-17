@@ -17,6 +17,11 @@
 #' ha_topics("education", progress = FALSE)
 #' }
 ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
+  if (!is.null(subcategory_key)) {
+    chk::chk_string(subcategory_key)
+  }
+  chk::chk_logical(progress)
+
   body <- ha_api_topics_req(subcategory_key) |>
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()

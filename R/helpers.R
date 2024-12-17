@@ -1,9 +1,22 @@
-ha_req <- function(endpoint) {
-  if (!curl::has_internet()) {
-    stop("Your API call has errors. No Internet Connection.")
-  } else if (ha_get() == "") {
-    stop("Set your portal using ha_set()")
+chk_has_internet <- function() {
+  if (vld_has_internet()) {
+    return(invisible())
   }
+  chk::abort_chk("Your API call has errors. No Internet Connection.")
+}
+vld_has_internet <- function() curl::has_internet()
+
+chk_has_set_ha <- function() {
+  if (vld_has_set_ha()) {
+    return(invisible())
+  }
+  chk::abort_chk("Health atlas portal must be set. Try using ha_set()")
+}
+vld_has_set_ha <- function() !is.na(ha_get())
+
+ha_req <- function(endpoint) {
+  chk_has_internet()
+  chk_has_set_ha()
 
   httr2::request(ha_get()) |>
     httr2::req_user_agent("healthatlas R package") |>
@@ -23,7 +36,7 @@ ha_req_perform_iterative <- function(req, progress = TRUE) {
         count <- httr2::resp_body_json(resp)[["count"]]
 
         if (count == 0) {
-          stop("Your API call has errors. No Results.")
+          chk::abort_chk("Your API call has errors. No Results.")
         }
         ceiling(count / 20)
       }
@@ -49,7 +62,7 @@ ha_resp_body <- function(resp, accessor) {
 
   count <- body[["count"]]
   if (!is.null(count) && count == 0) {
-    stop("Your API call has errors. No Results.")
+    chk::abort_chk("Your API call has errors. No Results.")
   }
   body <- body[[accessor]]
   if (is.matrix(body)) {

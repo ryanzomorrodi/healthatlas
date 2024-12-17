@@ -40,6 +40,9 @@ ha_point_layers <- function() {
 #' ha_point_layer("67f58fa0-0dfa-4ee9-8600-c1ab4a093dc6")
 #' }
 ha_point_layer <- function(point_layer_uuid) {
+  chk::chk_not_missing(point_layer_uuid, x_name = "`point_layer_uuid`")
+  chk::chk_string(point_layer_uuid)
+
   body <- ha_api_points_req(point_layer_uuid) |>
     ha_req_perform() |>
     ha_resp_body("points")

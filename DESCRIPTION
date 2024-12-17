@@ -19,7 +19,8 @@ Imports:
     curl,
     httr2,
     tibble,
-    sf
+    sf,
+    chk
 Suggests: 
     dplyr,
     ggplot2,
