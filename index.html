@@ -109,7 +109,7 @@
 <p>We can list all the topics (aka indicators) present within Chicago Health Atlas using <code><a href="reference/ha_topics.html">ha_topics()</a></code>. The most important column here is the <code>topic_key</code> which can be used to identify the topic within subsequent functions.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 403 × 7</span></span>
+<span><span class="co">#&gt; # A tibble: 407 × 7</span></span>
 <span><span class="co">#&gt;    topic_name           topic_key topic_description topic_units subcategory_name</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;                &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;           </span></span>
 <span><span class="co">#&gt;  1 9th grade education… EDA       Residents 25 or … % of resid… Education       </span></span>
@@ -122,25 +122,25 @@
 <span><span class="co">#&gt;  8 Adult binge drinking HCSBD     Number of adults… count of a… Alcohol &amp; Drug …</span></span>
 <span><span class="co">#&gt;  9 Adult binge drinkin… HCSBDP    Percent of adult… % of adults Alcohol &amp; Drug …</span></span>
 <span><span class="co">#&gt; 10 Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease </span></span>
-<span><span class="co">#&gt; # ℹ 393 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 397 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 2 more variables: subcategory_key &lt;chr&gt;, category_name &lt;chr&gt;</span></span></code></pre></div>
 <p>Then, we can explore what populations, time periods, and geographic scales that data is available for using <code><a href="reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns here are the key columns which can be used to specify the data desired.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ha_coverage.html">ha_coverage</a></span><span class="op">(</span><span class="st">"EDA"</span>, progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 132 × 7</span></span>
+<span><span class="co">#&gt; # A tibble: 152 × 7</span></span>
 <span><span class="co">#&gt;    topic_key population_key population_name population_grouping period_key</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;          &lt;chr&gt;           &lt;chr&gt;               &lt;chr&gt;     </span></span>
-<span><span class="co">#&gt;  1 EDA       ""             Full population ""                  2009-2013 </span></span>
-<span><span class="co">#&gt;  2 EDA       ""             Full population ""                  2010-2014 </span></span>
-<span><span class="co">#&gt;  3 EDA       ""             Full population ""                  2017-2021 </span></span>
-<span><span class="co">#&gt;  4 EDA       ""             Full population ""                  2008-2012 </span></span>
-<span><span class="co">#&gt;  5 EDA       ""             Full population ""                  2015-2019 </span></span>
-<span><span class="co">#&gt;  6 EDA       ""             Full population ""                  2007-2011 </span></span>
+<span><span class="co">#&gt;  1 EDA       ""             Full population ""                  2006-2010 </span></span>
+<span><span class="co">#&gt;  2 EDA       ""             Full population ""                  2007-2011 </span></span>
+<span><span class="co">#&gt;  3 EDA       ""             Full population ""                  2019-2023 </span></span>
+<span><span class="co">#&gt;  4 EDA       ""             Full population ""                  2011-2015 </span></span>
+<span><span class="co">#&gt;  5 EDA       "F"            Female          "Sex"               2019-2023 </span></span>
+<span><span class="co">#&gt;  6 EDA       ""             Full population ""                  2009-2013 </span></span>
 <span><span class="co">#&gt;  7 EDA       ""             Full population ""                  2014-2018 </span></span>
-<span><span class="co">#&gt;  8 EDA       ""             Full population ""                  2016-2020 </span></span>
-<span><span class="co">#&gt;  9 EDA       "F"            Female          "Sex"               2018-2022 </span></span>
-<span><span class="co">#&gt; 10 EDA       "M"            Male            "Sex"               2015-2019 </span></span>
-<span><span class="co">#&gt; # ℹ 122 more rows</span></span>
+<span><span class="co">#&gt;  8 EDA       ""             Full population ""                  2013-2017 </span></span>
+<span><span class="co">#&gt;  9 EDA       ""             Full population ""                  2016-2020 </span></span>
+<span><span class="co">#&gt; 10 EDA       ""             Full population ""                  2010-2014 </span></span>
+<span><span class="co">#&gt; # ℹ 142 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 2 more variables: layer_key &lt;chr&gt;, layer_name &lt;chr&gt;</span></span></code></pre></div>
 <p>Now, we can import our data using <code><a href="reference/ha_data.html">ha_data()</a></code> specifying the keys we identified above.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
