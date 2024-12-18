@@ -58,7 +58,7 @@ ha_data <- function(topic_key, population_key, period_key, layer_key, geometry =
   )
   missing <- combinations[!interaction(combinations[keys]) %in% interaction(output[keys]),]
   for (i in seq_len(nrow(missing))) {
-    warning(paste0(
+    chk::wrn(paste0(
       "Your API call has errors. No results for ",
       "topic_key = \"", missing$topic_key[i],
       "\" population_key = \"", missing$population_key[i],
