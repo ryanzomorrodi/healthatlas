@@ -74,7 +74,7 @@ functions.
 
 ``` r
 ha_topics(progress = FALSE)
-#> # A tibble: 403 × 7
+#> # A tibble: 407 × 7
 #>    topic_name           topic_key topic_description topic_units subcategory_name
 #>    <chr>                <chr>     <chr>             <chr>       <chr>           
 #>  1 9th grade education… EDA       Residents 25 or … % of resid… Education       
@@ -87,7 +87,7 @@ ha_topics(progress = FALSE)
 #>  8 Adult binge drinking HCSBD     Number of adults… count of a… Alcohol & Drug …
 #>  9 Adult binge drinkin… HCSBDP    Percent of adult… % of adults Alcohol & Drug …
 #> 10 Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease 
-#> # ℹ 393 more rows
+#> # ℹ 397 more rows
 #> # ℹ 2 more variables: subcategory_key <chr>, category_name <chr>
 ```
 
@@ -98,20 +98,20 @@ the data desired.
 
 ``` r
 ha_coverage("EDA", progress = FALSE)
-#> # A tibble: 132 × 7
+#> # A tibble: 152 × 7
 #>    topic_key population_key population_name population_grouping period_key
 #>    <chr>     <chr>          <chr>           <chr>               <chr>     
-#>  1 EDA       ""             Full population ""                  2009-2013 
-#>  2 EDA       ""             Full population ""                  2010-2014 
-#>  3 EDA       ""             Full population ""                  2017-2021 
-#>  4 EDA       ""             Full population ""                  2008-2012 
-#>  5 EDA       ""             Full population ""                  2015-2019 
-#>  6 EDA       ""             Full population ""                  2007-2011 
+#>  1 EDA       ""             Full population ""                  2006-2010 
+#>  2 EDA       ""             Full population ""                  2007-2011 
+#>  3 EDA       ""             Full population ""                  2019-2023 
+#>  4 EDA       ""             Full population ""                  2011-2015 
+#>  5 EDA       "F"            Female          "Sex"               2019-2023 
+#>  6 EDA       ""             Full population ""                  2009-2013 
 #>  7 EDA       ""             Full population ""                  2014-2018 
-#>  8 EDA       ""             Full population ""                  2016-2020 
-#>  9 EDA       "F"            Female          "Sex"               2018-2022 
-#> 10 EDA       "M"            Male            "Sex"               2015-2019 
-#> # ℹ 122 more rows
+#>  8 EDA       ""             Full population ""                  2013-2017 
+#>  9 EDA       ""             Full population ""                  2016-2020 
+#> 10 EDA       ""             Full population ""                  2010-2014 
+#> # ℹ 142 more rows
 #> # ℹ 2 more variables: layer_key <chr>, layer_name <chr>
 ```
 
