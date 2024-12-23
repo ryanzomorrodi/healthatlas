@@ -1,3 +1,5 @@
+# healthatlas (development version)
+
 # healthatlas 0.1.1
 
 * `dplyr`, `tidyr`, and `purrr` dependencies were removed (#2).  
