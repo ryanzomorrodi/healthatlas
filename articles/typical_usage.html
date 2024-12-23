@@ -26,7 +26,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">healthatlas</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,8 +92,10 @@ column here is the <code>topic_key</code>. An individual
 functions.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Error in get(paste0(generic, ".", class), envir = get_method_env()) : </span></span>
+<span><span class="co">#&gt;   object 'type_sum.accel' not found</span></span>
 <span><span class="va">topics</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 407 × 7</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 409 × 7</span></span></span>
 <span><span class="co">#&gt;    topic_name           topic_key topic_description topic_units subcategory_name</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 9th grade education… EDA       Residents 25 or … % of resid… Education       </span></span>
@@ -106,7 +108,7 @@ functions.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult binge drinking HCSBD     Number of adults… count of a… Alcohol &amp; Drug …</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Adult binge drinkin… HCSBDP    Percent of adult… % of adults Alcohol &amp; Drug …</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Adult diabetes       HCSDIA    Number of adults… count of a… Chronic Disease </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 397 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 399 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: subcategory_key &lt;chr&gt;, category_name &lt;chr&gt;</span></span></span></code></pre></div>
 <p>There may be a specific topic area you are interested in exploring.
 You can explore these topic areas using
@@ -219,18 +221,14 @@ population, and period requested.</p>
 <span>  period_key <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2017-2021"</span>, <span class="st">"2018-2022"</span>, <span class="st">"invalid"</span><span class="op">)</span>,</span>
 <span>  layer_key <span class="op">=</span> <span class="st">"neighborhood"</span></span>
 <span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
-<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "POP" population_key = ""</span></span>
-<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
-<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
-<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "UMP" population_key = ""</span></span>
-<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
-<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
-<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "POP" population_key = "H"</span></span>
-<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
-<span><span class="co">#&gt; Warning in ha_data(topic_key = c("POP", "UMP"), population_key = c("", "H"), :</span></span>
-<span><span class="co">#&gt; Your API call has errors. No results for topic_key = "UMP" population_key = "H"</span></span>
-<span><span class="co">#&gt; period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning: Your API call has errors. No results for topic_key = "POP"</span></span>
+<span><span class="co">#&gt; population_key = "" period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning: Your API call has errors. No results for topic_key = "UMP"</span></span>
+<span><span class="co">#&gt; population_key = "" period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning: Your API call has errors. No results for topic_key = "POP"</span></span>
+<span><span class="co">#&gt; population_key = "H" period_key = "invalid" layer_key = "neighborhood".</span></span>
+<span><span class="co">#&gt; Warning: Your API call has errors. No results for topic_key = "UMP"</span></span>
+<span><span class="co">#&gt; population_key = "H" period_key = "invalid" layer_key = "neighborhood".</span></span>
 <span><span class="va">combinations_of_data</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 616 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
