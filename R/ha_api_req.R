@@ -27,7 +27,8 @@ ha_api_layers_req <- function() {
 
 ha_api_geographies_req <- function(layer_slug) {
   ha_req("geographies") |>
-    httr2::req_url_path_append(layer_slug)
+    httr2::req_url_path_append(layer_slug) |>
+    httr2::req_url_query(limit = 1000)
 }
 
 ha_api_points_req <- function(uuid = NULL) {

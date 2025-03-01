@@ -32,7 +32,7 @@ ha_req_perform_iterative <- function(req, progress = TRUE) {
     next_req = httr2::iterate_with_offset(
       param_name = "offset",
       start = 0,
-      offset = 20,
+      offset = 1000,
       resp_pages = function(resp) {
         count <- httr2::resp_body_json(resp)[["count"]]
 
