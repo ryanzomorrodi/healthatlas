@@ -1,8 +1,8 @@
 ---
-title: "Typical Usage"
+title: "Get started"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Typical Usage}
+  %\VignetteIndexEntry{healthatlas}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
