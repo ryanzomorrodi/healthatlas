@@ -1,4 +1,8 @@
-# healthatlas (development version)
+# healthatlas 0.2.0
+
+* Datasets and keywords were added to `ha_topics()` results. Additionally, multiple subcategories are now viewable. (#5).
+* API page limit was raised, resulting in faster queries (#7).
+* Requests are now cached (#9).
 
 # healthatlas 0.1.1
 
