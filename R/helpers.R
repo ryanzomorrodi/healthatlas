@@ -38,7 +38,7 @@ ha_req_perform_iterative <- function(req, progress = TRUE) {
         if (count == 0) {
           chk::abort_chk("Your API call has errors. No Results.")
         }
-        ceiling(count / 20)
+        ceiling(count / 1000)
       }
     ),
     max_reqs = Inf,
