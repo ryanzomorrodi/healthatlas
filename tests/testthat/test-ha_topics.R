@@ -31,7 +31,10 @@ test_that("check specified subcategory", {
   expect_equal(names(topics), topic_header)
 
   "check table only contains the subcategory requested"
-  expect_equal(unique(topics$subcategory_key), cha_subcategory_key)
+  lapply(
+    topics$topic_subcategories,
+    \(x) expect_contains(x$key, cha_subcategory_key)
+  )
 
   "check at least 1 row"
   expect_gt(nrow(topics), 1)

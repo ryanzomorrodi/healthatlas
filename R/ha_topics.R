@@ -13,7 +13,7 @@
 #' @examples
 #' \donttest{
 #' ha_set("chicagohealthatlas.org")
-#' 
+#'
 #' ha_topics("education", progress = FALSE)
 #' }
 ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
@@ -25,12 +25,65 @@ ha_topics <- function(subcategory_key = NULL, progress = TRUE) {
   body <- ha_api_topics_req(subcategory_key) |>
     ha_req_perform_iterative(progress) |>
     ha_resp_body_iterative()
-  
-  subcategories <- do.call(rbind, body$subcategories)
-  output <- body[c("name", "key", "description", "units")]
-  colnames(output) <- c("topic_name", "topic_key", "topic_description", "topic_units")
-  colnames(subcategories) <- c("subcategory_name", "subcategory_key", "category_name")
-  
-  cbind(output, subcategories) |>
-    tibble::as_tibble()
+
+  output <- tibble::as_tibble(body)
+  output$keywords <- strsplit(output$keywords, ",") |>
+    lapply(trimws)
+  output$datasets <- lapply(output$datasets, process_dataset)
+  output$subcategories <- lapply(output$subcategories, process_subcategory)
+
+  output <- output[c(
+    "name",
+    "key",
+    "description",
+    "units",
+    "keywords",
+    "datasets",
+    "subcategories"
+  )]
+  colnames(output) <- paste0("topic_", names(output))
+
+  output
+}
+
+process_dataset <- function(data_df) {
+  col_names <- c("name", "key")
+
+  if (nrow(data_df) == 0) {
+    return(
+      tibble::as_tibble(
+        matrix(
+          rep(NA_character_, length(col_names)),
+          ncol = length(col_names),
+          dimnames = list(NULL, col_names)
+        )
+      )
+    )
+  }
+
+  data_df <- tibble::as_tibble(data_df$dataset)
+  colnames(data_df) <- col_names
+
+  data_df
+}
+
+process_subcategory <- function(subcategory_df) {
+  col_names <- c("name", "key", "category")
+
+  if (nrow(subcategory_df) == 0) {
+    return(
+      tibble::as_tibble(
+        matrix(
+          rep(NA_character_, length(col_names)),
+          ncol = length(col_names),
+          dimnames = list(NULL, col_names)
+        )
+      )
+    )
+  }
+
+  subcategory_df <- tibble::as_tibble(subcategory_df)
+  colnames(subcategory_df) <- col_names
+
+  subcategory_df
 }
