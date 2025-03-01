@@ -36,6 +36,29 @@ topics <- ha_topics(progress = FALSE)
 topics
 ```
 
+**Note:** topics can be derived from multiple datasets or belong to multiple subcategories or keywords. Therefore, these columns may be composed of `tibble`s or vectors. Filtering topics via these pieces of information is still quite easy using `purrr::map_lgl()`.
+
+```{r, include = FALSE}
+library(dplyr)
+```
+
+```{r}
+library(dplyr)
+library(purrr)
+
+# filter by dataset
+topics %>%
+  filter(map_lgl(topic_datasets, ~ "healthy-chicago-survey" %in% .x$key))
+
+# filter by subcategory
+topics %>%
+  filter(map_lgl(topic_subcategories, ~ "diet-exercise" %in% .x$key))
+
+# filter by keyword
+topics %>%
+  filter(map_lgl(topic_keywords, ~ "activity" %in% .x))
+```
+
 There may be a specific topic area you are interested in exploring. You can explore these topic areas using `ha_subcategories()`.
 ```{r}
 subcategories <- ha_subcategories()
@@ -85,7 +108,7 @@ library(purrr)
 
 # creating a table of data I want
 metadata <- tribble(
-  ~ topic_key, ~ population_key, ~ period_key, ~ layer_key,
+  ~topic_key, ~population_key, ~period_key, ~layer_key,
   "POP",       "",               "2017-2021",  "neighborhood",
   "HCSFVAP",   "",               "2020-2021",  "neighborhood",
   "UMP",       "H",              "2017-2021",  "neighborhood",
