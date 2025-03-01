@@ -22,6 +22,7 @@ ha_req <- function(endpoint) {
     httr2::req_user_agent("healthatlas R package") |>
     httr2::req_url_path_append(paste0(endpoint, "/")) |>
     httr2::req_url_query(format = "json") |>
+    httr2::req_cache(path = tempdir()) |>
     httr2::req_error(body = \(x) "Your API call has errors. No Results.")
 }
 
