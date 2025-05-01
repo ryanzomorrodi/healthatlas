@@ -1,4 +1,4 @@
-# healthatlas (development version)
+# healthatlas 0.2.1
 
 * Empty lists within point objects no longer cause errors within `ha_point_layer()`.
 
