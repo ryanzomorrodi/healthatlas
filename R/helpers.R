@@ -71,9 +71,13 @@ ha_resp_body <- function(resp, accessor) {
   }
   if (!is.data.frame(body)) {
     body <- body[lengths(body) != 0]
-    body <- lapply(body, as.data.frame)
-    body <- lapply(names(body), \(x) cbind(body[[x]], x))
-    body <- do.call(rbind, body)
+    if (is.data.frame(body[[1]])) {
+      body <- lapply(names(body), \(x) cbind(body[[x]], x))
+      body <- do.call(rbind, body)
+    } else {
+      body <- as.data.frame(do.call(rbind, body))
+      colnames(body) <- c("id", "name", "lat", "lon", "array", "type")
+    }
   }
 
   body

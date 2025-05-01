@@ -1,5 +1,7 @@
 # healthatlas (development version)
 
+* Empty lists within point objects no longer cause errors within `ha_point_layer()`.
+
 # healthatlas 0.2.0
 
 * Datasets and keywords were added to `ha_topics()` results. Additionally, multiple subcategories are now viewable. (#5).
