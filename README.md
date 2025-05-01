@@ -74,7 +74,7 @@ functions.
 
 ``` r
 ha_topics(progress = FALSE)
-#> # A tibble: 408 × 7
+#> # A tibble: 410 × 7
 #>    topic_name             topic_key topic_description topic_units topic_keywords
 #>    <chr>                  <chr>     <chr>             <chr>       <list>        
 #>  1 9th grade education r… EDA       Residents 25 or … % of resid… <chr [2]>     
@@ -87,7 +87,7 @@ ha_topics(progress = FALSE)
 #>  8 Adult binge drinking   HCSBD     Number of adults… count of a… <chr [1]>     
 #>  9 Adult binge drinking … HCSBDP    Percent of adult… % of adults <chr [1]>     
 #> 10 Adult diabetes         HCSDIA    Number of adults… count of a… <chr [1]>     
-#> # ℹ 398 more rows
+#> # ℹ 400 more rows
 #> # ℹ 2 more variables: topic_datasets <list>, topic_subcategories <list>
 ```
 
@@ -98,20 +98,20 @@ the data desired.
 
 ``` r
 ha_coverage("EDA", progress = FALSE)
-#> # A tibble: 153 × 7
+#> # A tibble: 156 × 7
 #>    topic_key population_key population_name population_grouping period_key
 #>    <chr>     <chr>          <chr>           <chr>               <chr>     
-#>  1 EDA       ""             Full population ""                  2007-2011 
-#>  2 EDA       ""             Full population ""                  2012-2016 
-#>  3 EDA       "F"            Female          "Sex"               2014-2018 
-#>  4 EDA       ""             Full population ""                  2010-2014 
-#>  5 EDA       ""             Full population ""                  2011-2015 
-#>  6 EDA       ""             Full population ""                  2015-2019 
-#>  7 EDA       ""             Full population ""                  2014-2018 
+#>  1 EDA       ""             Full population ""                  2011-2015 
+#>  2 EDA       ""             Full population ""                  2007-2011 
+#>  3 EDA       "F"            Female          "Sex"               2016-2020 
+#>  4 EDA       "F"            Female          "Sex"               2015-2019 
+#>  5 EDA       "F"            Female          "Sex"               2014-2018 
+#>  6 EDA       ""             Full population ""                  2009-2013 
+#>  7 EDA       ""             Full population ""                  2018-2022 
 #>  8 EDA       ""             Full population ""                  2017-2021 
 #>  9 EDA       ""             Full population ""                  2006-2010 
-#> 10 EDA       "F"            Female          "Sex"               2016-2020 
-#> # ℹ 143 more rows
+#> 10 EDA       ""             Full population ""                  2015-2019 
+#> # ℹ 146 more rows
 #> # ℹ 2 more variables: layer_key <chr>, layer_name <chr>
 ```
 
@@ -129,16 +129,16 @@ data
 #> # A tibble: 77 × 7
 #>    geoid      topic_key population_key period_key layer_key  value standardError
 #>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl>         <dbl>
-#>  1 1714000-14 EDA       ""             2018-2022  neighborh…  87.5          3.25
-#>  2 1714000-18 EDA       ""             2018-2022  neighborh…  88.8          3.32
-#>  3 1714000-2  EDA       ""             2018-2022  neighborh…  90.2          3.64
-#>  4 1714000-24 EDA       ""             2018-2022  neighborh…  96.8          1.87
-#>  5 1714000-43 EDA       ""             2018-2022  neighborh…  96.9          3.87
-#>  6 1714000-45 EDA       ""             2018-2022  neighborh…  97.7         13.1 
-#>  7 1714000-47 EDA       ""             2018-2022  neighborh…  93.7         21.9 
-#>  8 1714000-49 EDA       ""             2018-2022  neighborh…  96.4          4.66
-#>  9 1714000-52 EDA       ""             2018-2022  neighborh…  83.5          3.71
-#> 10 1714000-6  EDA       ""             2018-2022  neighborh…  98.9          1.91
+#>  1 1714000-35 EDA       ""             2018-2022  neighborh…  96.1          4.64
+#>  2 1714000-36 EDA       ""             2018-2022  neighborh…  98.5          4.64
+#>  3 1714000-37 EDA       ""             2018-2022  neighborh…  96.0          6.93
+#>  4 1714000-38 EDA       ""             2018-2022  neighborh…  97.0          4.69
+#>  5 1714000-39 EDA       ""             2018-2022  neighborh…  98.4          7.34
+#>  6 1714000-4  EDA       ""             2018-2022  neighborh…  96.1          3.18
+#>  7 1714000-40 EDA       ""             2018-2022  neighborh…  97.5          6.86
+#>  8 1714000-41 EDA       ""             2018-2022  neighborh…  99.0          5.27
+#>  9 1714000-42 EDA       ""             2018-2022  neighborh…  96.3          3.63
+#> 10 1714000-1  EDA       ""             2018-2022  neighborh…  93.9          2.72
 #> # ℹ 67 more rows
 ```
 
