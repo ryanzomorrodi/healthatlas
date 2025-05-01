@@ -6,12 +6,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Get started • healthatlas</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
@@ -26,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">healthatlas</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +87,7 @@ functions.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">topics</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 408 × 7</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 410 × 7</span></span></span>
 <span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 9th grade education r… EDA       Residents 25 or … % of resid… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
@@ -101,7 +100,7 @@ functions.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult binge drinking   HCSBD     Number of adults… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Adult binge drinking … HCSBDP    Percent of adult… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Adult diabetes         HCSDIA    Number of adults… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 398 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 400 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span></code></pre></div>
 <p><strong>Note:</strong> topics can be derived from multiple datasets
 or belong to multiple subcategories or keywords. Therefore, these
@@ -295,16 +294,16 @@ population, and period requested.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 616 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  6.67         1.46 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  5.36         2.10 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  6.66         1.11 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-24 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  3.50         0.608</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-43 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 17.0          1.95 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-45 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 13.5          5.24 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-47 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 21.5          8.32 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-49 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 18.7          2.10 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-52 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  8.02         1.69 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-6  UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  3.86         0.580</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 4.88<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.38<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 7.99<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-24 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 8.69<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-43 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 5.27<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-45 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 9.65<span style="color: #949494;">e</span>3            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-47 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.64<span style="color: #949494;">e</span>3            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-49 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 3.93<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-52 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.45<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-6  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.03<span style="color: #949494;">e</span>5            <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 606 more rows</span></span></span></code></pre></div>
 <p>If you want to mix and match topics, populations, years, or layers of
 data, I recommend creating a table of all the datasets you want, and
@@ -327,16 +326,16 @@ data, I recommend creating a table of all the datasets you want, and
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 4.88<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.38<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 7.99<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-24 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 8.69<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-43 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 5.27<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-45 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 9.65<span style="color: #949494;">e</span>3 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-47 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.64<span style="color: #949494;">e</span>3 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-49 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 3.93<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-52 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.45<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-6  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.03<span style="color: #949494;">e</span>5 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-35 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">21</span>276. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-36 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">7</span>417. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-37 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">2</span>280. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-38 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>397. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-39 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">18</span>503. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">42</span>252. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-40 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">11</span>608. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-41 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">28</span>802. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>362. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">55</span>627. <span style="color: #BB0000;">NA</span>           </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; [[2]]</span></span>
@@ -359,16 +358,16 @@ data, I recommend creating a table of all the datasets you want, and
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid     topic_key population_key period_key layer_key   value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-… UMP       H              2017-2021  neighbor… 5.95<span style="color: #949494;">e</span>+0          1.54</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-… UMP       H              2017-2021  neighbor… 3.13<span style="color: #949494;">e</span>+0          1.73</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2 UMP       H              2017-2021  neighbor… 4.21<span style="color: #949494;">e</span>+0          4.09</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-… UMP       H              2017-2021  neighbor… 3.48<span style="color: #949494;">e</span>+0          1.86</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-… UMP       H              2017-2021  neighbor… 1.90<span style="color: #949494;">e</span>+1         27.5 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-… UMP       H              2017-2021  neighbor… 1.51<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span>        126.  </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-… UMP       H              2017-2021  neighbor… 9.29<span style="color: #949494;">e</span><span style="color: #BB0000;">-3</span>         32.9 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-… UMP       H              2017-2021  neighbor… 3.71<span style="color: #949494;">e</span>+1         23.6 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-… UMP       H              2017-2021  neighbor… 7.80<span style="color: #949494;">e</span>+0          1.67</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-6 UMP       H              2017-2021  neighbor… 4.37<span style="color: #949494;">e</span>+0          3.21</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-… UMP       H              2017-2021  neighbor… 20.2            22.8 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-… UMP       H              2017-2021  neighbor…  0.023<span style="text-decoration: underline;">9</span>         48.0 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-… UMP       H              2017-2021  neighbor…  6.60           21.8 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-… UMP       H              2017-2021  neighbor…  9.47           30.5 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-… UMP       H              2017-2021  neighbor… 12.2            28.4 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4 UMP       H              2017-2021  neighbor…  8.13            3.35</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-… UMP       H              2017-2021  neighbor… 29.8            52.9 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-… UMP       H              2017-2021  neighbor…  6.42           10.5 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-… UMP       H              2017-2021  neighbor…  3.37           37.6 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1 UMP       H              2017-2021  neighbor…  5.19            4.38</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -524,7 +523,7 @@ Now it’s time for you to explore!</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer>
