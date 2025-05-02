@@ -3,7 +3,7 @@ pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   healthatlas: healthatlas.html
-last_built: 2025-05-02T01:20Z
+last_built: 2025-05-02T01:22Z
 urls:
   reference: https://ryanzomorrodi.github.io/healthatlas/reference
   article: https://ryanzomorrodi.github.io/healthatlas/articles
