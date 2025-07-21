@@ -1,5 +1,7 @@
 # healthatlas (development version)
 
+* Started mocking requests to reduce CRAN issues.
+
 # healthatlas 0.2.1
 
 * Empty lists within point objects no longer cause errors within `ha_point_layer()`.
