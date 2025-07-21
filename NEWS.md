@@ -1,4 +1,4 @@
-# healthatlas (development version)
+# healthatlas 0.2.2
 
 * Started mocking requests to reduce CRAN issues.
 
