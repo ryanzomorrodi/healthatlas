@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">healthatlas</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.1.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,7 +103,7 @@
 <p>We can list all the topics (aka indicators) present within Chicago Health Atlas using <code><a href="reference/ha_topics.html">ha_topics()</a></code>. The most important column here is the <code>topic_key</code> which can be used to identify the topic within subsequent functions.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 410 × 7</span></span>
+<span><span class="co">#&gt; # A tibble: 411 × 7</span></span>
 <span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
 <span><span class="co">#&gt;    &lt;chr&gt;                  &lt;chr&gt;     &lt;chr&gt;             &lt;chr&gt;       &lt;list&gt;        </span></span>
 <span><span class="co">#&gt;  1 9th grade education r… EDA       Residents 25 or … % of resid… &lt;chr [2]&gt;     </span></span>
@@ -116,7 +116,7 @@
 <span><span class="co">#&gt;  8 Adult binge drinking   HCSBD     Number of adults… count of a… &lt;chr [1]&gt;     </span></span>
 <span><span class="co">#&gt;  9 Adult binge drinking … HCSBDP    Percent of adult… % of adults &lt;chr [1]&gt;     </span></span>
 <span><span class="co">#&gt; 10 Adult diabetes         HCSDIA    Number of adults… count of a… &lt;chr [1]&gt;     </span></span>
-<span><span class="co">#&gt; # ℹ 400 more rows</span></span>
+<span><span class="co">#&gt; # ℹ 401 more rows</span></span>
 <span><span class="co">#&gt; # ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></code></pre></div>
 <p>Then, we can explore what populations, time periods, and geographic scales that data is available for using <code><a href="reference/ha_coverage.html">ha_coverage()</a></code>. Again, the most important columns here are the key columns which can be used to specify the data desired.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
