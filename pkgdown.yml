@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.2
+pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   healthatlas: healthatlas.html
-last_built: 2025-05-02T01:22Z
+last_built: 2025-07-21T16:23Z
 urls:
   reference: https://ryanzomorrodi.github.io/healthatlas/reference
   article: https://ryanzomorrodi.github.io/healthatlas/articles
