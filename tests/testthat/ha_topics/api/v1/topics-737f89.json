@@ -3964,7 +3964,7 @@
         {
             "name": "Environmental Justice Impact",
             "key": "CHAKNKC",
-            "description": "Estimated count of population within a community area that live in an Environmental Justice (EJ) priority neighborhood. (Based on Chicago EJ Index score - https://chicagohealthatlas.org/indicators/CHAIXYP?topic=chicago-environmental-justice-index)",
+            "description": "Estimated count of population within a community area that live in an Environmental Justice (EJ) priority neighborhood. (Based on Chicago EJ Index score - indicators/CHAIXYP?topic=chicago-environmental-justice-index)",
             "units": "count of residents",
             "format": "0 decimal places",
             "keywords": "built environment, place, green space, parks, environment, pollution, pollutant",
@@ -3993,7 +3993,7 @@
         {
             "name": "Environmental Justice Impact Rate",
             "key": "CHAVCNN",
-            "description": "Estimated percent of population within a community area that live in an Environmental Justice (EJ) priority neighborhood. (Based on Chicago EJ Index score - https://chicagohealthatlas.org/indicators/CHAIXYP?topic=chicago-environmental-justice-index)",
+            "description": "Estimated percent of population within a community area that live in an Environmental Justice (EJ) priority neighborhood. (Based on Chicago EJ Index score - indicators/CHAIXYP?topic=chicago-environmental-justice-index)",
             "units": "% of population",
             "format": "1 decimal place",
             "keywords": "built environment, place, green space, parks, environment, pollution, pollutant",

@@ -1,7 +1,7 @@
 {
     "count": 1127,
     "next": null,
-    "previous": "https://chicagohealthatlas.org/api/v1/stratifications/?format=json&limit=1000",
+    "previous": "api/v1/stratifications/?format=json&limit=1000",
     "results": [
         {
             "key": "ILO1",

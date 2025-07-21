@@ -1,4 +1,4 @@
-with_mock_dir("ha_point_layer", {
+with_mock_dir("ha_point", {
   test_that("check point layers list", {
     ha_set(cha_url)
     point_layers <- ha_point_layers()

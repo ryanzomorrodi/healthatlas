@@ -1,6 +1,6 @@
 {
     "count": 1127,
-    "next": "https://chicagohealthatlas.org/api/v1/stratifications/?format=json&limit=1000&offset=1000",
+    "next": "api/v1/stratifications/?format=json&limit=1000&offset=1000",
     "previous": null,
     "results": [
         {

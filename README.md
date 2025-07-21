@@ -74,7 +74,7 @@ functions.
 
 ``` r
 ha_topics(progress = FALSE)
-#> # A tibble: 410 × 7
+#> # A tibble: 411 × 7
 #>    topic_name             topic_key topic_description topic_units topic_keywords
 #>    <chr>                  <chr>     <chr>             <chr>       <list>        
 #>  1 9th grade education r… EDA       Residents 25 or … % of resid… <chr [2]>     
@@ -87,7 +87,7 @@ ha_topics(progress = FALSE)
 #>  8 Adult binge drinking   HCSBD     Number of adults… count of a… <chr [1]>     
 #>  9 Adult binge drinking … HCSBDP    Percent of adult… % of adults <chr [1]>     
 #> 10 Adult diabetes         HCSDIA    Number of adults… count of a… <chr [1]>     
-#> # ℹ 400 more rows
+#> # ℹ 401 more rows
 #> # ℹ 2 more variables: topic_datasets <list>, topic_subcategories <list>
 ```
 
