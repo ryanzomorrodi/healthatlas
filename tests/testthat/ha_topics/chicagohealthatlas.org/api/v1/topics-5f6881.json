@@ -1,0 +1,181 @@
+{
+    "count": 6,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "9th grade education rate",
+            "key": "EDA",
+            "description": "Residents 25 or older with at least a 9th grade education",
+            "units": "% of residents",
+            "format": "2 decimal places",
+            "keywords": "school, elementary",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "Table B15002",
+                    "dataset": {
+                        "name": "American Community Survey (ACS)",
+                        "label": "american-community-survey-acs"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Arts Education Access and Quality",
+            "key": "CHAVBTN",
+            "description": "The number of CPS students enrolled in a CPS with an Excelling rating for access and quality of arts education on the Creative Schools Certification.",
+            "units": "Count of Chicago Public School (CPS) students",
+            "format": "0 decimal places",
+            "keywords": "Chicago Public Schools (CPS), Equity, Excelling, Creative Schools Certification",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "artlook®",
+                        "label": "artlook"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Neutral"
+        },
+        {
+            "name": "Arts Education Access and Quality Rate",
+            "key": "CHACSJY",
+            "description": "The percent of CPS students enrolled in a CPS with an Excelling rating for access and quality of arts education on the Creative Schools Certification.",
+            "units": "Percent of Chicago Public School (CPS) students",
+            "format": "1 decimal place",
+            "keywords": "Chicago Public Schools (CPS), Equity, Excelling, Creative Schools Certification",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "artlook®",
+                        "label": "artlook"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Neutral"
+        },
+        {
+            "name": "College graduation rate",
+            "key": "EDE",
+            "description": "Residents 25 or older with a four-year college (bachelor's) degree or higher",
+            "units": "% of residents",
+            "format": "2 decimal places",
+            "keywords": "liberal arts",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "Table B15002",
+                    "dataset": {
+                        "name": "American Community Survey",
+                        "label": "american-community-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High school graduation rate",
+            "key": "EDB",
+            "description": "Residents 25 or older with at least a high school degree: including GED and any higher education",
+            "units": "% of residents",
+            "format": "2 decimal places",
+            "keywords": null,
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "Table B15002",
+                    "dataset": {
+                        "name": "American Community Survey",
+                        "label": "american-community-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Preschool enrollment",
+            "key": "EDG",
+            "description": "Percentage of 3- and 4-year-olds enrolled in school.",
+            "units": "% of toddlers",
+            "format": "2 decimal places",
+            "keywords": "daycare, head start, universal pre-k",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "Table B14003",
+                    "dataset": {
+                        "name": "American Community Survey",
+                        "label": "american-community-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        }
+    ]
+}

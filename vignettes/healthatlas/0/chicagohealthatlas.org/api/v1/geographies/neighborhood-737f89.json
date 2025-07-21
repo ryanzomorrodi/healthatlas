@@ -1,0 +1,623 @@
+{
+    "count": 77,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-6",
+            "name": "Lake View (Chicago, IL)",
+            "population": 103048,
+            "state": "IL",
+            "notes": "North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-8",
+            "name": "Near North Side (Chicago, IL)",
+            "population": 97789,
+            "state": "IL",
+            "notes": "Central"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-25",
+            "name": "Austin (Chicago, IL)",
+            "population": 96753,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-24",
+            "name": "West Town (Chicago, IL)",
+            "population": 87942,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-19",
+            "name": "Belmont Cragin (Chicago, IL)",
+            "population": 78151,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-2",
+            "name": "West Ridge (Chicago, IL)",
+            "population": 77139,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-22",
+            "name": "Logan Square (Chicago, IL)",
+            "population": 71742,
+            "state": "IL",
+            "notes": "North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-30",
+            "name": "South Lawndale (Chicago, IL)",
+            "population": 71402,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-7",
+            "name": "Lincoln Park (Chicago, IL)",
+            "population": 70425,
+            "state": "IL",
+            "notes": "North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-28",
+            "name": "Near West Side (Chicago, IL)",
+            "population": 67817,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-15",
+            "name": "Portage Park (Chicago, IL)",
+            "population": 63038,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-77",
+            "name": "Edgewater (Chicago, IL)",
+            "population": 56308,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-66",
+            "name": "Chicago Lawn (Chicago, IL)",
+            "population": 55789,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-1",
+            "name": "Rogers Park (Chicago, IL)",
+            "population": 55454,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-3",
+            "name": "Uptown (Chicago, IL)",
+            "population": 55120,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-23",
+            "name": "Humboldt Park (Chicago, IL)",
+            "population": 53832,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-43",
+            "name": "South Shore (Chicago, IL)",
+            "population": 51919,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-16",
+            "name": "Irving Park (Chicago, IL)",
+            "population": 51911,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-14",
+            "name": "Albany Park (Chicago, IL)",
+            "population": 48549,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-58",
+            "name": "Brighton Park (Chicago, IL)",
+            "population": 45141,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-71",
+            "name": "Auburn Gresham (Chicago, IL)",
+            "population": 44959,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-61",
+            "name": "New City (Chicago, IL)",
+            "population": 43510,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-32",
+            "name": "Loop (Chicago, IL)",
+            "population": 43440,
+            "state": "IL",
+            "notes": "Central"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-17",
+            "name": "Dunning (Chicago, IL)",
+            "population": 43120,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-70",
+            "name": "Ashburn (Chicago, IL)",
+            "population": 41280,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-10",
+            "name": "Norwood Park (Chicago, IL)",
+            "population": 41069,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-4",
+            "name": "Lincoln Square (Chicago, IL)",
+            "population": 40412,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-63",
+            "name": "Gage Park (Chicago, IL)",
+            "population": 39439,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-49",
+            "name": "Roseland (Chicago, IL)",
+            "population": 38934,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-21",
+            "name": "Avondale (Chicago, IL)",
+            "population": 36245,
+            "state": "IL",
+            "notes": "North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-56",
+            "name": "Garfield Ridge (Chicago, IL)",
+            "population": 35352,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-5",
+            "name": "North Center (Chicago, IL)",
+            "population": 35150,
+            "state": "IL",
+            "notes": "North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-29",
+            "name": "North Lawndale (Chicago, IL)",
+            "population": 34817,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-31",
+            "name": "Lower West Side (Chicago, IL)",
+            "population": 33716,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-60",
+            "name": "Bridgeport (Chicago, IL)",
+            "population": 33593,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-65",
+            "name": "West Lawn (Chicago, IL)",
+            "population": 33543,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-44",
+            "name": "Chatham (Chicago, IL)",
+            "population": 31804,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-69",
+            "name": "Greater Grand Crossing (Chicago, IL)",
+            "population": 31543,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-67",
+            "name": "West Englewood (Chicago, IL)",
+            "population": 29899,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-41",
+            "name": "Hyde Park (Chicago, IL)",
+            "population": 29459,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-33",
+            "name": "Near South Side (Chicago, IL)",
+            "population": 27296,
+            "state": "IL",
+            "notes": "Central"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-46",
+            "name": "South Chicago (Chicago, IL)",
+            "population": 27254,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-11",
+            "name": "Jefferson Park (Chicago, IL)",
+            "population": 26201,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-53",
+            "name": "West Pullman (Chicago, IL)",
+            "population": 25940,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-42",
+            "name": "Woodlawn (Chicago, IL)",
+            "population": 25285,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-73",
+            "name": "Washington Heights (Chicago, IL)",
+            "population": 25075,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-38",
+            "name": "Grand Boulevard (Chicago, IL)",
+            "population": 24586,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-64",
+            "name": "Clearing (Chicago, IL)",
+            "population": 24519,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-68",
+            "name": "Englewood (Chicago, IL)",
+            "population": 24322,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-20",
+            "name": "Hermosa (Chicago, IL)",
+            "population": 24127,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-52",
+            "name": "East Side (Chicago, IL)",
+            "population": 21787,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-75",
+            "name": "Morgan Park (Chicago, IL)",
+            "population": 21714,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-35",
+            "name": "Douglas (Chicago, IL)",
+            "population": 20292,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-27",
+            "name": "East Garfield Park (Chicago, IL)",
+            "population": 19995,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-72",
+            "name": "Beverly (Chicago, IL)",
+            "population": 19950,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-12",
+            "name": "Forest Glen (Chicago, IL)",
+            "population": 19579,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-39",
+            "name": "Kenwood (Chicago, IL)",
+            "population": 19126,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-74",
+            "name": "Mount Greenwood (Chicago, IL)",
+            "population": 18633,
+            "state": "IL",
+            "notes": "Far Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-62",
+            "name": "West Elsdon (Chicago, IL)",
+            "population": 18249,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-13",
+            "name": "North Park (Chicago, IL)",
+            "population": 17522,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-26",
+            "name": "West Garfield Park (Chicago, IL)",
+            "population": 17423,
+            "state": "IL",
+            "notes": "West Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-59",
+            "name": "McKinley Park (Chicago, IL)",
+            "population": 15927,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-76",
+            "name": "O'Hare (Chicago, IL)",
+            "population": 14416,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-18",
+            "name": "Montclare (Chicago, IL)",
+            "population": 14412,
+            "state": "IL",
+            "notes": "Northwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-57",
+            "name": "Archer Heights (Chicago, IL)",
+            "population": 14282,
+            "state": "IL",
+            "notes": "Southwest Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-51",
+            "name": "South Deering (Chicago, IL)",
+            "population": 14125,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-34",
+            "name": "Armour Square (Chicago, IL)",
+            "population": 13847,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-48",
+            "name": "Calumet Heights (Chicago, IL)",
+            "population": 13085,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-40",
+            "name": "Washington Park (Chicago, IL)",
+            "population": 12709,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-9",
+            "name": "Edison Park (Chicago, IL)",
+            "population": 11521,
+            "state": "IL",
+            "notes": "Far North Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-55",
+            "name": "Hegewisch (Chicago, IL)",
+            "population": 9884,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-45",
+            "name": "Avalon Park (Chicago, IL)",
+            "population": 9359,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-54",
+            "name": "Riverdale (Chicago, IL)",
+            "population": 7229,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-50",
+            "name": "Pullman (Chicago, IL)",
+            "population": 6866,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-36",
+            "name": "Oakland (Chicago, IL)",
+            "population": 6803,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-37",
+            "name": "Fuller Park (Chicago, IL)",
+            "population": 2549,
+            "state": "IL",
+            "notes": "South Side"
+        },
+        {
+            "layer": "neighborhood",
+            "geoid": "1714000-47",
+            "name": "Burnside (Chicago, IL)",
+            "population": 2514,
+            "state": "IL",
+            "notes": "Far Southeast Side"
+        }
+    ]
+}

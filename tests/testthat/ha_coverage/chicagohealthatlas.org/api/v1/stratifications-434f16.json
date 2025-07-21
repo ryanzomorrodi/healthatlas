@@ -1,0 +1,1023 @@
+{
+    "count": 1127,
+    "next": null,
+    "previous": "https://chicagohealthatlas.org/api/v1/stratifications/?format=json&limit=1000",
+    "results": [
+        {
+            "key": "ILO1",
+            "name": "Lost health insurance",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 5009,
+            "team": null
+        },
+        {
+            "key": "FEA2",
+            "name": "Fear of pain",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50010,
+            "team": null
+        },
+        {
+            "key": "CLI2",
+            "name": "Clinic was not open when needed",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50011,
+            "team": null
+        },
+        {
+            "key": "IDO2",
+            "name": "Unsure where to get care",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50012,
+            "team": null
+        },
+        {
+            "key": "LAC4",
+            "name": "Lack of insurance",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50013,
+            "team": null
+        },
+        {
+            "key": "FEA3",
+            "name": "Fear of bad results",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50014,
+            "team": null
+        },
+        {
+            "key": "IWA1",
+            "name": "Worried about confidentiality",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50015,
+            "team": null
+        },
+        {
+            "key": "IWA2",
+            "name": "Worried about job repercussions",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50016,
+            "team": null
+        },
+        {
+            "key": "ICO1",
+            "name": "Lack of culturally competent therapists",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50017,
+            "team": null
+        },
+        {
+            "key": "IDI1",
+            "name": "Lack of transportation",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50018,
+            "team": null
+        },
+        {
+            "key": "ICO2",
+            "name": "I couldn't afford the cost",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50019,
+            "team": null
+        },
+        {
+            "key": "ITR1",
+            "name": "Put on a waitlist",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50020,
+            "team": null
+        },
+        {
+            "key": "IDI2",
+            "name": "Unsure where to get services",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50021,
+            "team": null
+        },
+        {
+            "key": "IWA3",
+            "name": "Worried about reputation",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50022,
+            "team": null
+        },
+        {
+            "key": "IWA4",
+            "name": "Fear of hospitalization or medication",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50023,
+            "team": null
+        },
+        {
+            "key": "MYH1",
+            "name": "Underinsured",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50024,
+            "team": null
+        },
+        {
+            "key": "FEA4",
+            "name": "Fear of pain, side effects, or bad results",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50025,
+            "team": null
+        },
+        {
+            "key": "IDI3",
+            "name": "I did not think I needed to go",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50026,
+            "team": null
+        },
+        {
+            "key": "NEG2",
+            "name": "Negative effect on my life",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50027,
+            "team": null
+        },
+        {
+            "key": "PRI6",
+            "name": "Privacy concern",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50028,
+            "team": null
+        },
+        {
+            "key": "FEA5",
+            "name": "Fear of hospitalization",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50029,
+            "team": null
+        },
+        {
+            "key": "NOV1",
+            "name": "Lack of virtual options",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50030,
+            "team": null
+        },
+        {
+            "key": "LAC8",
+            "name": "Lack of provider",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50031,
+            "team": null
+        },
+        {
+            "key": "DID1",
+            "name": "Did not want to get vaccinated",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50032,
+            "team": null
+        },
+        {
+            "key": "FEA6",
+            "name": "Fear of negative opinion",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50033,
+            "team": null
+        },
+        {
+            "key": "COU3",
+            "name": "Could not find a therapist I liked",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50034,
+            "team": null
+        },
+        {
+            "key": "OTH57",
+            "name": "Other",
+            "grouping": "Reasons for Delaying Care",
+            "grouping_uuid": "1e13ddce-0ef7-4337-91f1-e23513286a5d",
+            "order": 50050,
+            "team": null
+        },
+        {
+            "key": "THE1",
+            "name": "Poor quality",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5101,
+            "team": null
+        },
+        {
+            "key": "IDO3",
+            "name": "Lack of transportation",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5102,
+            "team": null
+        },
+        {
+            "key": "FRE3",
+            "name": "Too expensive",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5103,
+            "team": null
+        },
+        {
+            "key": "THE2",
+            "name": "Not available within a mile",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5104,
+            "team": null
+        },
+        {
+            "key": "FRE4",
+            "name": "Fresh fruits and vegetables are too expensive where I shop",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5105,
+            "team": null
+        },
+        {
+            "key": "THE3",
+            "name": "EBT/SNAP eligible stores lack fresh produce",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5106,
+            "team": null
+        },
+        {
+            "key": "IPR1",
+            "name": "I prefer to buy other groceries",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5107,
+            "team": null
+        },
+        {
+            "key": "IDO4",
+            "name": "I don't like fruits and vegetables",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5108,
+            "team": null
+        },
+        {
+            "key": "OTH58",
+            "name": "Other",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5109,
+            "team": null
+        },
+        {
+            "key": "NOT6",
+            "name": "Not sold near me",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5110,
+            "team": null
+        },
+        {
+            "key": "UNA1",
+            "name": "Unable to store/prepare food",
+            "grouping": "Food Access",
+            "grouping_uuid": "a8602865-68b2-4193-85e5-e9007c03c08b",
+            "order": 5111,
+            "team": null
+        },
+        {
+            "key": "ZER2",
+            "name": "Zero days",
+            "grouping": "Frequency of Marijuana/Cannabis Use",
+            "grouping_uuid": "10cfd555-1df3-44b3-918d-e15872e90966",
+            "order": 5201,
+            "team": null
+        },
+        {
+            "key": "ONE5",
+            "name": "One to ten days",
+            "grouping": "Frequency of Marijuana/Cannabis Use",
+            "grouping_uuid": "10cfd555-1df3-44b3-918d-e15872e90966",
+            "order": 5202,
+            "team": null
+        },
+        {
+            "key": "ELE1",
+            "name": "Eleven to nineteen days",
+            "grouping": "Frequency of Marijuana/Cannabis Use",
+            "grouping_uuid": "10cfd555-1df3-44b3-918d-e15872e90966",
+            "order": 5203,
+            "team": null
+        },
+        {
+            "key": "TWE1",
+            "name": "Twenty or more days",
+            "grouping": "Frequency of Marijuana/Cannabis Use",
+            "grouping_uuid": "10cfd555-1df3-44b3-918d-e15872e90966",
+            "order": 5204,
+            "team": null
+        },
+        {
+            "key": "HEA18",
+            "name": "Health Department",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52001,
+            "team": null
+        },
+        {
+            "key": "CDC1",
+            "name": "CDC",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52002,
+            "team": null
+        },
+        {
+            "key": "FAM4",
+            "name": "Family and Friends",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52003,
+            "team": null
+        },
+        {
+            "key": "DOC1",
+            "name": "Doctor",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52004,
+            "team": null
+        },
+        {
+            "key": "ONL1",
+            "name": "Online",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52005,
+            "team": null
+        },
+        {
+            "key": "OTH59",
+            "name": "Other",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52006,
+            "team": null
+        },
+        {
+            "key": "PRE17",
+            "name": "Prefer not to answer",
+            "grouping": "Source of Sexual Health Education",
+            "grouping_uuid": "94b1c859-1818-415b-8bf1-60cd31f3cd77",
+            "order": 52007,
+            "team": null
+        },
+        {
+            "key": "DOM3",
+            "name": "Domestic violence services",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53001,
+            "team": null
+        },
+        {
+            "key": "FOO5",
+            "name": "Food pantry",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53002,
+            "team": null
+        },
+        {
+            "key": "HOU3",
+            "name": "Housing or shelter",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53003,
+            "team": null
+        },
+        {
+            "key": "CLO1",
+            "name": "Clothing",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53004,
+            "team": null
+        },
+        {
+            "key": "MED39",
+            "name": "Medical",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53005,
+            "team": null
+        },
+        {
+            "key": "FIN3",
+            "name": "Financial",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53006,
+            "team": null
+        },
+        {
+            "key": "OTH60",
+            "name": "Other",
+            "grouping": "Type of Trauma Support",
+            "grouping_uuid": "6522aac9-6aa4-4223-8dd3-54a8b1336e85",
+            "order": 53007,
+            "team": null
+        },
+        {
+            "key": "HEA19",
+            "name": "Health department",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54001,
+            "team": null
+        },
+        {
+            "key": "PRI7",
+            "name": "Private provider",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54002,
+            "team": null
+        },
+        {
+            "key": "PHA1",
+            "name": "Pharmacy",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54003,
+            "team": null
+        },
+        {
+            "key": "LAC5",
+            "name": "No insurance",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54005,
+            "team": null
+        },
+        {
+            "key": "LAC6",
+            "name": "Lack of funds",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54006,
+            "team": null
+        },
+        {
+            "key": "LAC7",
+            "name": "Lack of transportation",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54007,
+            "team": null
+        },
+        {
+            "key": "NOR11",
+            "name": "No regular doctor or clinic",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54008,
+            "team": null
+        },
+        {
+            "key": "FON1",
+            "name": "Do not want to be vaccinated",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54009,
+            "team": null
+        },
+        {
+            "key": "NON24",
+            "name": "None of the these",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54010,
+            "team": null
+        },
+        {
+            "key": "OTH61",
+            "name": "Other",
+            "grouping": "Vaccine Location and Limits",
+            "grouping_uuid": "73132edc-4d97-47a6-a8ff-a3ab4df1fbd1",
+            "order": 54010,
+            "team": null
+        },
+        {
+            "key": "NOT8",
+            "name": "Not prepared at all",
+            "grouping": "Disaster preparedness",
+            "grouping_uuid": "252afe52-732d-4164-b03a-ece9a4f0c18c",
+            "order": 5701,
+            "team": null
+        },
+        {
+            "key": "NOT9",
+            "name": "Not very prepared",
+            "grouping": "Disaster preparedness",
+            "grouping_uuid": "252afe52-732d-4164-b03a-ece9a4f0c18c",
+            "order": 5702,
+            "team": null
+        },
+        {
+            "key": "SOM6",
+            "name": "Somewhat prepared",
+            "grouping": "Disaster preparedness",
+            "grouping_uuid": "252afe52-732d-4164-b03a-ece9a4f0c18c",
+            "order": 5703,
+            "team": null
+        },
+        {
+            "key": "VER2",
+            "name": "Very prepared",
+            "grouping": "Disaster preparedness",
+            "grouping_uuid": "252afe52-732d-4164-b03a-ece9a4f0c18c",
+            "order": 5704,
+            "team": null
+        },
+        {
+            "key": "EMP4",
+            "name": "Employed (full-time)",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5801,
+            "team": null
+        },
+        {
+            "key": "EMP5",
+            "name": "Employed (part-time)",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5802,
+            "team": null
+        },
+        {
+            "key": "SEL6",
+            "name": "Self-employed",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5803,
+            "team": null
+        },
+        {
+            "key": "RET3",
+            "name": "Retired",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5804,
+            "team": null
+        },
+        {
+            "key": "NOT10",
+            "name": "Not employed",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5807,
+            "team": null
+        },
+        {
+            "key": "STU1",
+            "name": "Student",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5808,
+            "team": null
+        },
+        {
+            "key": "CIV1",
+            "name": "Civilian employed",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5809,
+            "team": null
+        },
+        {
+            "key": "CIV2",
+            "name": "Civilian unemployed",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5810,
+            "team": null
+        },
+        {
+            "key": "NOT15",
+            "name": "Not in labor force",
+            "grouping": "Employment Status",
+            "grouping_uuid": "9c5a5fb0-a5a6-49a7-b94e-9a501a5932f3",
+            "order": 5811,
+            "team": null
+        },
+        {
+            "key": "LES11",
+            "name": "Less than high school",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5901,
+            "team": null
+        },
+        {
+            "key": "SOM7",
+            "name": "Some high school",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5902,
+            "team": null
+        },
+        {
+            "key": "HIG9",
+            "name": "High school graduate or GED",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5903,
+            "team": null
+        },
+        {
+            "key": "VOC1",
+            "name": "Vocational or technical school",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5904,
+            "team": null
+        },
+        {
+            "key": "SOM9",
+            "name": "Some college or technical school",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5905,
+            "team": null
+        },
+        {
+            "key": "SOM10",
+            "name": "Some college or Associate's degree",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5905,
+            "team": null
+        },
+        {
+            "key": "SOM8",
+            "name": "Some college",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5905,
+            "team": null
+        },
+        {
+            "key": "K3Q3",
+            "name": "Associate's degree",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5906,
+            "team": null
+        },
+        {
+            "key": "BAC4",
+            "name": "Bachelor's degree",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5910,
+            "team": null
+        },
+        {
+            "key": "COL5",
+            "name": "College graduate or higher",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5912,
+            "team": null
+        },
+        {
+            "key": "GRA20",
+            "name": "Graduate or professional degree",
+            "grouping": "Education Level",
+            "grouping_uuid": "90edec28-8e3b-4647-a839-9197de883451",
+            "order": 5913,
+            "team": null
+        },
+        {
+            "key": "ALC2",
+            "name": "Alcohol",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6000,
+            "team": null
+        },
+        {
+            "key": "DRU1",
+            "name": "Drug (non-prescription)",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6001,
+            "team": null
+        },
+        {
+            "key": "TOB5",
+            "name": "Tobacco",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6002,
+            "team": null
+        },
+        {
+            "key": "PRE21",
+            "name": "Prescription Drug",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6003,
+            "team": null
+        },
+        {
+            "key": "OTH65",
+            "name": "Other",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6004,
+            "team": null
+        },
+        {
+            "key": "NON23",
+            "name": "None",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6005,
+            "team": null
+        },
+        {
+            "key": "PRE22",
+            "name": "Prefer not to Answer",
+            "grouping": "Type of Help",
+            "grouping_uuid": "262c3382-0d92-4a68-8c85-3a768514109a",
+            "order": 6006,
+            "team": null
+        },
+        {
+            "key": "IMM3",
+            "name": "Immunization",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6100,
+            "team": null
+        },
+        {
+            "key": "STI1",
+            "name": "STI Testing/Treatment",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6101,
+            "team": null
+        },
+        {
+            "key": "HIV1",
+            "name": "HIV Testing",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6102,
+            "team": null
+        },
+        {
+            "key": "WOM3",
+            "name": "Women’s Health Exams (Pap smear, Mammograms)",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6103,
+            "team": null
+        },
+        {
+            "key": "BIR1",
+            "name": "Birth Control",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6104,
+            "team": null
+        },
+        {
+            "key": "FRE5",
+            "name": "Free Condoms",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6105,
+            "team": null
+        },
+        {
+            "key": "FRE6",
+            "name": "Free Narcan",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6106,
+            "team": null
+        },
+        {
+            "key": "WIC2",
+            "name": "WIC (Women’s, Infants, and Children)",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6106,
+            "team": null
+        },
+        {
+            "key": "HEA20",
+            "name": "Health Education",
+            "grouping": "Type of Service",
+            "grouping_uuid": "51f80640-86ea-4fbc-97e3-e92f421189df",
+            "order": 6107,
+            "team": null
+        },
+        {
+            "key": "POP1",
+            "name": "Population",
+            "grouping": "Healthcare Shortage Designation Type",
+            "grouping_uuid": "12b6198b-eb59-4611-ad20-66ebf8508857",
+            "order": 3800,
+            "team": null
+        },
+        {
+            "key": "GEO3",
+            "name": "Geography",
+            "grouping": "Healthcare Shortage Designation Type",
+            "grouping_uuid": "12b6198b-eb59-4611-ad20-66ebf8508857",
+            "order": 3801,
+            "team": null
+        },
+        {
+            "key": "FAC1",
+            "name": "Facility",
+            "grouping": "Healthcare Shortage Designation Type",
+            "grouping_uuid": "12b6198b-eb59-4611-ad20-66ebf8508857",
+            "order": 3802,
+            "team": null
+        },
+        {
+            "key": "TOB3",
+            "name": "Tobacco users, Middle school",
+            "grouping": "Tobacco Type and Grade",
+            "grouping_uuid": "fe9507e5-0c8c-4566-a8ce-65b7f8574af0",
+            "order": 3901,
+            "team": null
+        },
+        {
+            "key": "TOB4",
+            "name": "Tobacco users, High school",
+            "grouping": "Tobacco Type and Grade",
+            "grouping_uuid": "fe9507e5-0c8c-4566-a8ce-65b7f8574af0",
+            "order": 3902,
+            "team": null
+        },
+        {
+            "key": "ECI1",
+            "name": "E-cigarette users, Middle school",
+            "grouping": "Tobacco Type and Grade",
+            "grouping_uuid": "fe9507e5-0c8c-4566-a8ce-65b7f8574af0",
+            "order": 3903,
+            "team": null
+        },
+        {
+            "key": "ECI2",
+            "name": "E-cigarette users, High school",
+            "grouping": "Tobacco Type and Grade",
+            "grouping_uuid": "fe9507e5-0c8c-4566-a8ce-65b7f8574af0",
+            "order": 3904,
+            "team": null
+        },
+        {
+            "key": "MED42",
+            "name": "Medicaid",
+            "grouping": "Type of Coverage",
+            "grouping_uuid": "97140869-6fcf-4a1e-ad60-08529c1907ae",
+            "order": 8400,
+            "team": null
+        },
+        {
+            "key": "AFF7",
+            "name": "Affordable Care Act",
+            "grouping": "Type of Coverage",
+            "grouping_uuid": "97140869-6fcf-4a1e-ad60-08529c1907ae",
+            "order": 8401,
+            "team": null
+        },
+        {
+            "key": "LEG3",
+            "name": "Legal searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8500,
+            "team": null
+        },
+        {
+            "key": "FOO6",
+            "name": "Food searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8501,
+            "team": null
+        },
+        {
+            "key": "HOU5",
+            "name": "Housing searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8502,
+            "team": null
+        },
+        {
+            "key": "GOO3",
+            "name": "Goods searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8503,
+            "team": null
+        },
+        {
+            "key": "TRA17",
+            "name": "Transit searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8504,
+            "team": null
+        },
+        {
+            "key": "HEA23",
+            "name": "Health searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8505,
+            "team": null
+        },
+        {
+            "key": "MON3",
+            "name": "Money searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8506,
+            "team": null
+        },
+        {
+            "key": "CAR11",
+            "name": "Care searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8507,
+            "team": null
+        },
+        {
+            "key": "EDU4",
+            "name": "Education searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8508,
+            "team": null
+        },
+        {
+            "key": "WOR3",
+            "name": "Work searches",
+            "grouping": "Type of Searches",
+            "grouping_uuid": "2d3523b7-27f3-4d73-86a4-8ace4da8aa82",
+            "order": 8509,
+            "team": null
+        },
+        {
+            "key": "OTH19",
+            "name": "Other Black, specified",
+            "grouping": "Other Black alone",
+            "grouping_uuid": "0d9fd405-047b-4dad-8fdd-dc01a150d55b",
+            "order": 10,
+            "team": "chicago-health-atlas"
+        },
+        {
+            "key": "OTH20",
+            "name": "Other Black, unspecified",
+            "grouping": "Other Black alone",
+            "grouping_uuid": "0d9fd405-047b-4dad-8fdd-dc01a150d55b",
+            "order": 20,
+            "team": "chicago-health-atlas"
+        }
+    ]
+}

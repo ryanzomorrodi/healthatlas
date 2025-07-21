@@ -1,34 +1,30 @@
-test_that("check layers list", {
-  skip_if_offline(cha_url)
-  skip_on_cran()
+with_mock_dir("ha_layer", {
+  test_that("check layers list", {
+    ha_set(cha_url)
+    layers <- ha_layers()
 
-  ha_set(cha_url)
-  layers <- ha_layers()
+    "expect a data.frame"
+    expect_s3_class(layers, "data.frame")
 
-  "expect a data.frame"
-  expect_s3_class(layers, "data.frame")
+    "check table names"
+    expect_equal(names(layers), layers_header)
 
-  "check table names"
-  expect_equal(names(layers), layers_header)
+    "check 4 rows"
+    expect_equal(nrow(layers), 4)
+  })
 
-  "check 4 rows"
-  expect_equal(nrow(layers), 4)
-})
+  test_that("check a single layer", {
+    ha_set(cha_url)
+    expect_snapshot(layer <- ha_layer("neighborhood", progress = FALSE))
 
-test_that("check a single layer", {
-  skip_if_offline(cha_url)
-  skip_on_cran()
+    "expect a data.frame"
+    expect_s3_class(layer, "sf")
+    expect_s3_class(layer, "data.frame")
 
-  ha_set(cha_url)
-  expect_snapshot(layer <- ha_layer("neighborhood", progress = FALSE))
+    "check table names"
+    expect_equal(names(layer), layer_header)
 
-  "expect a data.frame"
-  expect_s3_class(layer, "sf")
-  expect_s3_class(layer, "data.frame")
-
-  "check table names"
-  expect_equal(names(layer), layer_header)
-
-  "check 77 rows"
-  expect_equal(nrow(layer), 77)
+    "check 77 rows"
+    expect_equal(nrow(layer), 77)
+  })
 })

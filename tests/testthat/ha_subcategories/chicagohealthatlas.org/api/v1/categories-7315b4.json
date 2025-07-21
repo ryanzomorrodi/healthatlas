@@ -1,0 +1,199 @@
+{
+    "count": 7,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Clinical Care",
+            "icon": "stethoscope",
+            "subcategories": [
+                {
+                    "name": "Access to Care",
+                    "slug": "access-to-care",
+                    "category": "Clinical Care"
+                },
+                {
+                    "name": "Quality of Care",
+                    "slug": "quality-of-care",
+                    "category": "Clinical Care"
+                }
+            ]
+        },
+        {
+            "name": "Physical Environment",
+            "icon": "road",
+            "subcategories": [
+                {
+                    "name": "Community Safety",
+                    "slug": "community-safety-1",
+                    "category": "Physical Environment"
+                },
+                {
+                    "name": "Housing & Transit",
+                    "slug": "housing-transit",
+                    "category": "Physical Environment"
+                },
+                {
+                    "name": "Pollution",
+                    "slug": "pollution",
+                    "category": "Physical Environment"
+                },
+                {
+                    "name": "Resource Availability",
+                    "slug": "resource-availability",
+                    "category": "Physical Environment"
+                }
+            ]
+        },
+        {
+            "name": "Morbidity",
+            "icon": "heartbeat",
+            "subcategories": [
+                {
+                    "name": "Behavioral Health",
+                    "slug": "behavioral-health",
+                    "category": "Morbidity"
+                },
+                {
+                    "name": "Chronic Disease",
+                    "slug": "chronic-disease-1",
+                    "category": "Morbidity"
+                },
+                {
+                    "name": "Infectious Disease",
+                    "slug": "infectious-disease-1",
+                    "category": "Morbidity"
+                },
+                {
+                    "name": "Injury & Violence",
+                    "slug": "injury-violence-1",
+                    "category": "Morbidity"
+                },
+                {
+                    "name": "Maternal, Infant, Child, & Adolescent Health",
+                    "slug": "maternal-infant-child-adolescent-health",
+                    "category": "Morbidity"
+                },
+                {
+                    "name": "Quality of Life",
+                    "slug": "quality-of-life",
+                    "category": "Morbidity"
+                }
+            ]
+        },
+        {
+            "name": "Social and Economic Factors",
+            "icon": "dollar-sign",
+            "subcategories": [
+                {
+                    "name": "Community Safety",
+                    "slug": "community-safety",
+                    "category": "Social and Economic Factors"
+                },
+                {
+                    "name": "Education",
+                    "slug": "education",
+                    "category": "Social and Economic Factors"
+                },
+                {
+                    "name": "Employment",
+                    "slug": "employment",
+                    "category": "Social and Economic Factors"
+                },
+                {
+                    "name": "Family & Social Support",
+                    "slug": "family-social-support",
+                    "category": "Social and Economic Factors"
+                },
+                {
+                    "name": "Income",
+                    "slug": "income",
+                    "category": "Social and Economic Factors"
+                },
+                {
+                    "name": "Public Assistance",
+                    "slug": "public-assistance",
+                    "category": "Social and Economic Factors"
+                }
+            ]
+        },
+        {
+            "name": "Health Behaviors",
+            "icon": "bicycle",
+            "subcategories": [
+                {
+                    "name": "Alcohol & Drug Use",
+                    "slug": "alcohol-drug-use",
+                    "category": "Health Behaviors"
+                },
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                },
+                {
+                    "name": "Sexual Activity",
+                    "slug": "sexual-activity",
+                    "category": "Health Behaviors"
+                },
+                {
+                    "name": "Tobacco Use",
+                    "slug": "tobacco-use",
+                    "category": "Health Behaviors"
+                }
+            ]
+        },
+        {
+            "name": "Demography",
+            "icon": "users",
+            "subcategories": [
+                {
+                    "name": "Origin & Language",
+                    "slug": "origin-language",
+                    "category": "Demography"
+                },
+                {
+                    "name": "Population",
+                    "slug": "population",
+                    "category": "Demography"
+                }
+            ]
+        },
+        {
+            "name": "Mortality",
+            "icon": "hospital",
+            "subcategories": [
+                {
+                    "name": "Behavioral Health",
+                    "slug": "behavioral-health-1",
+                    "category": "Mortality"
+                },
+                {
+                    "name": "Chronic Disease",
+                    "slug": "chronic-disease",
+                    "category": "Mortality"
+                },
+                {
+                    "name": "Infectious Disease",
+                    "slug": "infectious-disease",
+                    "category": "Mortality"
+                },
+                {
+                    "name": "Injury & Violence",
+                    "slug": "injury-violence",
+                    "category": "Mortality"
+                },
+                {
+                    "name": "Maternal, Infant, Child, & Adolescent Health",
+                    "slug": "maternal-infant-child-adolescent-health-1",
+                    "category": "Mortality"
+                },
+                {
+                    "name": "Quality of Life",
+                    "slug": "quality-of-life-1",
+                    "category": "Mortality"
+                }
+            ]
+        }
+    ]
+}

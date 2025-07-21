@@ -1,0 +1,1801 @@
+{
+    "name": "Grocery Stores",
+    "description": "All chain grocery stores and supermarkets, along with smaller stores and supermarkets with at least $1 million in annual revenue. Last updated October 2023.",
+    "uuid": "7d9caf3c-75e6-4382-8c97-069696a3efbf",
+    "team_slug": "chicago-health-atlas",
+    "created_by": "Jonathan Giuffrida",
+    "created_on": "Mar 27, 2024",
+    "privacy": "Public",
+    "marker_color": "transparent",
+    "icon": "cart-shopping",
+    "icon_color": "#000000",
+    "icon_size": "sm",
+    "num_points": 178,
+    "access_level": "view",
+    "citation": "",
+    "tags": [
+
+    ],
+    "points": [
+        [
+            "3afb1b85-0bc9-44b2-a911-7e40cb32caf3",
+            "<b>Aldi<\/b><br>3320 B W Belmont<br>CHICAGO, IL 60618",
+            41.939909,
+            -87.711496,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "0ac78c16-2ef8-4e5b-8547-594251c60f8a",
+            "<b>Supermercado Gonzalez<\/b><br>2158 W 21st Pl<br>CHICAGO, IL 60608",
+            41.853246,
+            -87.680597,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "5670f7ec-dbe4-4799-870a-00e0735b5af1",
+            "<b>City Grocery<\/b><br>405 N Wabash Ave<br>CHICAGO, IL 60611-3591",
+            41.889791,
+            -87.625793,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b2a53226-b293-4993-9970-dd275735cba3",
+            "<b>Farmer's Pride Produce<\/b><br>756 N Western Ave<br>CHICAGO, IL 60612-1242",
+            41.895463,
+            -87.687125,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "8af2c947-7a4c-4de3-8228-d237bcd1bf12",
+            "<b>Dom's Kitchen &amp; Market<\/b><br>2730 N Halsted St<br>CHICAGO, IL 60614",
+            41.932429,
+            -87.649256,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "351ac649-a30a-40cf-9286-eb1c2b4028bf",
+            "<b>Big Apple Finer Foods<\/b><br>2345 N Clark St<br>CHICAGO, IL 60614-3422",
+            41.924943,
+            -87.639535,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e92923fa-8ca6-4e06-9c08-c7e270adc94c",
+            "<b>Carnival Grocery<\/b><br>458 W Dickens Ave<br>CHICAGO, IL 60614-4549",
+            41.920206,
+            -87.640807,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "3c2f6b59-611c-4692-9754-6204b3259d35",
+            "<b>1st Choice Market<\/b><br>3019 E 91st St<br>CHICAGO, IL 60617-4399",
+            41.729766,
+            -87.550363,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "59494029-6d5a-4313-b87e-4daed0d35a52",
+            "<b>Food Town<\/b><br>935 E 79Th St<br>CHICAGO, IL 60619-3244",
+            41.751048,
+            -87.601318,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "92f317c2-4ce4-4ba9-9dae-db94b3711ead",
+            "<b>Five Star Certified Inc.<\/b><br>935 W 87th St<br>CHICAGO, IL 60620-3232",
+            41.735711,
+            -87.647497,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "45479583-bec6-4ff8-ab0c-1ef422c92a0c",
+            "<b>Osama Foods<\/b><br>1308 S Central Park Ave<br>CHICAGO, IL 60623-1520",
+            41.864133,
+            -87.715704,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "86b0d287-e67a-4e09-9f75-38c2007eeeff",
+            "<b>La Estrella<\/b><br>3835 W 26th St<br>CHICAGO, IL 60623-3810",
+            41.844056,
+            -87.721079,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "343ec350-19bb-47f4-a840-1f2f23517efc",
+            "<b>El Progreso<\/b><br>3937 W 31st St<br>CHICAGO, IL 60623-4936",
+            41.836672,
+            -87.723313,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ee4dbeb8-7dc4-4f87-b35b-ba4ed691541c",
+            "<b>Chicago Produce<\/b><br>3500 W Lawrence Ave<br>CHICAGO, IL 60625-5612",
+            41.968564,
+            -87.716166,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b97bd59c-6fc1-4518-a05c-2dab73d97bf4",
+            "<b>Supermercado La Victoria<\/b><br>3927 W 63rd St<br>CHICAGO, IL 60629-4603",
+            41.778477,
+            -87.721397,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f7bfaf44-ea4c-465d-9ad9-7162399a8d02",
+            "<b>Kordians Market<\/b><br>6332 W Higgins Ave<br>CHICAGO, IL 60630-1809",
+            41.976232,
+            -87.786347,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "7e4d3dc7-2c79-43d8-b034-987872673612",
+            "<b>La Gloria Supermercado<\/b><br>4117 S Kedzie Ave<br>CHICAGO, IL 60632",
+            41.81835,
+            -87.704099,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "807a57dd-10b9-49a9-933b-6f218588baa4",
+            "<b>Mr G's Food &amp; Liquor<\/b><br>332 E 58th St<br>CHICAGO, IL 60637-1349",
+            41.789518,
+            -87.61785,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "efecc5a3-5c7c-4f3f-a004-544f5318bfa7",
+            "<b>Woodlawn Fresh Market<\/b><br>6319 S Vernon Ave<br>CHICAGO, IL 60637-3320",
+            41.779715,
+            -87.614061,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "fef1018d-6c0e-4854-b7ed-bb4383c592ff",
+            "<b>International Foods Inc.<\/b><br>4404 W Fullerton Ave<br>CHICAGO, IL 60639-1932",
+            41.924695,
+            -87.737081,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2e71f049-3240-4f5f-9f1a-14d2bb0502c3",
+            "<b>A &amp; R Food Mart<\/b><br>5952 W Grand Ave<br>CHICAGO, IL 60639-2740",
+            41.920692,
+            -87.775211,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2d8e2906-a9b9-4957-90da-2bf879d314f5",
+            "<b>Supermart 4 Foods<\/b><br>5035 N Sheridan Rd<br>CHICAGO, IL 60640-3127",
+            41.974436,
+            -87.654529,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "86c8f885-a87f-41f4-b17b-a806465dff94",
+            "<b>Uptown Shop &amp; Save<\/b><br>4605 N Sheridan Rd<br>CHICAGO, IL 60640-5019",
+            41.965696,
+            -87.654435,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "301b2bd2-1f7f-49ff-a951-bf8a1fd8ffd1",
+            "<b>Beverly Hills Food Mart<\/b><br>2156 W 95th St<br>CHICAGO, IL 60643-1019",
+            41.721347,
+            -87.677017,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "42af22b7-0d91-4f1d-a728-d9ae6c4a584e",
+            "<b>County Fair<\/b><br>10800 S Western Ave<br>CHICAGO, IL 60643-3226",
+            41.6968,
+            -87.681664,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a2544967-4504-4182-bea9-37798b6199e0",
+            "<b>One Stop Food &amp; Liquor Store Inc.<\/b><br>4301 S Lake Park Ave<br>CHICAGO, IL 60653-3703",
+            41.816429,
+            -87.598146,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "66db3d11-6d78-43a0-ab40-ee4a6d134abb",
+            "<b>200 Cut Rate Liquors &amp; Grocers<\/b><br>204 E 47th St<br>CHICAGO, IL 60653-3904",
+            41.809549,
+            -87.620752,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "261bd488-b0cd-4e47-b73d-868ec6f3cc06",
+            "<b>Devon Market<\/b><br>1440 W Devon Ave<br>CHICAGO, IL 60660-1326",
+            41.99836,
+            -87.667226,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d9155020-ccbc-4277-9a5e-12b0f6548553",
+            "<b>Aldi<\/b><br>215 West Madison St<br>MAYWOOD, IL 60153",
+            41.881671,
+            -87.634501,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "eddc18e9-bfbd-453c-85f9-8960a662afeb",
+            "<b>Bockwinkel's<\/b><br>222 N Columbus Dr<br>CHICAGO, IL 60601",
+            41.886671,
+            -87.620937,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a40360bc-7c48-449d-9ee2-77c3ba5571e9",
+            "<b>Bockwinkel's<\/b><br>155 N Harbor Dr<br>CHICAGO, IL 60601-7328",
+            41.884895,
+            -87.615398,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "9afd577d-55d9-41e2-8bdc-9eb8d0f15a70",
+            "<b>Mariano's Fresh Market<\/b><br>333 E Benton Pl<br>CHICAGO, IL 60601-7412",
+            41.885193,
+            -87.618465,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "bfe71327-e04f-4e66-9a8a-0deb89dc6aaa",
+            "<b>Trader Joe's<\/b><br>1147 S Wabash Ave<br>CHICAGO, IL 60605",
+            41.867799,
+            -87.625482,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "29751abe-088f-4753-aae0-8666524fc783",
+            "<b>Jewel - Osco<\/b><br>1224 S Wabash Ave<br>CHICAGO, IL 60605-2401",
+            41.866285,
+            -87.626261,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "6c3db762-3895-499f-9f33-896e2143cf90",
+            "<b>Whole Foods Market<\/b><br>1101 S Canal St<br>CHICAGO, IL 60607-4932",
+            41.86854,
+            -87.638477,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1aebdb71-e9bb-489b-ad3c-95d742bb6be3",
+            "<b>Jewel - Osco<\/b><br>1340 S Canal St<br>CHICAGO, IL 60607-5208",
+            41.864138,
+            -87.639922,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "68ad3f8f-dbf1-4494-aa3f-60975d9bf34d",
+            "<b>Jewel - Osco<\/b><br>1220 S Ashland Ave<br>CHICAGO, IL 60608-1402",
+            41.865942,
+            -87.668581,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "58725ae6-3a2d-4bcf-bea6-032e40e90974",
+            "<b>Pete's Fresh Market<\/b><br>2526 W Cermak Rd<br>CHICAGO, IL 60608-3710",
+            41.853274,
+            -87.689447,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "549899ee-ee98-4419-89af-0b2f09909503",
+            "<b>Fairplay Foods<\/b><br>2200 S Western Ave<br>CHICAGO, IL 60608-3816",
+            41.851498,
+            -87.686991,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e260eaa5-3db8-4de0-a221-71c7ff598b22",
+            "<b>El Guero<\/b><br>2101 W Cermak Rd<br>CHICAGO, IL 60608-4005",
+            41.851875,
+            -87.679152,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "fcb13d70-ba70-421d-bdf9-da530a08b14d",
+            "<b>Aldi<\/b><br>1739 W Cermak Rd<br>CHICAGO, IL 60608-4315",
+            41.851707,
+            -87.670111,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "44b182cc-07f1-4960-b9a6-d3341305be10",
+            "<b>Cermak Fresh Market<\/b><br>1711 W Cermak Rd<br>CHICAGO, IL 60608-4315",
+            41.851681,
+            -87.669281,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "85512445-9627-47be-96d6-9e32b6ff5407",
+            "<b>Cermak Fresh Market<\/b><br>3033 S Halsted St<br>CHICAGO, IL 60608-5804",
+            41.8389,
+            -87.645949,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "dabd13f3-da38-4613-9f3c-c78e30e15e9a",
+            "<b>Mariano's Fresh Market<\/b><br>3145 S Ashland Ave<br>CHICAGO, IL 60608-6248",
+            41.836842,
+            -87.663836,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "716c812d-2132-4f34-bc35-8b748736ad0e",
+            "<b>Cermak Fresh Market<\/b><br>3435 S Archer Ave<br>CHICAGO, IL 60608-6836",
+            41.830961,
+            -87.676115,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b1c1a2a8-dd0a-45a7-a70e-f3738d6f38a5",
+            "<b>Jewel - Osco<\/b><br>3644 S Archer Ave<br>CHICAGO, IL 60609-1044",
+            41.82778,
+            -87.682799,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d1e86272-e0b7-440f-9575-14ef094edd5e",
+            "<b>Aldi<\/b><br>1508 W 47th St<br>CHICAGO, IL 60609-3236",
+            41.80941,
+            -87.662881,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2db0c8f0-7b45-4c1d-b5d4-642cc8cbb13a",
+            "<b>El Guero<\/b><br>1701 W 47th St<br>CHICAGO, IL 60609-3823",
+            41.80831,
+            -87.667565,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1cc7a13b-f78c-44a6-8952-58798f205baa",
+            "<b>Fairplay Foods<\/b><br>4640 S Halsted St<br>CHICAGO, IL 60609-4414",
+            41.810012,
+            -87.647263,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2bbd7a4a-9f22-41af-bcd8-95890a07710a",
+            "<b>Aldi<\/b><br>201 West Division St<br>CHICAGO, IL 60610",
+            41.903604,
+            -87.634762,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "78002a95-cac1-4a79-b98e-c63b55d8aa80",
+            "<b>Jewel - Osco<\/b><br>424 W Division St<br>CHICAGO, IL 60610-1727",
+            41.904988,
+            -87.639552,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "66388f3a-ad51-46f9-a60d-2f764af9e80d",
+            "<b>Potash Bros.<\/b><br>1525 N Clark St<br>CHICAGO, IL 60610-1783",
+            41.910168,
+            -87.631214,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b9f87a46-e156-4d0b-9ff2-84a4c535dfd1",
+            "<b>Plum Market<\/b><br>1233 N Wells St<br>CHICAGO, IL 60610-1905",
+            41.904931,
+            -87.634101,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "16ef9283-b882-4f1b-a997-f8ebaaeeb42a",
+            "<b>Mariano's Fresh Market<\/b><br>1500 N Clybourn Ave<br>CHICAGO, IL 60610-3017",
+            41.908131,
+            -87.646806,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d814304c-b7b0-4fb2-9cb8-319e512a252c",
+            "<b>Potash Bros.<\/b><br>875 N State St<br>CHICAGO, IL 60610-3307",
+            41.89868,
+            -87.628022,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e7926bff-1f13-4bb8-bb59-a2e04536992f",
+            "<b>Potash Bros.<\/b><br>175 E Delaware Pl<br>CHICAGO, IL 60611-1756",
+            41.898944,
+            -87.622795,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "7749f812-2e63-4d9f-8e80-08783c2e8e5d",
+            "<b>Eataly<\/b><br>43 E Ohio St<br>CHICAGO, IL 60611-2701",
+            41.892126,
+            -87.626088,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f2f7df88-ae66-4471-8e98-e142053d6a80",
+            "<b>Bockwinkel's<\/b><br>320 E Ohio St<br>CHICAGO, IL 60611-3308",
+            41.892949,
+            -87.618715,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "dfbfec8c-e614-4aa9-b113-d8bde71d9017",
+            "<b>Whole Foods Market<\/b><br>255 E Grand Ave<br>CHICAGO, IL 60611-3315",
+            41.8916,
+            -87.620746,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "9e8f929c-14d4-495f-a6bd-dd92f4b228bc",
+            "<b>Trader Joe's<\/b><br>44 E Ontario St<br>CHICAGO, IL 60611-4755",
+            41.893424,
+            -87.626222,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "57d2c136-d672-4f72-a747-22175d679517",
+            "<b>Pete's Fresh Market<\/b><br>2333 W Madison St<br>CHICAGO, IL 60612-2227",
+            41.88052,
+            -87.685664,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c08da9e0-6a94-4c8d-8d76-a7ef5e6b0789",
+            "<b>Jewel - Osco<\/b><br>4355 N Sheridan Rd<br>CHICAGO, IL 60613-1414",
+            41.961158,
+            -87.653366,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ee23c26b-3c32-4800-b296-756d4020721c",
+            "<b>Trader Joe's<\/b><br>3745 N Lincoln Ave<br>CHICAGO, IL 60613-3517",
+            41.949959,
+            -87.675042,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "584de0bc-bc23-4549-a4a8-56cd2c0a8bbe",
+            "<b>Jewel - Osco<\/b><br>3630 N Southport Ave<br>CHICAGO, IL 60613-3710",
+            41.948168,
+            -87.664374,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "bf9e331e-62fc-4623-adc1-4800ca1d041a",
+            "<b>Whole Foods Market<\/b><br>3640 N Halsted St<br>CHICAGO, IL 60613-4316",
+            41.948361,
+            -87.649871,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "5623289f-5457-43f5-b8a5-445771b1d26a",
+            "<b>Mariano's Fresh Market<\/b><br>2112 N Ashland Ave<br>CHICAGO, IL 60614",
+            41.92072,
+            -87.669104,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a723372e-9b87-4c6d-8ae1-344d96fd603d",
+            "<b>Trader Joe's<\/b><br>1840 N Clybourn Ave<br>CHICAGO, IL 60614",
+            41.914488,
+            -87.654984,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "61c254fc-e4e1-48ac-a7c6-7bd8c1eb6ead",
+            "<b>Aldi<\/b><br>2600 N Clybourn Ave<br>CHICAGO, IL 60614-1004",
+            41.928714,
+            -87.674497,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "cd4e8bd2-bff7-452d-a35b-54c3b0eeec3f",
+            "<b>Trader Joe's<\/b><br>667 W Diversey Pkwy<br>CHICAGO, IL 60614-1510",
+            41.932421,
+            -87.646262,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b78dffb6-6aa7-43be-a106-c473faa14a74",
+            "<b>Jewel - Osco<\/b><br>2550 N Clybourn Ave<br>CHICAGO, IL 60614-1941",
+            41.927278,
+            -87.67441,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1ced8bfe-9195-4729-991d-be4a23b8855c",
+            "<b>Aldi<\/b><br>1836 N Clybourn Ave<br>CHICAGO, IL 60614-4902",
+            41.914337,
+            -87.654909,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "856620a8-ccfc-40cd-8f0f-57ba0ffa20ff",
+            "<b>Whole Foods Market<\/b><br>5118 S Lake Park Ave<br>CHICAGO, IL 60615-4115",
+            41.801902,
+            -87.587924,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "47930fa9-c129-4bd5-b1b9-e39b96e29f23",
+            "<b>Mariano's Fresh Market<\/b><br>1615 S Clark St<br>CHICAGO, IL 60616",
+            41.859366,
+            -87.629667,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "134ca78b-b762-48cf-b3a0-cae7ceabe337",
+            "<b>Jewel - Osco<\/b><br>443 E 34th St<br>CHICAGO, IL 60616-4135",
+            41.832745,
+            -87.614639,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "9cad07af-fbd4-402c-9820-1faf7120a810",
+            "<b>Save-A-Lot<\/b><br>2858 E 83rd St<br>CHICAGO, IL 60617-2107",
+            41.745008,
+            -87.554153,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "39e4caeb-609f-42e2-8431-cddf5f0b8fdd",
+            "<b>Jewel - Osco<\/b><br>1655 E 95th St<br>CHICAGO, IL 60617-4707",
+            41.720311,
+            -87.58266,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d941182d-28e4-4b91-b96d-c5e670bacfff",
+            "<b>Aldi<\/b><br>2333 E 95th St<br>CHICAGO, IL 60617-4806",
+            41.722198,
+            -87.566722,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1e5c72fd-74f4-4df2-8fb2-70da2dd7fa84",
+            "<b>Aldi<\/b><br>10532 S Indianapolis Ave<br>CHICAGO, IL 60617-6355",
+            41.703689,
+            -87.525806,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "314bcdd8-de22-4679-85b1-a72ad3d44997",
+            "<b>Pete's Fresh Market<\/b><br>3448 E 118th St<br>CHICAGO, IL 60617-7354",
+            41.682076,
+            -87.538816,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "7bc2e139-6692-45d4-a78a-299785c5f7ff",
+            "<b>ALDI<\/b><br>3320 B West Belmont<br>CHICAGO, IL 60618",
+            41.939909,
+            -87.711496,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "03f7cdbd-6124-400b-967c-a0d44809215a",
+            "<b>Aldi<\/b><br>2431 W Montrose Ave<br>CHICAGO, IL 60618-1605",
+            41.961042,
+            -87.689909,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "4ce3bc3d-bd14-4a11-8843-41770af0a78e",
+            "<b>Tony's Fresh Market<\/b><br>4137 N Elston Ave<br>CHICAGO, IL 60618-2107",
+            41.956022,
+            -87.722092,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "41efb0d6-2d8b-4964-8c66-214eff3546ef",
+            "<b>Cermak Fresh Market<\/b><br>4234 N Kedzie Ave<br>CHICAGO, IL 60618-2402",
+            41.958662,
+            -87.708499,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "db21e9a2-5177-4c1f-a813-b87288a35fbe",
+            "<b>Jewel - Osco<\/b><br>4250 N Lincoln Ave<br>CHICAGO, IL 60618-2902",
+            41.958451,
+            -87.682358,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "0fbd8d0e-14e9-47a6-9408-446da2cb54d1",
+            "<b>Jewel - Osco<\/b><br>3570 N Elston Ave<br>CHICAGO, IL 60618-4318",
+            41.945076,
+            -87.708441,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ce742e11-b65d-438a-bf4c-d2ea2dd38f3e",
+            "<b>Jewel - Osco<\/b><br>3400 N Western Ave<br>CHICAGO, IL 60618-6012",
+            41.943552,
+            -87.690081,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ce12fe63-4f99-420a-bf85-094dd12edf37",
+            "<b>Mariano's Fresh Market<\/b><br>3350 N Western Ave<br>CHICAGO, IL 60618-6213",
+            41.942263,
+            -87.689683,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "666a41e7-a85a-4b85-accc-d88a99eaf112",
+            "<b>Aldi<\/b><br>7345 S State St<br>CHICAGO, IL 60619-1622",
+            41.760562,
+            -87.62448,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f5450e45-84c9-42a0-bb00-b67c4973d4df",
+            "<b>Aldi<\/b><br>7800 S South Chicago Ave<br>CHICAGO, IL 60619-2724",
+            41.752646,
+            -87.587973,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "86b5d207-02f8-4882-ae78-3a1024fc9790",
+            "<b>Jewel - Osco<\/b><br>87 W 87th St<br>CHICAGO, IL 60620-1304",
+            41.735235,
+            -87.627861,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "5abaf35e-b9fc-4338-b3c9-144c36dcc62b",
+            "<b>Food 4 Less<\/b><br>112 W 87th St<br>CHICAGO, IL 60620-1318",
+            41.73771,
+            -87.627319,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a67a66c9-4453-4e72-b157-7a2c38b57dc5",
+            "<b>Aldi<\/b><br>8500 S Holland Rd<br>CHICAGO, IL 60620-1338",
+            41.739354,
+            -87.63213,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "3bcccac2-0816-40a8-8f68-94dfc8093e00",
+            "<b>Walmart Neighborhood Market<\/b><br>7535 S Ashland Ave<br>CHICAGO, IL 60620-4246",
+            41.756569,
+            -87.663309,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d707424a-1302-4ec8-9419-f19aad7e1acc",
+            "<b>Jewel - Osco<\/b><br>9400 S Ashland Ave<br>CHICAGO, IL 60620-5121",
+            41.722969,
+            -87.663391,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "bc304be5-7f45-40b5-8d1e-1081280ccc2d",
+            "<b>Aldi<\/b><br>620 W 63rd St<br>CHICAGO, IL 60621-2012",
+            41.780423,
+            -87.640509,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a0bb2ad0-dfdc-4127-b513-f6a42c8115d6",
+            "<b>Jewel - Osco<\/b><br>1341 N Paulina St<br>CHICAGO, IL 60622-2145",
+            41.906559,
+            -87.669396,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "6b0ed3f0-956a-41d2-b033-7cc950323327",
+            "<b>Mariano's Fresh Market<\/b><br>2021 W Chicago Ave<br>CHICAGO, IL 60622-5549",
+            41.89571,
+            -87.678375,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "073fa461-8988-42ba-86e7-60138bdedfc0",
+            "<b>Food Market La Chiquita<\/b><br>3555 W 26th St<br>CHICAGO, IL 60623-3913",
+            41.84428,
+            -87.714589,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "0ed1882c-8f5a-4573-89f8-236c1de5fbbc",
+            "<b>Cermak Fresh Market<\/b><br>3311 W 26th St<br>CHICAGO, IL 60623-4036",
+            41.843848,
+            -87.708271,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a5f64d74-42b3-4237-b1c9-0ed9f9347f06",
+            "<b>Food Market La Chiquita<\/b><br>2637 S Pulaski Rd<br>CHICAGO, IL 60623-4410",
+            41.843013,
+            -87.724355,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "039f33e0-2c6f-44f2-b83b-709187ec6fc9",
+            "<b>Aldi<\/b><br>3030 S Kedzie Ave<br>CHICAGO, IL 60623-4713",
+            41.838227,
+            -87.705663,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "37457b1d-7e41-45ed-acaa-2aefb0ec6448",
+            "<b>Save-A-Lot<\/b><br>420 S Pulaski Rd<br>CHICAGO, IL 60624-3151",
+            41.874605,
+            -87.72626,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "346ba6a1-6a15-4079-9ec4-c52076ce1b26",
+            "<b>Tony's Fresh Market<\/b><br>5233 N Lincoln Ave<br>CHICAGO, IL 60625-2405",
+            41.97691,
+            -87.69204,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2f01dd72-e555-4d52-adab-f7d74abbc766",
+            "<b>Jewel - Osco<\/b><br>1763 W Howard St<br>CHICAGO, IL 60626-1626",
+            42.017507,
+            -87.674525,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c1a668e5-8c24-4340-88f9-80019bd6a421",
+            "<b>Save-A-Lot<\/b><br>10700 S Halsted St<br>CHICAGO, IL 60628-3108",
+            41.698635,
+            -87.642939,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "8ea8db80-06ed-4d3b-8d63-9a74217a3726",
+            "<b>Pete's Fresh Market<\/b><br>5724 S Kedzie Ave<br>CHICAGO, IL 60629-2408",
+            41.788806,
+            -87.703775,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a6c4dfe7-4389-4d92-9c8b-c91a9b4477cb",
+            "<b>West Lawn Market<\/b><br>5838 S Pulaski Rd<br>CHICAGO, IL 60629-4544",
+            41.786591,
+            -87.72332,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "165f31f0-9bd6-45f7-845d-b72d772c2e69",
+            "<b>Save-A-Lot<\/b><br>4439 W 63rd St<br>CHICAGO, IL 60629-5548",
+            41.778429,
+            -87.733935,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "70f5effe-3f8d-4100-96d3-4be0dd815632",
+            "<b>Mariano's Fresh Market<\/b><br>5353 N Elston Ave<br>CHICAGO, IL 60630-1610",
+            41.979471,
+            -87.757398,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c07bbf7a-9545-4ff8-bfbf-5356f84d3486",
+            "<b>Seafood City Supermarket<\/b><br>5033 N Elston Ave<br>CHICAGO, IL 60630-1707",
+            41.972813,
+            -87.74558,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "03da8145-eabd-48d6-8a27-77ed56a14ca7",
+            "<b>Aldi<\/b><br>5001 N Pulaski Rd<br>CHICAGO, IL 60630-2706",
+            41.972817,
+            -87.727724,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c44b4f46-0471-42e2-a595-7d536bd0ee48",
+            "<b>Jewel - Osco<\/b><br>4042 W Foster Ave<br>CHICAGO, IL 60630-2747",
+            41.976274,
+            -87.730012,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c797166b-0cec-4876-829a-51974c17cbce",
+            "<b>Jewel - Osco<\/b><br>4729 N Central Ave<br>CHICAGO, IL 60630-3269",
+            41.96693,
+            -87.76673,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "757c7cea-c44c-4c27-8525-762aafb9119d",
+            "<b>Happy Foods<\/b><br>6783 N Northwest Hwy<br>CHICAGO, IL 60631-1264",
+            42.004558,
+            -87.818392,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "6a8ea65e-9e0f-4d7f-b6a0-997c6d882f00",
+            "<b>El Guero<\/b><br>4023 S Archer Ave<br>CHICAGO, IL 60632-1139",
+            41.819916,
+            -87.694117,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1fad8314-f0e5-4934-b33a-6c0dc681503d",
+            "<b>Pete's Fresh Market<\/b><br>4700 S Kedzie Ave<br>CHICAGO, IL 60632-3002",
+            41.807824,
+            -87.705169,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2adcd4f1-b56d-4c40-b7e4-927396cb815a",
+            "<b>Aldi<\/b><br>4934 S Kedzie Ave<br>CHICAGO, IL 60632-3042",
+            41.803328,
+            -87.705636,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e44d61ef-1b05-4180-b843-307c142f65b1",
+            "<b>Cermak Fresh Market<\/b><br>4404 W 42nd Pl<br>CHICAGO, IL 60632-3924",
+            41.817182,
+            -87.733287,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "df9bad55-9b41-4d96-8349-4409f3168165",
+            "<b>Pete's Fresh Market<\/b><br>4343 S Pulaski Rd<br>CHICAGO, IL 60632-4008",
+            41.813771,
+            -87.722557,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d9bec5af-725b-4788-99c1-4b01274e39df",
+            "<b>Aldi<\/b><br>4501 S Pulaski Rd<br>CHICAGO, IL 60632-4035",
+            41.810149,
+            -87.723289,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b5adb4cd-5d3b-49cc-b111-424f362bde72",
+            "<b>Jewel - Osco<\/b><br>5320 S Pulaski Rd<br>CHICAGO, IL 60632-4224",
+            41.796002,
+            -87.725034,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "512ffde8-f3be-4e66-804c-50c6f9d8a322",
+            "<b>Jewel - Osco<\/b><br>6430 W Irving Park Rd<br>CHICAGO, IL 60634-2459",
+            41.954028,
+            -87.787766,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ff39c8bc-1671-4a9d-8e9c-79833f269b07",
+            "<b>Tony's Fresh Market<\/b><br>5630 W Belmont Ave<br>CHICAGO, IL 60634-5301",
+            41.926751,
+            -87.766417,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1c8df723-2ef5-405c-a423-99b0e973f669",
+            "<b>Aldi<\/b><br>2828 N Central Ave<br>CHICAGO, IL 60634-5306",
+            41.932165,
+            -87.76641,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "41a78cfd-a0ed-4a9f-98e9-dd2a8080499d",
+            "<b>Aldi<\/b><br>6025 S Western Ave<br>CHICAGO, IL 60636-2019",
+            41.784042,
+            -87.683307,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "5cb11879-2929-4fb0-901a-e9882b928309",
+            "<b>Food 4 Less<\/b><br>7030 S Ashland Ave<br>CHICAGO, IL 60636-3948",
+            41.765466,
+            -87.664463,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "145509f1-453f-43f2-a210-1ab035b1b6d7",
+            "<b>Aldi<\/b><br>6621 S Cottage Grove Ave<br>CHICAGO, IL 60637-4126",
+            41.774519,
+            -87.605405,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e552edaa-6b46-42ab-99a9-e793f2a575b3",
+            "<b>Aldi<\/b><br>5501 S HARLEM AVE<br>CHICAGO, IL 60638",
+            41.791603,
+            -87.801151,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e3e540a7-06ba-46f6-a73c-1e9d65a5f377",
+            "<b>Jewel - Osco<\/b><br>6107 S Archer Ave<br>CHICAGO, IL 60638-2743",
+            41.793805,
+            -87.770368,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "ec533992-4203-47e9-b3b7-f2086409551c",
+            "<b>Jewel - Osco<\/b><br>2520 N Narragansett Ave<br>CHICAGO, IL 60639-1041",
+            41.926249,
+            -87.786376,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "64c368c5-54c4-4ac8-aec1-72b016f62eb2",
+            "<b>Tony's Fresh Market<\/b><br>2500 N Central Ave<br>CHICAGO, IL 60639-1322",
+            41.926901,
+            -87.766455,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "aa973315-2992-4e18-bea4-1e5962105ae4",
+            "<b>Aldi<\/b><br>4627 W Diversey Ave<br>CHICAGO, IL 60639-1828",
+            41.930822,
+            -87.742769,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b6faa009-2660-463d-8de3-dbe8d851b751",
+            "<b>Cermak Fresh Market<\/b><br>4000 W Diversey Ave<br>CHICAGO, IL 60639-2102",
+            41.931992,
+            -87.727756,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "51b4e23e-f5f8-4407-bff1-58ecf9056a8c",
+            "<b>Aldi<\/b><br>4030 W Wrightwood Ave<br>CHICAGO, IL 60639-2125",
+            41.928655,
+            -87.728743,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f4dc7e87-676e-4b39-aea0-a1ccd5e8f06d",
+            "<b>Food 4 Less<\/b><br>4821 W North Ave<br>CHICAGO, IL 60639-4529",
+            41.908484,
+            -87.747895,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "3dbf1bbd-b5d9-4024-b8a3-5787846621a1",
+            "<b>Jewel - Osco<\/b><br>5516 North Clark St<br>CHICAGO, IL 60640",
+            41.90512,
+            -87.639581,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "22b75c1e-8c24-4314-ad22-1b411b8862b1",
+            "<b>Jewel - Osco<\/b><br>5516 N Clark St<br>CHICAGO, IL 60640-1214",
+            41.982814,
+            -87.669206,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e61ec702-ee10-471c-b8a0-f37d2653cb98",
+            "<b>Jewel - Osco<\/b><br>5343 N Broadway St<br>CHICAGO, IL 60640-2311",
+            41.979209,
+            -87.659305,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a1bdb219-2964-4169-8e8f-454fb0cfaf90",
+            "<b>Mariano's Fresh Market<\/b><br>5201 N Sheridan Rd<br>CHICAGO, IL 60640-2512",
+            41.976949,
+            -87.654399,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "3e1c774a-09d9-47f0-8088-386f3fe5999d",
+            "<b>Mariano's Fresh Market<\/b><br>1800 W Lawrence Ave<br>CHICAGO, IL 60640-4002",
+            41.969121,
+            -87.674754,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "58da9194-d214-4b88-8f09-2d0d9c6399b0",
+            "<b>Aldi<\/b><br>4500 N Broadway St<br>CHICAGO, IL 60640-5602",
+            41.963775,
+            -87.656869,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "894b11aa-9667-4662-904b-557f4b18be40",
+            "<b>Jewel - Osco<\/b><br>4660 W Irving Park Rd<br>CHICAGO, IL 60641-2888",
+            41.955498,
+            -87.744904,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "6dc4e366-eb84-496f-8dec-a318309ca14d",
+            "<b>Tony's Fresh Market<\/b><br>4608 W Belmont Ave<br>CHICAGO, IL 60641-4401",
+            41.940284,
+            -87.742689,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "eaceea4a-1b6f-4929-8d18-0aad2aa37c51",
+            "<b>Whole Foods Market<\/b><br>1550 N Kingsbury St<br>CHICAGO, IL 60642-2532",
+            41.908693,
+            -87.652928,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "da01bc1a-e7e1-4486-8dc2-0f4f43d57f25",
+            "<b>Fairplay Foods<\/b><br>2323 W 111th St<br>CHICAGO, IL 60643-3923",
+            41.69156,
+            -87.680385,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d8ab412c-bb72-4774-a706-3eaaf4f34b98",
+            "<b>Aldi<\/b><br>821 W 115th St<br>CHICAGO, IL 60643-4618",
+            41.683735,
+            -87.643199,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1ec821e5-deb8-4df1-ac12-6754ea3ac221",
+            "<b>Jewel - Osco<\/b><br>11730 S Marshfield Ave<br>CHICAGO, IL 60643-4904",
+            41.680237,
+            -87.66452,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "350c66ef-541b-4bea-bd58-0acb179501fd",
+            "<b>Aldi<\/b><br>5629 W Fillmore St<br>CHICAGO, IL 60644-5504",
+            41.867218,
+            -87.764687,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "00329991-fb0b-407a-a574-dfd4bb99054b",
+            "<b>Cermak Fresh Market<\/b><br>6623 N Damen Ave<br>CHICAGO, IL 60645-5101",
+            42.002412,
+            -87.679602,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "dfab3e03-f175-457c-98bf-507c69325b71",
+            "<b>Happy Foods<\/b><br>6415 N Central Ave<br>CHICAGO, IL 60646-2901",
+            41.998106,
+            -87.76306,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "3644a0fe-0578-42e1-8ea7-43c9cefece1e",
+            "<b>Whole Foods Market<\/b><br>6020 N Cicero Ave<br>CHICAGO, IL 60646-4302",
+            41.990044,
+            -87.748843,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "8803d241-5efa-4513-a9b4-e7ac0105d846",
+            "<b>Aldi<\/b><br>1753 N Milwaukee Ave<br>CHICAGO, IL 60647",
+            41.913612,
+            -87.681874,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "60a48fc8-8c6e-4a83-91ee-3abfc00b66c3",
+            "<b>Fresh Thyme Market<\/b><br>2500 N Elston Ave<br>CHICAGO, IL 60647-2004",
+            41.926535,
+            -87.680908,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "d46a1baf-8064-46f7-afb3-d35e2ef5c6e0",
+            "<b>Tony's Fresh Market<\/b><br>3607 W Fullerton Ave<br>CHICAGO, IL 60647-2318",
+            41.924295,
+            -87.717401,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c505716f-887e-4416-ae95-7d7755c5e6cc",
+            "<b>Save-A-Lot<\/b><br>7240 S Stony Island Ave<br>CHICAGO, IL 60649-2838",
+            41.763175,
+            -87.587498,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "4a033ab1-70f2-452d-8f1c-33772a067896",
+            "<b>Jewel - Osco<\/b><br>7530 S Stony Island Ave<br>CHICAGO, IL 60649-3914",
+            41.758314,
+            -87.587843,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "c1e73270-72fe-4bbb-b1c5-4c499cd3e90f",
+            "<b>Aldi<\/b><br>1440 N Kostner Ave<br>CHICAGO, IL 60651-0000",
+            41.907193,
+            -87.736601,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "a9d3540d-0f67-4f43-b248-e13588642fd8",
+            "<b>Aldi<\/b><br>800 N Kedzie Ave<br>CHICAGO, IL 60651-4100",
+            41.896744,
+            -87.708264,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f98c5e7e-d493-4bf9-89fe-8228f73e5c1a",
+            "<b>Aldi<\/b><br>8333 S Cicero Ave<br>CHICAGO, IL 60652-3562",
+            41.740776,
+            -87.740645,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "8ecabaf9-5a1e-43eb-a627-b3ea3aa639a9",
+            "<b>Mariano's Fresh Market<\/b><br>3857 S Dr Martin L King Jr Dr<br>CHICAGO, IL 60653",
+            41.824273,
+            -87.615933,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "bc99078c-8e03-4aaf-8e82-d8af03cdd515",
+            "<b>Jewel - Osco<\/b><br>550 N State St<br>CHICAGO, IL 60654-4815",
+            41.892086,
+            -87.62854,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "6b3c0f60-bcae-4bce-ab35-c93e5be9e50c",
+            "<b>Jewel - Osco<\/b><br>3128 W 103rd St<br>CHICAGO, IL 60655-2010",
+            41.706822,
+            -87.700016,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b2abcdb2-96db-41c4-8cc8-ae0d612bb59f",
+            "<b>Jewel - Osco<\/b><br>7342 W Foster Ave<br>CHICAGO, IL 60656-3617",
+            41.975191,
+            -87.81102,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "b6d69938-e32a-49e2-ac19-809d9dcd97ec",
+            "<b>Jewel - Osco<\/b><br>4734 N Cumberland Ave<br>CHICAGO, IL 60656-4296",
+            41.965563,
+            -87.838056,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "164e4e49-fd71-42b4-899d-f1d7be46408a",
+            "<b>Jewel - Osco<\/b><br>3531 N Broadway St<br>CHICAGO, IL 60657-1825",
+            41.946875,
+            -87.646201,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "e0a96d64-1c5d-4428-84f8-2d561f124ae8",
+            "<b>Whole Foods Market<\/b><br>3201 N Ashland Ave<br>CHICAGO, IL 60657-2156",
+            41.94009,
+            -87.668253,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "f2001d36-70ac-41dc-86e2-a381b96ae49d",
+            "<b>Jewel - Osco<\/b><br>2940 N Ashland Ave<br>CHICAGO, IL 60657-4004",
+            41.935418,
+            -87.670211,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "2791a075-7289-4913-8603-e76c841e4aaa",
+            "<b>Mariano's Fresh Market<\/b><br>3030 N Broadway St<br>CHICAGO, IL 60657-5316",
+            41.93725,
+            -87.644923,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "7207d4b2-5cdc-4991-ada5-a279e9d03011",
+            "<b>Patel Brothers<\/b><br>2610 W. Devon Avenue<br>CHICAGO, IL 60659",
+            41.997795,
+            -87.69527,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "7d3c0a28-e6f4-4b2a-b97a-213ec571093a",
+            "<b>Aldi<\/b><br>6220 N California Ave<br>CHICAGO, IL 60659-2608",
+            41.994576,
+            -87.69992,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "9eb656ea-9c62-4389-b5f0-4e0d55591603",
+            "<b>Aldi<\/b><br>6221 N Broadway St<br>CHICAGO, IL 60660-1902",
+            41.995197,
+            -87.660224,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "4a05eff2-bbe1-4ddd-a0d0-884b4a11d66c",
+            "<b>Whole Foods Market<\/b><br>6009 N Broadway St<br>CHICAGO, IL 60660-2500",
+            41.991114,
+            -87.659614,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "708a5945-a7a0-402e-8231-98e3dd531571",
+            "<b>H Mart<\/b><br>711 West Jackson Blvd<br>CHICAGO, IL 60661",
+            41.877513,
+            -87.644779,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "1c3beaa4-769d-4819-99a9-c317ec636604",
+            "<b>Jewel - Osco<\/b><br>370 N Desplaines St<br>CHICAGO, IL 60661-1106",
+            41.888701,
+            -87.645136,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "934e0e22-fdb3-4618-a4dc-f25a5809e8fc",
+            "<b>Whole Foods Market<\/b><br>1 N Halsted St<br>CHICAGO, IL 60661-2176",
+            41.882381,
+            -87.646884,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "84da67ea-7c46-4cfe-a3fd-488d0f39c256",
+            "<b>Mariano's Fresh Market<\/b><br>40 S Halsted St<br>CHICAGO, IL 60661-3506",
+            41.880621,
+            -87.647652,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "41c0460e-fcc0-4c8a-8b1f-6e97a5db2ab5",
+            "<b>GFS Marketplace<\/b><br>6431 W Fullerton Ave<br>CHICAGO, IL 60707-3405",
+            41.92326,
+            -87.786333,
+            [
+
+            ],
+            ""
+        ],
+        [
+            "9cf8b593-17c4-4e3c-829b-9f3259cf4eed",
+            "<b>Aldi<\/b><br>6520 W Fullerton Ave<br>CHICAGO, IL 60707-3428",
+            41.925941,
+            -87.788707,
+            [
+
+            ],
+            ""
+        ]
+    ]
+}

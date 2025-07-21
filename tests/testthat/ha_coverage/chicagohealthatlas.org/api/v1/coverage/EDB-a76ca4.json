@@ -1,0 +1,298 @@
+{
+    "params": {
+        "format": [
+            "json"
+        ],
+        "layers": [
+            "neighborhood"
+        ],
+        "topic": "EDB"
+    },
+    "coverages": {
+        "neighborhood": [
+            {
+                "population": "",
+                "period": "2019-2023"
+            },
+            {
+                "population": "",
+                "period": "2018-2022"
+            },
+            {
+                "population": "",
+                "period": "2017-2021"
+            },
+            {
+                "population": "",
+                "period": "2016-2020"
+            },
+            {
+                "population": "",
+                "period": "2015-2019"
+            },
+            {
+                "population": "",
+                "period": "2014-2018"
+            },
+            {
+                "population": "",
+                "period": "2013-2017"
+            },
+            {
+                "population": "",
+                "period": "2012-2016"
+            },
+            {
+                "population": "",
+                "period": "2011-2015"
+            },
+            {
+                "population": "",
+                "period": "2010-2014"
+            },
+            {
+                "population": "",
+                "period": "2009-2013"
+            },
+            {
+                "population": "",
+                "period": "2008-2012"
+            },
+            {
+                "population": "",
+                "period": "2007-2011"
+            },
+            {
+                "population": "",
+                "period": "2006-2010"
+            },
+            {
+                "population": "W",
+                "period": "2019-2023"
+            },
+            {
+                "population": "W",
+                "period": "2018-2022"
+            },
+            {
+                "population": "W",
+                "period": "2017-2021"
+            },
+            {
+                "population": "W",
+                "period": "2016-2020"
+            },
+            {
+                "population": "W",
+                "period": "2015-2019"
+            },
+            {
+                "population": "W",
+                "period": "2014-2018"
+            },
+            {
+                "population": "W",
+                "period": "2013-2017"
+            },
+            {
+                "population": "W",
+                "period": "2012-2016"
+            },
+            {
+                "population": "W",
+                "period": "2011-2015"
+            },
+            {
+                "population": "B",
+                "period": "2019-2023"
+            },
+            {
+                "population": "B",
+                "period": "2018-2022"
+            },
+            {
+                "population": "B",
+                "period": "2017-2021"
+            },
+            {
+                "population": "B",
+                "period": "2016-2020"
+            },
+            {
+                "population": "B",
+                "period": "2015-2019"
+            },
+            {
+                "population": "B",
+                "period": "2014-2018"
+            },
+            {
+                "population": "B",
+                "period": "2013-2017"
+            },
+            {
+                "population": "B",
+                "period": "2012-2016"
+            },
+            {
+                "population": "B",
+                "period": "2011-2015"
+            },
+            {
+                "population": "A",
+                "period": "2019-2023"
+            },
+            {
+                "population": "A",
+                "period": "2018-2022"
+            },
+            {
+                "population": "A",
+                "period": "2017-2021"
+            },
+            {
+                "population": "A",
+                "period": "2016-2020"
+            },
+            {
+                "population": "A",
+                "period": "2015-2019"
+            },
+            {
+                "population": "A",
+                "period": "2014-2018"
+            },
+            {
+                "population": "A",
+                "period": "2013-2017"
+            },
+            {
+                "population": "A",
+                "period": "2012-2016"
+            },
+            {
+                "population": "A",
+                "period": "2011-2015"
+            },
+            {
+                "population": "H",
+                "period": "2019-2023"
+            },
+            {
+                "population": "H",
+                "period": "2018-2022"
+            },
+            {
+                "population": "H",
+                "period": "2017-2021"
+            },
+            {
+                "population": "H",
+                "period": "2016-2020"
+            },
+            {
+                "population": "H",
+                "period": "2015-2019"
+            },
+            {
+                "population": "H",
+                "period": "2014-2018"
+            },
+            {
+                "population": "H",
+                "period": "2013-2017"
+            },
+            {
+                "population": "H",
+                "period": "2012-2016"
+            },
+            {
+                "population": "H",
+                "period": "2011-2015"
+            },
+            {
+                "population": "P",
+                "period": "2019-2023"
+            },
+            {
+                "population": "P",
+                "period": "2018-2022"
+            },
+            {
+                "population": "P",
+                "period": "2017-2021"
+            },
+            {
+                "population": "P",
+                "period": "2016-2020"
+            },
+            {
+                "population": "P1",
+                "period": "2019-2023"
+            },
+            {
+                "population": "P1",
+                "period": "2018-2022"
+            },
+            {
+                "population": "P1",
+                "period": "2017-2021"
+            },
+            {
+                "population": "Q",
+                "period": "2019-2023"
+            },
+            {
+                "population": "F",
+                "period": "2019-2023"
+            },
+            {
+                "population": "F",
+                "period": "2018-2022"
+            },
+            {
+                "population": "F",
+                "period": "2017-2021"
+            },
+            {
+                "population": "F",
+                "period": "2016-2020"
+            },
+            {
+                "population": "F",
+                "period": "2015-2019"
+            },
+            {
+                "population": "F",
+                "period": "2014-2018"
+            },
+            {
+                "population": "M",
+                "period": "2019-2023"
+            },
+            {
+                "population": "M",
+                "period": "2018-2022"
+            },
+            {
+                "population": "M",
+                "period": "2017-2021"
+            },
+            {
+                "population": "M",
+                "period": "2016-2020"
+            },
+            {
+                "population": "M",
+                "period": "2015-2019"
+            },
+            {
+                "population": "M",
+                "period": "2014-2018"
+            }
+        ]
+    },
+    "limits": {
+        "neighborhood": "0.000,34.608,60.528,71.127,77.971,83.607,88.364,92.710,96.963,100.000"
+    }
+}

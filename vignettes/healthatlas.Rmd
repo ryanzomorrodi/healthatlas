@@ -14,6 +14,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, include=FALSE}
+library(httptest2)
+start_vignette("healthatlas")
+```
+
 ## Discover indicators
 
 ```{r setup}
@@ -108,10 +113,22 @@ library(purrr)
 
 # creating a table of data I want
 metadata <- tribble(
-  ~topic_key, ~population_key, ~period_key, ~layer_key,
-  "POP",       "",               "2017-2021",  "neighborhood",
-  "HCSFVAP",   "",               "2020-2021",  "neighborhood",
-  "UMP",       "H",              "2017-2021",  "neighborhood",
+  ~topic_key,
+  ~population_key,
+  ~period_key,
+  ~layer_key,
+  "POP",
+  "",
+  "2017-2021",
+  "neighborhood",
+  "HCSFVAP",
+  "",
+  "2020-2021",
+  "neighborhood",
+  "UMP",
+  "H",
+  "2017-2021",
+  "neighborhood",
 )
 
 metadata %>%
@@ -180,3 +197,7 @@ plot +
 As expected, it seems that the areas with more grocery stores tend to have a higher percent of adults who report that it is very easy to get fresh fruits and vegetables. 
 
 This is a typical use case for the `healthatlas` in which we explored every function that `healthatlas` has to offer. Now it's time for you to explore!
+
+```{r, include=FALSE}
+end_vignette()
+```

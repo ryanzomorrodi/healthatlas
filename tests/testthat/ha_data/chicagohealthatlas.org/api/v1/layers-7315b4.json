@@ -1,0 +1,55 @@
+{
+    "count": 4,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Community areas",
+            "slug": "neighborhood",
+            "description": "The city of Chicago is divided into 77 community areas for statistical and planning purposes. These definitions were made by the Social Science Research Committee at the University of Chicago in the 1920s to aid with statistical research and urban planning. Other than the addition of O'Hare and Edgewater, these boundaries have been kept stable since then.",
+            "visibility": "full",
+            "priority": 1,
+            "singular_name": "community area",
+            "plural_name": "community areas",
+            "split_by": "",
+            "shapes": "https://metopio.blob.core.windows.net/lalage/atlas/3/shapes/communityareas.topo.json",
+            "keywords": "neighborhoods, cca"
+        },
+        {
+            "name": "ZIP Codes",
+            "slug": "zip",
+            "description": "The ZIP code is a basic unit of geography, assigned by the United States Postal Service. ZIP codes vary widely in their sizes and populations. This site uses ZIP Code Tabulation Areas, which are geographic versions of the postal service's ZIP Codes.",
+            "visibility": "full",
+            "priority": 3,
+            "singular_name": "ZIP code",
+            "plural_name": "ZIP codes",
+            "split_by": "",
+            "shapes": "https://metopio.blob.core.windows.net/lalage/atlas/3/shapes/zcta-2025.topo.json",
+            "keywords": "zcta, zips"
+        },
+        {
+            "name": "Census Tracts",
+            "slug": "tract-2020",
+            "description": "Census tracts are small geographies defined by the U.S. Census in order to provide local, neighborhood-level information. They generally each span a few city blocks and contain about 4,000 residents. These tracts were defined following the 2020 decennial census.",
+            "visibility": "searchable",
+            "priority": 5,
+            "singular_name": "Census tract",
+            "plural_name": "Census tracts",
+            "split_by": "",
+            "shapes": "https://metopio.blob.core.windows.net/lalage/atlas/3/shapes/tract-2020.topo3.json",
+            "keywords": "census track"
+        },
+        {
+            "name": "Chicago",
+            "slug": "place",
+            "description": "Cities, towns, villages, and boroughs, and other incorporated and unincorporated places as defined by the Census Bureau.",
+            "visibility": "z_primary",
+            "priority": 7,
+            "singular_name": "city",
+            "plural_name": "cities",
+            "split_by": "",
+            "shapes": "https://metopio.blob.core.windows.net/lalage/atlas/3/shapes/place.topo1.json",
+            "keywords": ""
+        }
+    ]
+}

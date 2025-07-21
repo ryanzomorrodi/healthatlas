@@ -1,17 +1,15 @@
+with_mock_dir("ha_subcategories", {
+  test_that("check all subcategories", {
+    ha_set(cha_url)
+    subcategories <- ha_subcategories()
 
-test_that("check all subcategories", {
-  skip_if_offline(cha_url)
-  skip_on_cran()
+    "expect a data.frame"
+    expect_s3_class(subcategories, "data.frame")
 
-  ha_set(cha_url)
-  subcategories <- ha_subcategories()
+    "check table names"
+    expect_equal(names(subcategories), subcategories_header)
 
-  "expect a data.frame"
-  expect_s3_class(subcategories, "data.frame")
-
-  "check table names"
-  expect_equal(names(subcategories), subcategories_header)
-
-  "check at least 1 row"
-  expect_gt(nrow(subcategories), 1)
+    "check at least 1 row"
+    expect_gt(nrow(subcategories), 1)
+  })
 })

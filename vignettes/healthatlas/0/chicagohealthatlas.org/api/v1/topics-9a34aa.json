@@ -1,0 +1,587 @@
+{
+    "count": 20,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "name": "Adult fruit and vegetable servings",
+            "key": "HCSFV",
+            "description": "Number of adults who reported eating five or more servings of fruits and vegetables (combined) daily.",
+            "units": "count of adults",
+            "format": "0 decimal places",
+            "keywords": "healthy eating, consumption",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Adult fruit and vegetable servings rate",
+            "key": "HCSFVP",
+            "description": "Percent of adults who reported eating five or more servings of fruits and vegetables (combined) daily.",
+            "units": "% of adults",
+            "format": "1 decimal place",
+            "keywords": "healthy eating, consumption",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Adult physical inactivity",
+            "key": "HCSPA",
+            "description": "Number of adults who reported that they did not participate in any physical activities or exercises in the past month.",
+            "units": "count of adults",
+            "format": "0 decimal places",
+            "keywords": "activity, exercise",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Adult physical inactivity rate",
+            "key": "HCSPAP",
+            "description": "Percent of adults who reported that they did not participate in any physical activities or exercises in the past month.",
+            "units": "% of adults",
+            "format": "1 decimal place",
+            "keywords": "activity, exercise",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Adult soda consumption",
+            "key": "HCSS",
+            "description": "Number of adults who drank soda or pop or other sweetened drinks like sweetened iced tea, sports drinks, fruit punch or other fruit-flavored drinks at least once per day in the past month.",
+            "units": "count of adults",
+            "format": "0 decimal places",
+            "keywords": "beverage",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Adult soda consumption rate",
+            "key": "HCSSP",
+            "description": "Percent of adults who drank soda or pop or other sweetened drinks like sweetened iced tea, sports drinks, fruit punch or other fruit-flavored drinks at least once per day in the past month.",
+            "units": "% of adults",
+            "format": "1 decimal place",
+            "keywords": "beverage",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Easy access to fruits and vegetables",
+            "key": "HCSFVA",
+            "description": "Number of adults who reported that it is very easy for them to get fresh fruits and vegetables.",
+            "units": "count of adults",
+            "format": "0 decimal places",
+            "keywords": "healthy eating, food access",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Easy access to fruits and vegetables rate",
+            "key": "HCSFVAP",
+            "description": "Percent of adults who reported that it is very easy for them to get fresh fruits and vegetables.",
+            "units": "% of adults",
+            "format": "1 decimal place",
+            "keywords": "healthy eating, food access",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Chicago Department of Public Health, Healthy Chicago Survey",
+                        "label": "healthy-chicago-survey"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High School fruit and vegetable servings",
+            "key": "YRFV",
+            "description": "Number of Chicago Public High School students who report eating fruits and vegetables five or more times per day during the past seven days.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": "healthy eating, consumption",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High School fruit and vegetable servings rate",
+            "key": "YRFVP",
+            "description": "Percent of Chicago Public High School students who report eating fruits and vegetables five or more times per day during the past seven days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": "healthy eating, consumption",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High School physical activity",
+            "key": "YRPA",
+            "description": "Number of Chicago Public High School students who report being physically active for 60+ minutes for 7 of the past 7 days.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": null,
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High School physical activity rate",
+            "key": "YRPAP",
+            "description": "Percent of Chicago Public High School students who report being physically active for 60+ minutes  for all of the past 7 days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": null,
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "High School physical inactivity",
+            "key": "YRPI",
+            "description": "Number of Chicago Public High School students who report not participating in at least 60 minutes of physical activity on at least 1 day of the past 7 days.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": "exercise, activity, inactivity",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "High School physical inactivity rate",
+            "key": "YRPIP",
+            "description": "Percent of Chicago Public High School students who report not participating in at least 60 minutes of physical activity on at least 1 day of the past 7 days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": "exercise, activity, inactivity",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "High School soda consumption",
+            "key": "YRSO",
+            "description": "Number of Chicago Public High School students who report consuming one or more servings of soda or pop daily for the past 7 days.\r\n\r\nNumbers will not be displayed if the weighted number of respondents is less than 100.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": "sugar sweetened beverage",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "High School soda consumption rate",
+            "key": "YRSOP",
+            "description": "Percent of Chicago Public High School students who report consuming one or more servings of soda or pop daily for the past 7 days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": "sugar sweetened beverage",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Middle School physical activity",
+            "key": "YRMPA",
+            "description": "Number of Chicago Public Middle School students between 6th and 8th grade who report being physically active for 60+ minutes for 7 of the past 7 days.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": null,
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Middle School physical activity rate",
+            "key": "YRMPAP",
+            "description": "Percent of Chicago Public Middle School students between 6th and 8th grade who report being physically active for 60+ minutes  for all of the past 7 days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": null,
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Good"
+        },
+        {
+            "name": "Middle School physical inactivity",
+            "key": "YRMPI",
+            "description": "Number of Chicago Public Middle School students between 6th and 8th grade who report not participating in at least 60 minutes of physical activity on at least 1 day of the past 7 days.",
+            "units": "count of students",
+            "format": "0 decimal places",
+            "keywords": "exercise, activity, inactivity",
+            "is_count": true,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        },
+        {
+            "name": "Middle School physical inactivity rate",
+            "key": "YRMPIP",
+            "description": "Percent of Chicago Public Middle School students between 6th and 8th grade who report not participating in at least 60 minutes of physical activity on at least 1 day of the past 7 days.",
+            "units": "% of students",
+            "format": "1 decimal place",
+            "keywords": "exercise, activity, inactivity",
+            "is_count": false,
+            "datasets": [
+                {
+                    "notes": "",
+                    "dataset": {
+                        "name": "Centers for Disease Control and Prevention, Youth Risk Behavior Survey (YRBS)",
+                        "label": "yrbss"
+                    }
+                }
+            ],
+            "subcategories": [
+                {
+                    "name": "Diet & Exercise",
+                    "slug": "diet-exercise",
+                    "category": "Health Behaviors"
+                }
+            ],
+            "restrictions": [
+
+            ],
+            "direction": "Bad"
+        }
+    ]
+}

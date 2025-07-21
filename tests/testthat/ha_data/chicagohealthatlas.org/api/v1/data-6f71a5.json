@@ -1,0 +1,22 @@
+{
+    "time": "1502.65 ms",
+    "params": {
+        "format": "json",
+        "topic": "EDB",
+        "population": "",
+        "period": "2022",
+        "layer": "place"
+    },
+    "count": 1,
+    "results": [
+        {
+            "se": 0.7020510841775319,
+            "a": "EDB",
+            "p": "",
+            "d": "2022",
+            "v": 86.51451311856667,
+            "g": "1714000",
+            "l": "place"
+        }
+    ]
+}
