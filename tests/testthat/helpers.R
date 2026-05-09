@@ -39,7 +39,7 @@ data_header_long <- c(
   "value",
   "standardError"
 )
-layers_header <- c("layer_name", "layer_key", "layer_description", "layer_url")
+layers_header <- c("layer_name", "layer_key", "layer_url")
 layer_header <- c(
   "geoid",
   "layer_key",

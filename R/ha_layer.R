@@ -1,24 +1,38 @@
 #' List Geographic Layers
-#' 
+#'
 #' @description
 #' List all geographic layers available.
-#' 
+#'
 #' @return Layer information tibble.
 #' @export
 #'
 #' @examples
 #' \donttest{
 #' ha_set("chicagohealthatlas.org")
-#' 
+#'
 #' ha_layers()
 #' }
 ha_layers <- function() {
   body <- ha_api_layers_req() |>
-    ha_req_perform()  |>
+    ha_req_perform() |>
     ha_resp_body("results")
 
-  output <- body[c("name", "slug", "description", "shapes")]
-  colnames(output) <- c("layer_name", "layer_key", "layer_description", "layer_url")
+  output <- body[c("name", "slug", "shapes")]
+  colnames(output) <- c("layer_name", "layer_key", "layer_url")
+
+  output[["layer_url"]] <- apply(body, 1, function(row) {
+    row_url <- row[["shapes"]]
+    if (is.na(row_url)) {
+      row_sublayers <- row[["sublayers"]]
+      if (nrow(row_sublayers) == 1) {
+        row_sublayers[["shapes"]]
+      } else {
+        NA
+      }
+    } else {
+      row_url
+    }
+  })
 
   tibble::as_tibble(output)
 }
@@ -29,14 +43,14 @@ ha_layers <- function() {
 #' Import geographic layer as a `sf` object.
 #' @param layer_key Unique ID for a geographic layer.
 #' @param progress Display a progress bar?
-#' 
+#'
 #' @return `sf` geographic layer.
 #' @export
 #'
 #' @examples
 #' \donttest{
 #' ha_set("chicagohealthatlas.org")
-#' 
+#'
 #' ha_layer("zip", progress = FALSE)
 #' }
 ha_layer <- function(layer_key, progress = TRUE) {
