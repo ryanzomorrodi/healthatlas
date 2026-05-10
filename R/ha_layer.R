@@ -24,8 +24,8 @@ ha_layers <- function() {
     row_url <- row[["shapes"]]
     if (is.na(row_url)) {
       row_sublayers <- row[["sublayers"]]
-      if (nrow(row_sublayers) == 1) {
-        row_sublayers[["shapes"]]
+      if (is.data.frame(row_sublayers) && nrow(row_sublayers) >= 1) {
+        row_sublayers[["shapes"]][1]
       } else {
         NA
       }

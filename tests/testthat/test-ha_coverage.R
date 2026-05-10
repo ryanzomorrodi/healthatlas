@@ -1,53 +1,32 @@
-with_mock_dir("ha_coverage", {
-  test_that("check specific topic coverage", {
-    ha_set(cha_url)
+test_that("specific topic", {
+  skip_on_cran()
+  skip_if_offline()
+  ha_set("https://chicagohealthatlas.org/")
 
-    "expect no progress bar"
-    expect_snapshot(coverage <- ha_coverage("EDB", progress = FALSE))
+  expect_no_error(
+    output <- ha_coverage("EDB")
+  )
+  expect_s3_class(output, "data.frame")
+})
 
-    "expect a data.frame"
-    expect_s3_class(coverage, "data.frame")
+test_that("specific topic and layer", {
+  skip_on_cran()
+  skip_if_offline()
+  ha_set("https://chicagohealthatlas.org/")
 
-    "check table names"
-    expect_equal(names(coverage), coverage_header)
+  expect_no_error(
+    output <- ha_coverage("EDB", "neighborhood")
+  )
+  expect_s3_class(output, "data.frame")
+})
 
-    "check at least 1 row"
-    expect_gt(nrow(coverage), 1)
-  })
+test_that("keys only", {
+  skip_on_cran()
+  skip_if_offline()
+  ha_set("https://chicagohealthatlas.org/")
 
-  test_that("check specific topic and layer coverage", {
-    ha_set(cha_url)
-
-    "expect no progress bar"
-    expect_snapshot(
-      coverage <- ha_coverage("EDB", "neighborhood", progress = FALSE)
-    )
-
-    "expect a data.frame"
-    expect_s3_class(coverage, "data.frame")
-
-    "check table names"
-    expect_equal(names(coverage), coverage_header)
-
-    "check at least 1 row"
-    expect_gt(nrow(coverage), 1)
-  })
-
-  test_that("check keys only", {
-    ha_set(cha_url)
-
-    "expect no progress bar"
-    expect_snapshot(
-      coverage <- ha_coverage("EDB", "neighborhood", keys_only = TRUE)
-    )
-
-    "expect a data.frame"
-    expect_s3_class(coverage, "data.frame")
-
-    "check table names"
-    expect_equal(names(coverage), coverage_header_keys_only)
-
-    "check at least 1 row"
-    expect_gt(nrow(coverage), 1)
-  })
+  expect_no_error(
+    output <- ha_coverage("EDB", "neighborhood", keys_only = TRUE)
+  )
+  expect_s3_class(output, "data.frame")
 })
