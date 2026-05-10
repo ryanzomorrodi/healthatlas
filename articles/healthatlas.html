@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">healthatlas</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2.9001</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,20 +87,20 @@ functions.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">topics</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_topics.html">ha_topics</a></span><span class="op">(</span>progress <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">topics</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 411 × 7</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 463 × 7</span></span></span>
 <span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 9th grade education r… EDA       Residents 25 or … % of resid… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> ACA marketplace enrol… ENR       Number of plan s… plan selec… <span style="color: #949494;">&lt;chr [5]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Accidents mortality    VRAC      Number of people… count of d… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Accidents mortality r… VRACR     Age-adjusted rat… per 100,00… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Active business licen… CHANVYI   Count of active … licenses p… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult asthma           HCSATH    Number of adults… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Adult asthma rate      HCSATHP   Percent of adult… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult binge drinking   HCSBD     Number of adults… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Adult binge drinking … HCSBDP    Percent of adult… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Adult diabetes         HCSDIA    Number of adults… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 401 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Active transportation… ACT       Percent of worke… <span style="color: #949494;">"</span>% of work… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Area Deprivation Index ADI       The ADI is a ran… <span style="color: #949494;">""</span>          <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Asthma (CDC Places)    AST       Percent of adult… <span style="color: #949494;">"</span>% of adul… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Expected annual build… BAL       Building loss qu… <span style="color: #949494;">""</span>          <span style="color: #949494;">&lt;chr [6]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Have ever had cancer   CAN       Percent of resid… <span style="color: #949494;">"</span>% of adul… <span style="color: #949494;">&lt;chr [4]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Drive alone to work    CAR       Percent of worke… <span style="color: #949494;">"</span>% of work… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Invasive breast cance… CCB       Annual diagnosis… <span style="color: #949494;">"</span>per 100,0… <span style="color: #949494;">&lt;chr [4]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Cervical cancer diagn… CCC       Annual diagnosis… <span style="color: #949494;">"</span>per 100,0… <span style="color: #949494;">&lt;chr [5]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Oral cancer diagnosis… CCD       Annual diagnosis… <span style="color: #949494;">"</span>per 100,0… <span style="color: #949494;">&lt;chr [4]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Lung cancer diagnosis… CCG       Annual diagnosis… <span style="color: #949494;">"</span>per 100,0… <span style="color: #949494;">&lt;chr [5]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 453 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span></code></pre></div>
 <p><strong>Note:</strong> topics can be derived from multiple datasets
 or belong to multiple subcategories or keywords. Therefore, these
@@ -114,21 +114,10 @@ topics via these pieces of information is still quite easy using
 <span><span class="co"># filter by dataset</span></span>
 <span><span class="va">topics</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://purrr.tidyverse.org/reference/map.html" class="external-link">map_lgl</a></span><span class="op">(</span><span class="va">topic_datasets</span>, <span class="op">~</span> <span class="st">"healthy-chicago-survey"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">.x</span><span class="op">$</span><span class="va">key</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 74 × 7</span></span></span>
-<span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
-<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Adult asthma           HCSATH    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Adult asthma rate      HCSATHP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Adult binge drinking   HCSBD     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Adult binge drinking … HCSBDP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Adult diabetes         HCSDIA    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult diabetes rate    HCSDIAP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Adult e-cigarette use  HCSEC     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult e-cigarette use… HCSECP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Adult flu vaccination  HCSFLU    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Adult flu vaccination… HCSFLUP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 64 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 7</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 7 variables: topic_name &lt;chr&gt;, topic_key &lt;chr&gt;, topic_description &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   topic_units &lt;chr&gt;, topic_keywords &lt;list&gt;, topic_datasets &lt;list&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   topic_subcategories &lt;list&gt;</span></span></span>
 <span></span>
 <span><span class="co"># filter by subcategory</span></span>
 <span><span class="va">topics</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -137,25 +126,25 @@ topics via these pieces of information is still quite easy using
 <span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Adult fruit and veget… HCSFV     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Adult fruit and veget… HCSFVP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Adult physical inacti… HCSPA     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Adult physical inacti… HCSPAP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Adult soda consumption HCSS      <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult soda consumptio… HCSSP     <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Easy access to fruits… HCSFVA    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Easy access to fruits… HCSFVAP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Easy access to fruits… HCSFVA    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Easy access to fruits… HCSFVAP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Adult fruit and veget… HCSFVP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Adult physical inacti… HCSPA     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult physical inacti… HCSPAP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Adult soda consumption HCSS      <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult soda consumptio… HCSSP     <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> High School fruit and… YRFV      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> High School fruit and… YRFVP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> High School physical … YRPA      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> High School physical … YRPAP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> High School physical … YRPI      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> High School physical … YRPIP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> High School soda cons… YRSO      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> High School soda cons… YRSOP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> Middle School physica… YRMPA     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> Middle School physica… YRMPAP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> Middle School physica… YRMPI     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> Middle School physica… YRMPIP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> Middle School physica… YRMPA     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> Middle School physica… YRMPAP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> Middle School physica… YRMPI     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> Middle School physica… YRMPIP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> High School physical … YRPA      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> High School physical … YRPAP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> High School physical … YRPI      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> High School physical … YRPIP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> High School soda cons… YRSO      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> High School soda cons… YRSOP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span>
 <span></span>
 <span><span class="co"># filter by keyword</span></span>
@@ -166,10 +155,10 @@ topics via these pieces of information is still quite easy using
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Adult physical inactiv… HCSPA     Number of adults… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Adult physical inactiv… HCSPAP    Percent of adult… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> High School physical i… YRPI      Number of Chicag… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> High School physical i… YRPIP     Percent of Chica… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Middle School physical… YRMPI     Number of Chicag… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Middle School physical… YRMPIP    Percent of Chica… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Middle School physical… YRMPI     Number of Chicag… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Middle School physical… YRMPIP    Percent of Chica… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> High School physical i… YRPI      Number of Chicag… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> High School physical i… YRPIP     Percent of Chica… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span></code></pre></div>
 <p>There may be a specific topic area you are interested in exploring.
 You can explore these topic areas using
@@ -177,20 +166,20 @@ You can explore these topic areas using
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">subcategories</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_subcategories.html">ha_subcategories</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">subcategories</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 30 × 3</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 32 × 3</span></span></span>
 <span><span class="co">#&gt;    subcategory_name      subcategory_key       category_name       </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Access to Care        access-to-care        Clinical Care       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Quality of Care       quality-of-care       Clinical Care       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Community Safety      community-safety-1    Physical Environment</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Housing &amp; Transit     housing-transit       Physical Environment</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Pollution             pollution             Physical Environment</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Resource Availability resource-availability Physical Environment</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Behavioral Health     behavioral-health     Morbidity           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Chronic Disease       chronic-disease-1     Morbidity           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Infectious Disease    infectious-disease-1  Morbidity           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Injury &amp; Violence     injury-violence-1     Morbidity           </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 20 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Pollution             pollution-32          Environmental       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Access to Care        access-to-care        Clinical Care       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Quality of Care       quality-of-care       Clinical Care       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Cancer                cancer-36             Health Outcomes     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Community Safety      community-safety      Physical Environment</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Housing &amp; Transit     housing-transit       Physical Environment</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Pollution             pollution-26          Physical Environment</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Resource Availability resource-availability Physical Environment</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> Behavioral Health     behavioral-health-2   Morbidity           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> Chronic Disease       chronic-disease-31    Morbidity           </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 22 more rows</span></span></span></code></pre></div>
 <p>You can use a <code>subcategory_key</code> to subset the list of
 topics.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
@@ -199,25 +188,25 @@ topics.</p>
 <span><span class="co">#&gt;    topic_name             topic_key topic_description topic_units topic_keywords</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>        </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> Adult fruit and veget… HCSFV     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Adult fruit and veget… HCSFVP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Adult physical inacti… HCSPA     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Adult physical inacti… HCSPAP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Adult soda consumption HCSS      <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult soda consumptio… HCSSP     <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Easy access to fruits… HCSFVA    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Easy access to fruits… HCSFVAP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> Easy access to fruits… HCSFVA    <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> Easy access to fruits… HCSFVAP   <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> Adult fruit and veget… HCSFVP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> Adult physical inacti… HCSPA     <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> Adult physical inacti… HCSPAP    <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> Adult soda consumption HCSS      <span style="color: #949494;">"</span>Number of adult… count of a… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> Adult soda consumptio… HCSSP     <span style="color: #949494;">"</span>Percent of adul… % of adults <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> High School fruit and… YRFV      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> High School fruit and… YRFVP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [2]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> High School physical … YRPA      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> High School physical … YRPAP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> High School physical … YRPI      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> High School physical … YRPIP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> High School soda cons… YRSO      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> High School soda cons… YRSOP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> Middle School physica… YRMPA     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> Middle School physica… YRMPAP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> Middle School physica… YRMPI     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> Middle School physica… YRMPIP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> Middle School physica… YRMPA     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> Middle School physica… YRMPAP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> Middle School physica… YRMPI     <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> Middle School physica… YRMPIP    <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> High School physical … YRPA      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> High School physical … YRPAP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [0]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> High School physical … YRPI      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> High School physical … YRPIP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [3]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> High School soda cons… YRSO      <span style="color: #949494;">"</span>Number of Chica… count of s… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> High School soda cons… YRSOP     <span style="color: #949494;">"</span>Percent of Chic… % of stude… <span style="color: #949494;">&lt;chr [1]&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 2 more variables: topic_datasets &lt;list&gt;, topic_subcategories &lt;list&gt;</span></span></span></code></pre></div>
 <p>Once we have a topic or topics in mind, we can explore what
 populations, time periods, and geographic scales that data is available
@@ -294,16 +283,16 @@ population, and period requested.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 616 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  6.67         1.46 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  5.36         2.10 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  6.66         1.11 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-43 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 17.0          1.95 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-45 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 13.5          5.24 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-47 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 21.5          8.32 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-52 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  8.02         1.69 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-6  UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  3.86         0.580</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-49 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh… 18.7          2.10 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-24 UMP       <span style="color: #949494;">""</span>             2017-2021  neighborh…  3.50         0.608</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 4.88<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.38<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 7.99<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-43 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 5.27<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-45 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 9.65<span style="color: #949494;">e</span>3            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-47 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.64<span style="color: #949494;">e</span>3            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-52 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.45<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-6  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.03<span style="color: #949494;">e</span>5            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-49 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 3.93<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-24 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 8.69<span style="color: #949494;">e</span>4            <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 606 more rows</span></span></span></code></pre></div>
 <p>If you want to mix and match topics, populations, years, or layers of
 data, I recommend creating a table of all the datasets you want, and
@@ -314,22 +303,10 @@ data, I recommend creating a table of all the datasets you want, and
 <span></span>
 <span><span class="co"># creating a table of data I want</span></span>
 <span><span class="va">metadata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html" class="external-link">tribble</a></span><span class="op">(</span></span>
-<span>  <span class="op">~</span><span class="va">topic_key</span>,</span>
-<span>  <span class="op">~</span><span class="va">population_key</span>,</span>
-<span>  <span class="op">~</span><span class="va">period_key</span>,</span>
-<span>  <span class="op">~</span><span class="va">layer_key</span>,</span>
-<span>  <span class="st">"POP"</span>,</span>
-<span>  <span class="st">""</span>,</span>
-<span>  <span class="st">"2017-2021"</span>,</span>
-<span>  <span class="st">"neighborhood"</span>,</span>
-<span>  <span class="st">"HCSFVAP"</span>,</span>
-<span>  <span class="st">""</span>,</span>
-<span>  <span class="st">"2020-2021"</span>,</span>
-<span>  <span class="st">"neighborhood"</span>,</span>
-<span>  <span class="st">"UMP"</span>,</span>
-<span>  <span class="st">"H"</span>,</span>
-<span>  <span class="st">"2017-2021"</span>,</span>
-<span>  <span class="st">"neighborhood"</span>,</span>
+<span>  <span class="op">~</span><span class="va">topic_key</span> , <span class="op">~</span><span class="va">population_key</span> , <span class="op">~</span><span class="va">period_key</span> , <span class="op">~</span><span class="va">layer_key</span>     ,</span>
+<span>  <span class="st">"POP"</span>      , <span class="st">""</span>              , <span class="st">"2017-2021"</span> , <span class="st">"neighborhood"</span> ,</span>
+<span>  <span class="st">"HCSFVAP"</span>  , <span class="st">""</span>              , <span class="st">"2020-2021"</span> , <span class="st">"neighborhood"</span> ,</span>
+<span>  <span class="st">"UMP"</span>      , <span class="st">"H"</span>             , <span class="st">"2017-2021"</span> , <span class="st">"neighborhood"</span> ,</span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">metadata</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -338,16 +315,16 @@ data, I recommend creating a table of all the datasets you want, and
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid      topic_key population_key period_key layer_key  value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-35 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">21</span>276. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-36 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">7</span>417. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-37 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor…  <span style="text-decoration: underline;">2</span>280. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-38 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>397. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-39 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">18</span>503. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">42</span>252. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-40 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">11</span>608. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-41 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">28</span>802. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-42 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">24</span>362. <span style="color: #BB0000;">NA</span>           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… <span style="text-decoration: underline;">55</span>627. <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-14 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 4.88<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-18 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.38<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 7.99<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-43 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 5.27<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-45 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 9.65<span style="color: #949494;">e</span>3 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-47 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.64<span style="color: #949494;">e</span>3 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-52 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 2.45<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-6  POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 1.03<span style="color: #949494;">e</span>5 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-49 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 3.93<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-24 POP       <span style="color: #949494;">""</span>             2017-2021  neighbor… 8.69<span style="color: #949494;">e</span>4 <span style="color: #BB0000;">NA</span>           </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; [[2]]</span></span>
@@ -370,16 +347,16 @@ data, I recommend creating a table of all the datasets you want, and
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 77 × 7</span></span></span>
 <span><span class="co">#&gt;    geoid     topic_key population_key period_key layer_key   value standardError</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-… UMP       H              2017-2021  neighbor… 20.2            22.8 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-… UMP       H              2017-2021  neighbor…  0.023<span style="text-decoration: underline;">9</span>         48.0 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-… UMP       H              2017-2021  neighbor…  6.60           21.8 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-… UMP       H              2017-2021  neighbor…  9.47           30.5 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-… UMP       H              2017-2021  neighbor… 12.2            28.4 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-4 UMP       H              2017-2021  neighbor…  8.13            3.35</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-… UMP       H              2017-2021  neighbor… 29.8            52.9 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-… UMP       H              2017-2021  neighbor…  6.42           10.5 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-… UMP       H              2017-2021  neighbor…  3.37           37.6 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-1 UMP       H              2017-2021  neighbor…  5.19            4.38</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 1714000-… UMP       H              2017-2021  neighbor… 5.95<span style="color: #949494;">e</span>+0          1.54</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 1714000-… UMP       H              2017-2021  neighbor… 3.13<span style="color: #949494;">e</span>+0          1.73</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 1714000-2 UMP       H              2017-2021  neighbor… 4.21<span style="color: #949494;">e</span>+0          4.09</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 1714000-… UMP       H              2017-2021  neighbor… 1.90<span style="color: #949494;">e</span>+1         27.5 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 1714000-… UMP       H              2017-2021  neighbor… 1.51<span style="color: #949494;">e</span><span style="color: #BB0000;">-1</span>        126.  </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 1714000-… UMP       H              2017-2021  neighbor… 9.29<span style="color: #949494;">e</span><span style="color: #BB0000;">-3</span>         32.9 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 1714000-… UMP       H              2017-2021  neighbor… 7.80<span style="color: #949494;">e</span>+0          1.67</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 1714000-6 UMP       H              2017-2021  neighbor… 4.37<span style="color: #949494;">e</span>+0          3.21</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 1714000-… UMP       H              2017-2021  neighbor… 3.71<span style="color: #949494;">e</span>+1         23.6 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 1714000-… UMP       H              2017-2021  neighbor… 3.48<span style="color: #949494;">e</span>+0          1.86</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 67 more rows</span></span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -390,13 +367,16 @@ data, I recommend creating a table of all the datasets you want, and
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ha_layers.html">ha_layers</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">layers</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 4 × 4</span></span></span>
-<span><span class="co">#&gt;   layer_name      layer_key    layer_description                       layer_url</span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Community areas neighborhood The city of Chicago is divided into 77… https://…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> ZIP Codes       zip          The ZIP code is a basic unit of geogra… https://…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Census Tracts   tract-2020   Census tracts are small geographies de… https://…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Chicago         place        Cities, towns, villages, and boroughs,… https://…</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 7 × 3</span></span></span>
+<span><span class="co">#&gt;   layer_name      layer_key    layer_url                                        </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                            </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Community areas neighborhood https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> ZIP Codes       zip          https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Census Tracts   tract-2020   https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Chicago         place        https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> United States   us           https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> States          state        https://metopio.blob.core.windows.net/lalage/sha…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> Counties        county       https://metopio.blob.core.windows.net/lalage/sha…</span></span></code></pre></div>
 <p>Since we just downloaded our data at the Community Area level, let’s
 import the Community Area geographic layer with
 <code><a href="../reference/ha_layer.html">ha_layer()</a></code>.</p>
@@ -483,7 +463,7 @@ to get the geographic layer’s geometry along with your data.</p>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="va">plot</span></span></code></pre></div>
-<p><img src="healthatlas_files/figure-html/unnamed-chunk-17-1.png" width="700"></p>
+<p><img src="healthatlas_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" alt="" width="700"></p>
 <p>Our map looks pretty good, but perhaps there is a point layer that
 may provide more insight into the spatial variation of the ease of
 access to fruits and vegetables. We can use
@@ -516,7 +496,7 @@ of our map.</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">plot</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">grocery_stores</span>, size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="healthatlas_files/figure-html/unnamed-chunk-20-1.png" width="700"></p>
+<p><img src="healthatlas_files/figure-html/unnamed-chunk-19-1.png" class="r-plt" alt="" width="700"></p>
 <p>As expected, it seems that the areas with more grocery stores tend to
 have a higher percent of adults who report that it is very easy to get
 fresh fruits and vegetables.</p>
@@ -535,7 +515,7 @@ Now it’s time for you to explore!</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
