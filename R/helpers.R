@@ -62,10 +62,14 @@ ha_resp_body <- function(resp, accessor) {
   body <- httr2::resp_body_json(resp, simplifyVector = TRUE)
 
   count <- body[["count"]]
-  if (!is.null(count) && count == 0) {
+  body <- body[[accessor]]
+  if (
+    is.null(body) ||
+      (is.list(body) && length(body) == 0) ||
+      (!is.null(count) && count == 0)
+  ) {
     chk::abort_chk("Your API call has errors. No Results.")
   }
-  body <- body[[accessor]]
   if (is.matrix(body)) {
     body <- as.data.frame(body)
   }

@@ -14,7 +14,6 @@ Description: Allows for painless use of the 'Metopio' health atlas APIs
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 Depends:
     R (>= 4.1.0)
 Imports: 
@@ -26,7 +25,6 @@ Imports:
 Suggests: 
     dplyr,
     ggplot2,
-    httptest2,
     knitr,
     purrr,
     rmarkdown,
@@ -35,3 +33,4 @@ VignetteBuilder: knitr
 URL: https://ryanzomorrodi.github.io/healthatlas/, https://github.com/ryanzomorrodi/healthatlas
 Config/testthat/edition: 3
 BugReports: https://github.com/ryanzomorrodi/healthatlas/issues
+Config/roxygen2/version: 8.0.0
