@@ -1,4 +1,6 @@
-# healthatlas (development version)
+# healthatlas 0.2.3
+
+* Fixed issues caused by changes in layers API. (#14)
 
 # healthatlas 0.2.2
 
