@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# healthatlas
+# healthatlas <a href="https://ryanzomorrodi.github.io/healthatlas/"><img src="man/figures/logo.png" align="right" height="120" alt="healthatlas website" /></a>
 
 <!-- badges: start -->
 
@@ -75,7 +75,7 @@ functions.
 
 ``` r
 ha_topics(progress = FALSE)
-#> # A tibble: 474 × 7
+#> # A tibble: 483 × 7
 #>    topic_name             topic_key topic_description topic_units topic_keywords
 #>    <chr>                  <chr>     <chr>             <chr>       <list>        
 #>  1 9th grade education r… EDA       Residents 25 or … % of resid… <chr [2]>     
@@ -88,7 +88,7 @@ ha_topics(progress = FALSE)
 #>  8 Adult asthma rate      HCSATHP   Percent of adult… % of adults <chr [2]>     
 #>  9 Adult binge drinking   HCSBD     Number of adults… count of a… <chr [1]>     
 #> 10 Adult binge drinking … HCSBDP    Percent of adult… % of adults <chr [1]>     
-#> # ℹ 464 more rows
+#> # ℹ 473 more rows
 #> # ℹ 2 more variables: topic_datasets <list>, topic_subcategories <list>
 ```
 
@@ -127,7 +127,7 @@ data <- ha_data(
   layer_key = "neighborhood"
 )
 data
-#> # A tibble: 77 × 7
+#> # A tibble: 160 × 7
 #>    geoid      topic_key population_key period_key layer_key  value standardError
 #>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl>         <dbl>
 #>  1 1714000-14 EDA       ""             2018-2022  neighborh…  87.5          3.25
@@ -140,7 +140,7 @@ data
 #>  8 1714000-6  EDA       ""             2018-2022  neighborh…  98.9          1.91
 #>  9 1714000-49 EDA       ""             2018-2022  neighborh…  96.4          4.66
 #> 10 1714000-24 EDA       ""             2018-2022  neighborh…  96.8          1.87
-#> # ℹ 67 more rows
+#> # ℹ 150 more rows
 ```
 
 Let’s create a map. But first, we will need to download the Community

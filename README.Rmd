@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# healthatlas
+# healthatlas <a href="https://ryanzomorrodi.github.io/healthatlas/"><img src="man/figures/logo.png" align="right" height="120" alt="healthatlas website" /></a>
 
 <!-- badges: start -->
 
