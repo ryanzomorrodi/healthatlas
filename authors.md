@@ -11,13 +11,13 @@ Source:
 [`DESCRIPTION`](https://github.com/ryanzomorrodi/healthatlas/blob/main/DESCRIPTION)
 
 Zomorrodi R (2026). *healthatlas: Explore and Import 'Metopio' Health
-Atlas Data and Spatial Layers*. R package version 0.2.2.9001,
+Atlas Data and Spatial Layers*. R package version 0.2.3,
 <https://ryanzomorrodi.github.io/healthatlas/>.
 
     @Manual{,
       title = {healthatlas: Explore and Import 'Metopio' Health Atlas Data and Spatial Layers},
       author = {Ryan Zomorrodi},
       year = {2026},
-      note = {R package version 0.2.2.9001},
+      note = {R package version 0.2.3},
       url = {https://ryanzomorrodi.github.io/healthatlas/},
     }

@@ -1,6 +1,11 @@
 # Changelog
 
-## healthatlas (development version)
+## healthatlas 0.2.3
+
+CRAN release: 2026-08-21
+
+- Fixed issues caused by changes in layers API.
+  ([\#14](https://github.com/ryanzomorrodi/healthatlas/issues/14))
 
 ## healthatlas 0.2.2
 

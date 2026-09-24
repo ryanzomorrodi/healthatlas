@@ -36,7 +36,7 @@ The most important column here is the `topic_key`. An individual
 
 topics <- ha_topics(progress = FALSE)
 topics
-#> # A tibble: 474 × 7
+#> # A tibble: 483 × 7
 #>    topic_name             topic_key topic_description topic_units topic_keywords
 #>    <chr>                  <chr>     <chr>             <chr>       <list>        
 #>  1 9th grade education r… EDA       Residents 25 or … % of resid… <chr [2]>     
@@ -49,7 +49,7 @@ topics
 #>  8 Adult asthma rate      HCSATHP   Percent of adult… % of adults <chr [2]>     
 #>  9 Adult binge drinking   HCSBD     Number of adults… count of a… <chr [1]>     
 #> 10 Adult binge drinking … HCSBDP    Percent of adult… % of adults <chr [1]>     
-#> # ℹ 464 more rows
+#> # ℹ 473 more rows
 #> # ℹ 2 more variables: topic_datasets <list>, topic_subcategories <list>
 ```
 
@@ -123,20 +123,20 @@ can explore these topic areas using
 
 subcategories <- ha_subcategories()
 subcategories
-#> # A tibble: 32 × 3
+#> # A tibble: 30 × 3
 #>    subcategory_name      subcategory_key       category_name       
 #>    <chr>                 <chr>                 <chr>               
-#>  1 Pollution             pollution-32          Environmental       
-#>  2 Access to Care        access-to-care        Clinical Care       
-#>  3 Quality of Care       quality-of-care       Clinical Care       
-#>  4 Cancer                cancer-36             Health Outcomes     
-#>  5 Community Safety      community-safety      Physical Environment
-#>  6 Housing & Transit     housing-transit       Physical Environment
-#>  7 Pollution             pollution-26          Physical Environment
-#>  8 Resource Availability resource-availability Physical Environment
-#>  9 Behavioral Health     behavioral-health-2   Morbidity           
-#> 10 Chronic Disease       chronic-disease-31    Morbidity           
-#> # ℹ 22 more rows
+#>  1 Access to Care        access-to-care        Clinical Care       
+#>  2 Quality of Care       quality-of-care       Clinical Care       
+#>  3 Community Safety      community-safety      Physical Environment
+#>  4 Housing & Transit     housing-transit       Physical Environment
+#>  5 Pollution             pollution-26          Physical Environment
+#>  6 Resource Availability resource-availability Physical Environment
+#>  7 Behavioral Health     behavioral-health-2   Morbidity           
+#>  8 Chronic Disease       chronic-disease-31    Morbidity           
+#>  9 Infectious Disease    infectious-disease    Morbidity           
+#> 10 Injury & Violence     injury-violence-1     Morbidity           
+#> # ℹ 20 more rows
 ```
 
 You can use a `subcategory_key` to subset the list of topics.
@@ -252,20 +252,20 @@ combinations_of_data <- ha_data(
 #> Warning: Your API call has errors. No results for topic_key = "UMP"
 #> population_key = "H" period_key = "invalid" layer_key = "neighborhood".
 combinations_of_data
-#> # A tibble: 616 × 7
+#> # A tibble: 1,278 × 7
 #>    geoid      topic_key population_key period_key layer_key  value standardError
 #>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl>         <dbl>
 #>  1 1714000-14 UMP       ""             2017-2021  neighborh…  6.67         1.46 
 #>  2 1714000-18 UMP       ""             2017-2021  neighborh…  5.36         2.10 
 #>  3 1714000-2  UMP       ""             2017-2021  neighborh…  6.66         1.11 
-#>  4 1714000-43 UMP       ""             2017-2021  neighborh… 17.0          1.95 
+#>  4 1714000-43 UMP       ""             2017-2021  neighborh… 16.4          1.84 
 #>  5 1714000-45 UMP       ""             2017-2021  neighborh… 13.5          5.24 
 #>  6 1714000-47 UMP       ""             2017-2021  neighborh… 21.5          8.32 
 #>  7 1714000-52 UMP       ""             2017-2021  neighborh…  8.02         1.69 
-#>  8 1714000-6  UMP       ""             2017-2021  neighborh…  3.86         0.580
+#>  8 1714000-6  UMP       ""             2017-2021  neighborh…  4.02         0.621
 #>  9 1714000-49 UMP       ""             2017-2021  neighborh… 18.7          2.10 
 #> 10 1714000-24 UMP       ""             2017-2021  neighborh…  3.50         0.608
-#> # ℹ 606 more rows
+#> # ℹ 1,268 more rows
 ```
 
 If you want to mix and match topics, populations, years, or layers of
@@ -289,20 +289,20 @@ metadata <- tribble(
 metadata %>%
   pmap(ha_data)
 #> [[1]]
-#> # A tibble: 77 × 7
+#> # A tibble: 160 × 7
 #>    geoid      topic_key population_key period_key layer_key  value standardError
-#>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl> <lgl>        
-#>  1 1714000-14 POP       ""             2017-2021  neighbor… 4.88e4 NA           
-#>  2 1714000-18 POP       ""             2017-2021  neighbor… 1.38e4 NA           
-#>  3 1714000-2  POP       ""             2017-2021  neighbor… 7.99e4 NA           
-#>  4 1714000-43 POP       ""             2017-2021  neighbor… 5.27e4 NA           
-#>  5 1714000-45 POP       ""             2017-2021  neighbor… 9.65e3 NA           
-#>  6 1714000-47 POP       ""             2017-2021  neighbor… 2.64e3 NA           
-#>  7 1714000-52 POP       ""             2017-2021  neighbor… 2.45e4 NA           
-#>  8 1714000-6  POP       ""             2017-2021  neighbor… 1.03e5 NA           
-#>  9 1714000-49 POP       ""             2017-2021  neighbor… 3.93e4 NA           
-#> 10 1714000-24 POP       ""             2017-2021  neighbor… 8.69e4 NA           
-#> # ℹ 67 more rows
+#>    <chr>      <chr>     <chr>          <chr>      <chr>      <dbl>         <dbl>
+#>  1 1714000-14 POP       ""             2017-2021  neighbor…  48823         1880.
+#>  2 1714000-18 POP       ""             2017-2021  neighbor…  13785         1016.
+#>  3 1714000-2  POP       ""             2017-2021  neighbor…  79911         3188.
+#>  4 1714000-43 POP       ""             2017-2021  neighbor…  52735         2187.
+#>  5 1714000-45 POP       ""             2017-2021  neighbor…   9645          892.
+#>  6 1714000-47 POP       ""             2017-2021  neighbor…   2639          430.
+#>  7 1714000-52 POP       ""             2017-2021  neighbor…  24453         1470.
+#>  8 1714000-6  POP       ""             2017-2021  neighbor… 102608         2049.
+#>  9 1714000-49 POP       ""             2017-2021  neighbor…  39253         1820.
+#> 10 1714000-24 POP       ""             2017-2021  neighbor…  86867         1885.
+#> # ℹ 150 more rows
 #> 
 #> [[2]]
 #> # A tibble: 77 × 7
@@ -321,20 +321,20 @@ metadata %>%
 #> # ℹ 67 more rows
 #> 
 #> [[3]]
-#> # A tibble: 77 × 7
+#> # A tibble: 158 × 7
 #>    geoid     topic_key population_key period_key layer_key   value standardError
 #>    <chr>     <chr>     <chr>          <chr>      <chr>       <dbl>         <dbl>
-#>  1 1714000-… UMP       H              2017-2021  neighbor… 5.95e+0          1.54
-#>  2 1714000-… UMP       H              2017-2021  neighbor… 3.13e+0          1.73
-#>  3 1714000-2 UMP       H              2017-2021  neighbor… 4.21e+0          4.09
-#>  4 1714000-… UMP       H              2017-2021  neighbor… 1.90e+1         27.5 
-#>  5 1714000-… UMP       H              2017-2021  neighbor… 1.51e-1        126.  
-#>  6 1714000-… UMP       H              2017-2021  neighbor… 9.29e-3         32.9 
-#>  7 1714000-… UMP       H              2017-2021  neighbor… 7.80e+0          1.67
-#>  8 1714000-6 UMP       H              2017-2021  neighbor… 4.37e+0          3.21
-#>  9 1714000-… UMP       H              2017-2021  neighbor… 3.71e+1         23.6 
-#> 10 1714000-… UMP       H              2017-2021  neighbor… 3.48e+0          1.86
-#> # ℹ 67 more rows
+#>  1 1714000-… UMP       H              2017-2021  neighbor… 6.50e+0          1.59
+#>  2 1714000-… UMP       H              2017-2021  neighbor… 3.27e+0          1.83
+#>  3 1714000-2 UMP       H              2017-2021  neighbor… 4.56e+0          3.54
+#>  4 1714000-… UMP       H              2017-2021  neighbor… 1.77e+1         26.8 
+#>  5 1714000-… UMP       H              2017-2021  neighbor… 1.48e-1        126.  
+#>  6 1714000-… UMP       H              2017-2021  neighbor… 5.43e-3         33.0 
+#>  7 1714000-… UMP       H              2017-2021  neighbor… 7.91e+0          1.68
+#>  8 1714000-6 UMP       H              2017-2021  neighbor… 4.38e+0          2.97
+#>  9 1714000-… UMP       H              2017-2021  neighbor… 4.71e+1         26.7 
+#> 10 1714000-… UMP       H              2017-2021  neighbor… 4.13e+0          1.63
+#> # ℹ 148 more rows
 ```
 
 ## Import spatial data
